@@ -1,0 +1,100 @@
+Для начала решим небольшой пример по прошлому семинару.
+\begin{prim}
+$\phi: M_{2\times 2}\rightarrow M_{2\times 1}, \phi(\textbf{x})=\textbf{x}\begin{psm}
+	1\\4\\
+	\end{psm}$. Найти матрицу линейного преобразования $A$.
+\end{prim}\\
+Запишем базисы:\\
+$M_{2\times 2}: \textbf{e}
+\left\{
+\begin{psm}
+1&0\\
+0&0\\
+\end{psm}
+,
+\begin{psm}
+0&1\\
+0&0\\
+\end{psm}
+,
+\begin{psm}
+0&0\\
+1&0\\
+\end{psm}
+,
+\begin{psm}
+0&0\\
+0&1\\
+\end{psm}
+\right\}\\
+M_{2\times1}: \textbf{f}
+\left\{
+\begin{psm}
+1\\0
+\end{psm}
+,
+\begin{psm}
+0\\1
+\end{psm}
+\right\}.
+$\\
+Для удобства в общем виде найдём, что значит наше преобразование:\\
+$$
+\phi(\textbf{x})=\begin{pmatrixr}
+a&b\\
+c&d\\
+\end{pmatrixr}
+\begin{pmatrixr}
+1\\4
+\end{pmatrixr}
+=
+\begin{pmatrixr}
+a+4b\\c+4d
+\end{pmatrixr}.
+$$
+Далее <<прогоним>> через преобразование базис \textbf{e}:\\
+$
+\phi(e_1)=
+\begin{psm}
+1&0\\
+0&0\\
+\end{psm}
+\begin{psm}
+1\\4
+\end{psm}
+=
+\begin{psm}
+1\\0
+\end{psm}, \quad
+\phi(e_2)=\begin{psm}
+4\\0
+\end{psm}, \quad
+\phi(e_3)=\begin{psm}
+0\\1
+\end{psm}, \quad
+\phi(e_4)=\begin{psm}
+0\\4
+\end{psm}.
+$\\
+Отсюда, получаем ответ:
+$$
+A=\begin{pmatrixr}
+1&4&0&0\\
+0&0&1&4\\
+\end{pmatrixr}.
+$$
+\section{Рассмотрение ядра и образа}
+Рассмотрим $\phi: \underset{\dim L=n}{L}\rightarrow \underset{\dim \overline{L}=m}{\overline{L}}$.\\
+Ядро: $\ker\phi: \{\textbf{x} \in L: A\textbf{\textbf{x}}=\textbf{o}\}$\\
+Очевидно, что ЛНЗ решения такого уравнения формируют ФСР, а ФСР задаёт линейное подпространство. Вспоминая количество столбцов в ФСР, легко получить формулу:
+$$
+\fbox{$\dim\ker\phi=n-\Rg A$}.
+$$
+Образ $\im\phi: \{\textbf{y} \in \overline{L}:\exists \textbf{x}\in L: A\textbf{x}=\textbf{y}\}$.\\
+Аналогично $\im\phi \in \overline{L}$ формирует линейное подпространство т.к.
+\begin{center}
+$
+A\textbf{x$_1$}+A\textbf{x$_2$}=A(\textbf{x$_1$}+\textbf{x$_2$})$
+
+$A\alpha \textbf{x}=\alpha A\textbf{x}$.
+\end{center}
