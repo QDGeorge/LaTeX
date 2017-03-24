@@ -1,0 +1,28 @@
+\documentclass[a4paper,12pt]{article}
+
+\input{preambula}
+
+\newcounter{prim}
+\newenvironment{prim}{%
+	\addtocounter{prim}{1}
+	\noindent{\\
+		\textbf{\noindentПример \arabic{prim}\\}}%
+}{\\}
+
+\title{sem_J_2}
+\author{Георгий Демьянов}
+\date{today}
+\usepackage[left=1.27cm,right=1.27cm,top=1.27cm,bottom=2cm]{geometry}
+\begin{document}
+\paragraph{Семинар 3. Линейные пространства и подпространства.}
+\input{sem_3_part1}
+\input{sem_3_part2}
+\input{sem_3_part3}
+\begin{center}
+	\vfill \emph{{\small Команда \href{https://vk.com/botay_fizteh}{BOTAY!}:\\
+	Г. Демьянов, \href{https://vk.com/id37346992}{VK}\\
+	Г. Мадина, \href{https://vk.com/id226312463}{VK}\\
+	К. Ксения, \href{https://vk.com/id143862366}{VK}
+}}
+\end{center}
+\end{document}

@@ -1,0 +1,43 @@
+\documentclass[a4paper,12pt]{article}
+
+\input{preambula}
+
+
+\usepackage{graphicx,xcolor}
+\newcounter{prim}
+\newenvironment{prim}{%
+	\addtocounter{prim}{1}
+	\noindent{\\
+		\textbf{\noindentПример \arabic{prim}\\}}%
+}{}
+\definecolor{orange}{rgb}{1, 0.7, 0.1}
+%\usepackage{ulem}
+
+\newenvironment{psm}
+{\left(\begin{smallmatrix*}[r]}
+	{\end{smallmatrix*}\right)}
+
+\newenvironment{pmatrixr}
+{\begin{pmatrix*}[r]}
+	{\end{pmatrix*}}
+
+
+\title{sem_J_4}
+\author{Георгий Демьянов}
+\date{today}
+\usepackage[left=1.27cm,right=1.27cm,top=1.27cm,bottom=2cm]{geometry}
+\begin{document}
+\paragraph{Семинар 4. Замена базиса. Сумма и пересечение подпространств.}
+\input{sem_4_page1and2}
+\input{sem_4_page4}
+\input{4_sem_page_6}
+\begin{center}
+	\vfill \emph{{\small Команда \href{https://vk.com/botay_fizteh}{BOTAY!}:\\
+			Г. Демьянов, \href{https://vk.com/id37346992}{VK}\\
+			К. Ксения, \href{https://vk.com/id143862366}{VK}\\
+			Г. Мадина, \href{https://vk.com/id226312463}{VK}
+	}}
+\end{center}
+
+
+\end{document}}

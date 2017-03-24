@@ -1,0 +1,74 @@
+Понимая пример 5 как отображение, можно заметить, что $\dim(\im\varphi)=2$,  а значит, для описания всевозможных результатов в $\bar L$ можно было выбрать базис из двух векторов.\\
+$ f= \left\{ \left(
+\begin{smallmatrix*}[r]
+0\\ 1\\ 0\\
+\end{smallmatrix*}
+\right) 
+, 
+\left(
+\begin{smallmatrix*}[r]
+0\\ 0\\ 1\\
+\end{smallmatrix*}
+\right) 
+\right\}$\\ 
+$\varphi (\textbf{e$_1$})=\left(
+\begin{smallmatrix*}[r]
+-1\\ 2\\
+\end{smallmatrix*}
+\right) $
+,
+$\varphi (\textbf{e$_2$})=\left(
+\begin{smallmatrix*}[r]
+1\\ 0\\
+\end{smallmatrix*}
+\right) $
+,
+$\varphi (\textbf{e$_3$})=\left(
+\begin{smallmatrix*}[r]
+0\\ 1\\
+\end{smallmatrix*}
+\right) $;\\
+$$A=
+\begin{pmatrixr}
+-1 & 1 & 0\\
+ 2 & 0 & 1\\
+\end{pmatrixr}
+$$
+\begin{prim}
+$ \varphi : \underset{\textbf{e$_1$}, \textbf{e$_2$}, \textbf{e$_3$}}L \Rightarrow \underset{\textbf{f$_1$}, \textbf{f$_2$}, \textbf{f$_3$}, \textbf{f$_4$}}{\bar L} $\\
+
+$L: \langle\underset{=\text{\textbf{$e_1$}}}1, \underset{=\text{\textbf{$e_2$}}}x, \underset{=\text{\textbf{$e_3$}}}{x^2}\rangle$ , 
+$L: \langle\underset{=\text{\textbf{$f_1$}}}1, \underset{=\text{\textbf{$f_2$}}}x, \underset{=\text{\textbf{$f_3$}}}{x^2}, \underset{=\text{\textbf{$f_4$}}}{x^3}\rangle$ \\
+\end{prim}
+$\varphi (x)=\int\limits^x_0 f(t)dt$\\
+$$
+\left.
+\begin{aligned}
+\varphi (e_1)=\int\limits^x_0 1 dt=x
+\left(
+\begin{smallmatrix*}[r]
+0\\ 1\\ 0\\ 0\\
+\end{smallmatrix*}
+\right) \\
+\varphi (e_2)=\int\limits^x_0 t dt=\frac{x^2}{2}
+\left(
+\begin{smallmatrix*}[r]
+0\\ 0\\ \frac{1}{2}\\ 0\\
+\end{smallmatrix*}
+\right) \\
+\varphi (e_3)=\int\limits^x_0 t^2 dt=\frac{x^3}{3}
+\left(
+\begin{smallmatrix*}[r]
+0\\ 0\\  0\\ \frac{1}{3}\\
+\end{smallmatrix*}
+\right) 
+\end{aligned}
+\right\}
+A=
+\begin{pmatrix*}[r]
+ 0 & 0 & 0\\
+ 1 & 0 & 0\\
+ 0 & \frac{1}{2} & 0\\
+ 0 & 0 & \frac{1}{3}\\
+\end{pmatrix*}
+$$

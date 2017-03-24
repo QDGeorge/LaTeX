@@ -1,0 +1,574 @@
+\documentclass[a4paper,12pt]{article}
+
+%%% Работа с русским языком % для pdfLatex
+\usepackage{cmap}					% поиск в~PDF
+\usepackage{mathtext} 				% русские буквы в~фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{indentfirst} 			% отступ 1 абзаца
+
+%%% Работа с русским языком % для XeLatex
+%\usepackage[english,russian]{babel}   %% загружает пакет многоязыковой вёрстки
+%\usepackage{fontspec}      %% подготавливает загрузку шрифтов Open Type, True Type и др.
+%\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}  %% свойства шрифтов по умолчанию
+%\setmainfont[Ligatures={TeX,Historic}]{Times New Roman} %% задаёт основной шрифт документа
+%\setsansfont{Comic Sans MS}                    %% задаёт шрифт без засечек
+%\setmonofont{Courier New}
+%\usepackage{indentfirst}
+%\frenchspacing
+
+%%% Дополнительная работа с математикой
+\usepackage{amsfonts,amssymb,amsthm,mathtools}
+\usepackage{amsmath}
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+\usepackage{upgreek}
+
+%% Номера формул
+%\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в~тексте.
+
+%%% Страница
+\usepackage{extsizes} % Возможность сделать 14-й шрифт
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}} % создание новой конанды \sgn (типо как \sin)
+\usepackage{csquotes} % ещё одна штука для цитат
+\newcommand{\pd}[2]{\ensuremath{\cfrac{\partial #1}{\partial #2}}} % частная производная
+\newcommand{\abs}[1]{\ensuremath{\left|#1\right|}} % модуль
+\renewcommand{\phi}{\ensuremath{\varphi}} % греческая фи
+\newcommand{\pogk}[1]{\!\left(\cfrac{\sigma_{#1}}{#1}\right)^{\!\!\!2}\!} % для погрешностей
+
+% Ссылки
+\usepackage{color} % подключить пакет color
+% выбрать цвета
+\definecolor{BlueGreen}{RGB}{49,152,255}
+\definecolor{Violet}{RGB}{120,80,120}
+% назначить цвета при подключении hyperref
+\usepackage[unicode, colorlinks, urlcolor=blue, linkcolor=blue, pagecolor=blue, citecolor=blue]{hyperref} %синие ссылки
+%\usepackage[unicode, colorlinks, urlcolor=black, linkcolor=black, pagecolor=black, citecolor=black]{hyperref} % для печати (отключить верхний!)
+
+
+%% Перенос знаков в~формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%%% Работа с картинками
+\usepackage{graphicx}  % Для вставки рисунков
+\graphicspath{{images/}{images2/}}  % папки с картинками
+\setlength\fboxsep{3pt} % Отступ рамки \fbox{} от рисунка
+\setlength\fboxrule{1pt} % Толщина линий рамки \fbox{}
+\usepackage{wrapfig} % Обтекание рисунков и таблиц текстом
+\usepackage{multicol}
+
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в~таблице
+\usepackage{caption}
+\captionsetup{labelsep=period, labelfont=bf}
+
+%%% Оформление
+\usepackage{indentfirst} % Красная строка
+%\setlength{\parskip}{0.3cm} % отступы между абзацами
+%%% Название разделов
+\usepackage{titlesec}
+\titlelabel{\thetitle.\quad}
+\renewcommand{\figurename}{\textbf{Рис.}}		%Чтобы вместо figure под рисунками писал "рис"
+\renewcommand{\tablename}{\textbf{Таблица}}		%Чтобы вместо table над таблицами писал Таблица
+
+%%% Теоремы
+\theoremstyle{plain} % Это стиль по умолчанию, его можно не переопределять.
+\newtheorem{theorem}{Теорема}[section]
+\newtheorem{proposition}[theorem]{Утверждение}
+
+\theoremstyle{definition} % "Определение"
+\newtheorem{definition}{Определение}[section]
+\newtheorem{corollary}{Следствие}[theorem]
+\newtheorem{problem}{Задача}[section]
+
+\theoremstyle{remark} % "Примечание"
+\newtheorem*{nonum}{Решение}
+\newtheorem{zamech}{Замечание}[theorem]
+
+%%% Правильные мат. символы для русского языка
+\renewcommand{\epsilon}{\ensuremath{\varepsilon}}
+\renewcommand{\phi}{\ensuremath{\varphi}}
+\renewcommand{\kappa}{\ensuremath{\varkappa}}
+\renewcommand{\le}{\ensuremath{\leqslant}}
+\renewcommand{\leq}{\ensuremath{\leqslant}}
+\renewcommand{\ge}{\ensuremath{\geqslant}}
+\renewcommand{\geq}{\ensuremath{\geqslant}}
+\renewcommand{\emptyset}{\varnothing}
+
+%%% Для лекций по инфе
+\usepackage{tikz}  
+\usetikzlibrary{graphs}
+\usepackage{alltt}
+\newcounter{infa}[section]
+\newcounter{num}
+\definecolor{infa}{rgb}{0, 0.2, 0.89}
+\definecolor{infa1}{rgb}{0, 0.3, 1}
+\definecolor{grey}{rgb}{0.5, 0.5, 0.5}
+\newcommand{\tab}{\ \ \ }
+\newcommand{\com}[1]{{\color{grey}\# #1}}
+\newcommand{\num}{\addtocounter{num}{1}\arabic{num}\tab}
+\newcommand{\defi}{{\color{infa}def}}
+\newcommand{\globali}{{\color{infa}global}}
+\newcommand{\ini}{{\color{infa}in}}
+\newcommand{\rangei}{{\color{infa}range}}
+\newcommand{\fori}{{\color{infa}for}}
+\newcommand{\ifi}{{\color{infa}if}}
+\newcommand{\elsei}{{\color{infa}else}}
+\newcommand{\printi}{{\color{infa1}print}}
+\newcommand{\enumeratei}{{\color{infa1}enumerate}}
+\newcommand{\maxi}{{\color{infa}max}}
+\newcommand{\classi}{{\color{infa}class}}
+\newcommand{\returni}{{\color{infa}return}}
+\newcommand{\elifi}{{\color{infa}elif}}
+\newcommand{\seti}{{\color{infa}set}}
+\newcommand{\noti}{{\color{infa}not}}
+\newcommand{\dicti}{{\color{infa}dict}}
+\newcommand{\zipi}{{\color{infa}zip}}
+\newcommand{\chri}{{\color{infa}chr}}
+\newcommand{\ordi}{{\color{infa}ord}}
+\newcommand{\leni}{{\color{infa}len}}
+\newcommand{\deli}{{\color{infa}del}}
+\newcommand{\sortedi}{{\color{infa}sorted}}
+\newcommand{\keyi}{{\color{infa}key}}
+\newcommand{\lambdai}{{\color{infa}lambda}}
+\newcommand{\inti}{{\color{infa}int}}
+\newcommand{\inputi}{{\color{infa}input}}
+\newcommand{\isi}{{\color{infa}is}}
+\newcommand{\Nonei}{{\color{infa}None}}
+\newcommand{\whilei}{{\color{infa}while}}
+\newcommand{\andi}{{\color{infa}and}}
+\newcommand{\fromi}{{\color{infa}from}}
+\newcommand{\importi}{{\color{infa}import}}
+\newcommand{\continuei}{{\color{infa}continue}}
+\newcommand{\mapi}{{\color{infa}map}}
+\newcommand{\Falsei}{{\color{infa1}False}}
+\newcommand{\listi}{{\color{infa}list}}
+\newcommand{\Truei}{{\color{infa1}True}}
+\newcommand{\mini}{{\color{infa1}min}}
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\newenvironment{infa}[1]{
+	
+	\vspace{0.5cm}
+	\addtocounter{infa}{1}%
+	\noindent{\large \textbf{#1}}%
+	\begin{alltt}%
+	}{\end{alltt}
+	\setcounter{num}{0}
+	\vspace{0.1cm}}
+\newenvironment{infanoname}{
+	
+	%\vspace{0.5cm}
+	%\addtocounter{infa}{1}%
+	%\noindent{\large \textbf{Программа №\thesection.\arabic{infa}.}\ \textbf{#1}}%
+	\begin{alltt}%
+	}{\end{alltt}
+	\setcounter{num}{0}
+	\vspace{0.1cm}}
+
+\usepackage{animate} % Для добавления гифок
+\usepackage{xmpmulti}
+%Пример кода:
+%\begin{infa}{Поразрядная сортировка}
+%	\ \num \defi count_sort(a):\tab \com{определяет нашу функцию}
+%	\ \num \tab m = \maxi(a)+1
+%	\ \num \tab q = [0]*m
+%	\ \num \tab \fori x \ini a:
+%	\ \num \tab \tab q[x] += 1
+%	\ \num \tab pos = 0
+%	\ \num \tab \fori x \ini q:
+%	\ \num \tab \tab \fori i \ini \rangei(q[x]):
+%	\ \num \tab \tab \tab a[pos] = x
+%	\num \tab \tab \tab pos += 1
+%\end{infa}
+
+\usepackage[left=1.27cm,right=1.27cm,top=1.27cm,bottom=2cm]{geometry}
+%\hbox to\textwidth{команда колонтитула}
+\begin{document}
+\begin{center}
+{\huge \textbf{Список вопросов на полузачёте}}
+\end{center}
+
+\noindent{\Large \textbf{\underline{Алгоритмические и теоретические вопросы:}}}
+\begin{enumerate}
+\item Понятия теории графов. Вершины, рёбра, петли, кратные рёбра, инцидентность, смежные вершины.
+\item Понятия теории графов. Пути (цепи) и циклы в графах.
+\item Понятия теории графов. Связность графов. Компоненты связности.
+\item Понятия теории графов. Взвешенный граф.
+\item Способы представления графа в памяти.
+\item Сильно связные компоненты орграфов и ациклические орграфы. Алгоритм Косарайю (описание).
+\item Три определения дерева. Остовное дерево графа.
+\item Эйлеров цикл и Эйлеров путь. Эйлеровы, полуэйлеровы и не Эйлеровы графы. Привести примеры.
+\item Гамильтонов цикл и Гамильтонов путь. Гамильтонов и полугамильтонов граф. Гамильтоновы, полугамильтоновы и не Гамильтоновы графы. Привести примеры.
+\item Задача о китайском почтальоне. Задача о коммивояжёре.
+\end{enumerate}
+{\Large \textbf{\underline{Реализация алгоритма на языке Python 3:}}}
+
+\begin{enumerate}
+\item Считывание матрицы смежности орграфа и вывод списков смежности.
+\item Подсчёт компонент связности поиском в глубину. Реализация на Python 3.
+\item Подсчёт компонент связности поиском в ширину. Реализация на Python 3.
+\item Остовное дерево поиска в глубину. Реализация на Python 3.
+\item Остовное дерево поиска в ширину. Реализация на Python 3.
+\item Алгоритм Дейкстры с восстановлением кратчайшего пути. Реализация на Python 3.
+\item Алгоритм Флойда-Уоршелла. Реализация на Python 3.
+\item Алгоритм Прима. Реализация на Python 3.
+\item Алгоритм Краскала. Реализация на Python 3.
+\item Топологическая сортировка. Алгоритм Кана и Тарьяна. Реализация одного из них на Python 3.
+\end{enumerate}
+
+\begin{center}
+	\textbf{Алгоритмические и теоретические вопросы}
+\end{center}
+\begin{enumerate}
+\item Граф --- множество \textbf{вершин} и инцедентных им \textbf{ребер}.
+$$G=(V, E)$$
+$$v \in V, \qquad e \in E $$
+Говорят, что ребро $e$ \textbf{инцедентно} вершине $v$, если она является его концом.
+
+Допустимы графы:
+$$G = (\varnothing, \varnothing)$$
+$$G = ({1}, \varnothing)$$
+Недопустим граф:
+$$G = (\varnothing, {a})$$
+
+Граф --- "упрощенная модель".
+
+У ребра \underline{2 конца}. Это не обязательно отрезок. 
+
+Ребро может быть \textbf{петлей}.
+
+2 разных ребра могут быть инцедентно двум вершинам --- \textbf{кратные ребра}.
+
+\textbf{Cмежные вершины} --- <<соседи>>, т.е. это вершины, которые имеют общее ребро.
+
+У классического графа 2 конца. Но может быть ориентированный граф. Т.е. либо у ребра 2 конца, либо у него есть начало и конец. Тогда ребро называется дуга. Короткое название \textbf{орграф}.
+
+\item \textbf{Путь} --- последовательность ребер (в которой конец каждого ребра есть начало следующего).
+
+Путь тоже является графом, а точнее это орграф, подграф исходного.
+
+Любой неориентированный граф можно представить как ориентированный.
+
+\textbf{Цикл} --- путь, в котором начало пути (начало первого ребра) совпадает с концом (конец последнего ребра).
+
+Рассмотрим граф A---B.
+
+Возможны пути
+$$[AB, BA]$$
+
+\textbf{Простой путь} --- путь, у которого не повторяются ребра (вершины повторятся могут).
+
+\textbf{Простой цикл} ---  цикл, у которого не повторяются ребра (вершины повторятся могут).
+
+\textbf{Эйлеров цикл} --- простой цикл, включающий все ребра графа.
+
+\item Граф является \textbf{связным}, если для $\forall A,B \in V$ существует путь от $A$ к $B$.\\
+$A\longrightarrow B\longrightarrow C$ --- несвязный граф.
+
+\textbf{Компонента связности} --- связный подграф, в который включены все вершины исходного, связаные с принадлежащими подграфами. Связный граф имеет 1 компоненту связности. Крайний случай: вершины без ребер. Количество компонент связности от 1 до количества вершин.
+
+\textbf{Слабая связность графа} --- "забываем"\  про направленность графов и смотрим на связность.
+
+\textbf{Сильно связный граф} --- граф связан при условии направленности.
+
+\item \textbf{"Вес"\  ребра} --- некоторая числовая характеристика ребра (расстояние, время прохождения, стоимость, энергия реакции и т.д.). Это необязательно положительное число.
+
+\textbf{Взвешенный граф} --- граф, у которого все ребра имеют вес.
+
+\item Есть 3 основные формы хранения:\\
+1. \textbf{Список ребер (множество ребер)}
+\begin{center}
+	AB 5\\
+	BC 3\\
+	CD 1\\
+	DE 2\\
+\end{center}
+2. \textbf{Матрица смежности}\\
+Матрица смежности не умеет хранить кратные ребра (если только массив не трехмерный (но это бред)).
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline 
+		& A & B & C & D & E \\ 
+		\hline 
+		A & x & 1 & 0 & 0 & 0 \\ 
+		\hline 
+		B & 1 & x & 1 & 0 & 0 \\ 
+		\hline 
+		C & 0 & 1 & x & 1 & 0 \\ 
+		\hline 
+		D & 0 & 0 & 1 & x & 1 \\ 
+		\hline 
+		E & 0 & 0 & 0 & 1 & x \\ 
+		\hline 
+	\end{tabular}
+\end{center}
+
+Можно  также составить матрицу взвешенности, если записать в эту матрицу вес каждого ребра.
+
+\noindent3. \textbf{Списки смежности}\\
+\begin{align*}
+&A : B\\
+&B : A, \quad C\\
+&C : B, \quad D\\
+&D : C, \quad E\\
+&E : D\\
+\end{align*}
+
+\item \textbf{Ациклический граф} --- орграф без цикла.
+
+\textbf{Сильно связный граф} --- граф связан при условии направленности.
+
+\textbf{Алгоритм Косарайю} --- алгоритм поиска компонент сильной связности в орграфе.\\
+\textbf{Алгоритм:}
+\begin{enumerate}
+	\item Инвертируем ребра исходного орграфа.
+	\item Запускаем поиск в глубину на этом обращенном графе. В результате получаем вектор обхода.
+	\item Запускаем поиск в глубину на исходном графе, в очередной раз выбирая непосещённую вершину с максимальным номером в векторе, полученном в п.2.
+	\item Полученные из п.3 деревья и являются сильно связными компонентами.
+\end{enumerate}
+
+\item \textbf{Дерево} --- связный граф, в котором
+\begin{enumerate}
+	\item Нет простых циклов
+	\item От a к b только один путь
+	\item $N_{\text{вершин}}=M_{\text{ребер}}+1$
+\end{enumerate}
+\textbf{Остовное дерево} --- пограф исходного графа, в котором выброшено максимальное количество ребер так, чтобы связность еще сохранилась. Обход графа в глубину позволяет построить одно из остовных деревьев.
+
+\item \textbf{Эйлеров цикл} --- простой цикл, включающий все ребра графа.
+
+\textbf{Эйлеров путь} (эйлерова цепь) в графе --- это путь, проходящий по всем рёбрам графа и притом только по одному разу.
+
+\textbf{Эйлеров граф} --- граф, в котором существует Эйлеров цикл.
+
+\textbf{Полуйэлеров граф} --- граф, в котором есть Эйлеров путь, но нет Эйлерого цикла.
+
+\textbf{Не эйлеров граф} --- граф, в котором не существует Эйлерова цикла.
+
+Для того, чтобы граф $G = (V, E)$ был эйлеровым необходимо чтобы:\\
+1. Все вершины имели четную степень.\\
+2. Все компоненты связности кроме, может быть одной, не содержали ребер.\\
+Примеры:\\
+Эйлеров граф: шестичленный цикл.\\
+Не эйлеров граф: квадрат с диагональю.\\
+
+\item \textbf{Гамильтонов цикл}~--- цикл, проходящий через все вершины по одному разу.
+
+\textbf{Гамильтонов путь}~--- путь, проходящий через все вершины по одному разу.
+
+Граф называется \textbf{полугамильтоновым}, если он содержит гамильтонов путь.
+
+Граф называется \textbf{гамильтоновым}, если он содержит гамильтонов цикл.
+
+Граф называется \textbf{не гамильтоновым}, если он не содержит гамильтонов цикл.
+
+\textbf{Пример} гамильтонова цикла: пятиугольник.
+
+\item \textbf{Задача о коммивояжере} --- задача, в которой коммивояжер должен посетить N городов, побывав в каждом из них ровно по одному разу и завершив путешествие в том городе, с которого он начал. В какой последовательности ему нужно обходить города, чтобы общая длина его пути была наименьшей?\\
+Задача о коммивояжере относится к классу \textbf{NP-полных задач} (задачи, решаемые полным перебором).
+
+\textbf{Задача о китайском почтальоне} --- задача, в котором почтальону нужно пройти по каждому ребру графа минимум 1 раз, чтобы доставить почту в каждую вершину. Требуется найти такой цикл минимального суммарного веса. \\
+Если граф эйлеров, то \textbf{эйлеров цикл является решением}. \textbf{Если есть вершины с нечетными степенями} (критерий эйлеровости графа), то решение находится \textbf{только полным перебором}.
+\end{enumerate}
+
+\newpage
+\begin{center}
+\textbf{Реализация алгоритма на языке Python 3}
+\end{center}
+
+\begin{enumerate}
+\item \begin{infa}{Считывание графа как матрицы и как списка смежностей}
+		\ \num \defi read_graph_as_matrix():
+		\ \num \tab N, M = [\inti(x) \fori x \ini \inputi().split()]
+		\ \num \tab graph = [[0]*N \fori i \ini \rangei(N)] \com{матрица смежностей}
+		\ \num \tab \fori edge \ini \rangei(M):
+		\ \num \tab \tab a, b = [\inti(x) \fori x \ini \inputi().split()]
+		\ \num \tab \tab graph[a][b] = 1
+		\ \num \tab \tab graph[b][a] = 1
+		\ \num \tab \returni graph
+		\ \num
+		\num \defi print2d(A):
+		\num \tab \fori line \ini A:
+		\num \tab \tab print(*line)
+		\num \tab \printi()
+		\num
+		\num \defi read_graph_as_lists():
+		\num \tab N, M = [\inti(x) \fori x \ini \inputi().split()]
+		\num \tab graph = [[] \fori i \ini \rangei(N)]
+		\num \tab \fori edge \ini \rangei(M):
+		\num \tab \tab a, b = [\inti(x) \fori x \ini \inputi().split()]
+		\num \tab \tab graph[a].append(b)
+		\num \tab \tab graph[b].append(a) \com{Для ориентированного графа строка не нужна}
+		\num \tab \returni graph
+		\num
+		\num graph = read_graph_as_lists()
+		\num print2d(graph)
+	\end{infa}
+
+\item \begin{infa}{Реализация алгоритма обхода графа в глубину и подсчет компонент связности}
+	\ \num \defi dfs(vertex, graph, used = \Nonei): \com{Depth-first search}
+	\ \num \tab \ifi used \isi \Nonei:
+	\ \num \tab \tab used = \seti()
+	\ \num \tab used.add(vertex)
+	\ \num \tab \fori neighbour \ini graph[vertex]:
+	\ \num \tab \tab \ifi neighbour \noti \ini used:
+	\ \num \tab \tab \tab dfs(neighbour, graph, used) 
+	\ \num
+	\ \num graph = read_graph_as_lists()
+	\num used = \seti()
+	\num number_of_components = 0
+	\num \fori vertex \ini \rangei(\leni(graph)): \com{Подсчет компонент связности}
+	\num \tab \ifi vertex \noti \ini used:
+	\num \tab \tab dfs(vertex, graph, used)
+	\num \tab \tab number_of_components += 1
+	\num
+	\num \printi('Количество компонент связности:', number_of_components)
+\end{infa}
+
+\item \begin{infa}{Реализация алгоритма BFS и подсчет компонент связности}
+	\ \num \defi bfs_fire(G, start, fired = \Nonei):
+	\ \num \tab \ifi fired \isi \Nonei:
+	\ \num \tab \tab fired = \seti()
+	\ \num \tab fired.add(start)
+	\ \num \tab time = \{start: 0\} \com{Хранение времен их добывания}
+	\ \num \tab Q = [start]
+	\ \num \tab \whilei Q:
+	\ \num \tab \tab current = Q.pop(0) \com{Для списка это не эффективно}
+	\ \num \tab \tab \fori neighbour \ini G[current]:
+	\num \tab \tab \tab \ifi neighbour \noti \ini fired:
+	\num \tab \tab \tab \tab fired.add(neighbour)
+	\num \tab \tab \tab \tab Q.append(neighbour)
+	\num \tab \tab \tab \tab \printi(current, neighbour) \com{Для построения остовного дерева}
+	\num \tab \tab \tab \tab time[neighbour] = time[current] + 1
+	\num
+	\num graph = read_graph_as_lists()
+	\num used = \seti()
+	\num number_of_components = 0
+	\num \fori vertex \ini \rangei(\leni(graph)): \com{Подсчет компонент связности}
+	\num \tab \ifi vertex \noti \ini used:
+	\num \tab \tab bfs_fire(graph, vertex, used)
+	\num \tab \tab number_of_components += 1
+	\num
+	\num \printi('Количество компонент связности:', number_of_components)
+\end{infa}
+
+\item \begin{infa}{Реализация алгоритма обхода графа в глубину и подсчет компонент связности}
+	\ \num \defi dfs(vertex, graph, used = \Nonei, tree = []): \com{Добавим tree}
+	\ \num \tab \ifi used \isi \Nonei:
+	\ \num \tab \tab used = \seti()
+	\ \num \tab used.add(vertex)
+	\ \num \tab \fori neighbour \ini graph[vertex]:
+	\ \num \tab \tab \ifi neighbour \noti \ini used:
+	\ \num \tab \tab \tab tree.append((vertex, neighbour)) \com{К дереву добавим}
+	\ \num \tab \tab \tab dfs(neighbour, graph, used, tree) 
+	\ \num \tab \returni tree
+	\end{infa}
+\item Как в п.3. строка 13.
+\item \begin{infa}{Реализация алгоритма Дейкстры}
+	\ \num \defi dijkstra(G, start): \com{G - словарь словарей с весами}
+	\ \num \tab d = \{v: float('+inf') \fori v \ini G\}
+	\ \num \tab d[start] = 0
+	\ \num \tab used = \seti()
+	\ \num \tab \whilei \leni(used) != \leni(G):
+	\ \num \tab \tab min_d = float('+inf')
+	\ \num \tab \tab \fori v \ini d:
+	\ \num \tab \tab \tab \ifi d[v] < min_d \andi v \noti \ini used:
+	\ \num \tab \tab \tab \tab current = v
+	\num \tab \tab \tab \tab min_d = d[v]
+	\num \tab \tab \fori neighbour \ini G[current]:
+	\num \tab \tab \tab l = d[current] + G[current][neighbour]
+	\num \tab \tab \tab \ifi l < d[neighbour]:
+	\num \tab \tab \tab \tab d[neighbour] = l
+	\num \tab \tab used.add(current)
+	\num \tab \returni d \com{Алгоритм не эффективен}
+\end{infa}
+
+\item \begin{infa}{Реализация алгоритма Флойда-Уоршела}
+	\num A = [[[INF]*n \fori i \ini \rangei(n)] \fori k \ini \rangei(n+1)] \com{INF - условная\\\phantom{6\ \ \ \ }бесконечность, n - число ребер}
+	\num \fori i \ini \rangei(n):
+	\num \tab A[0][i][:] = W[i] \com{При копировании весовой матрицы W расстояние от вершины\\\phantom{6\ \ \ \ }до себя равно нулю; забиваем матрицу рёбер т.е. расстояния в начальный момент.}
+	\num \fori k \ini \rangei(1, n+1):
+	\num \tab \fori i \ini \rangei(n):
+	\num \tab \tab \fori j \ini \rangei(n):
+	\num \tab \tab \tab A[k][i][j] = \mini(A[k-1][i][j], A[k-1][i][k]+A[k-1][k][j]) \com{Добав-\\\phantom{6\ \ \ \ }ляем путь от i до j вершины через новую вершину, если такой путь короче}
+\end{infa}
+
+\item \begin{infa}{Реализация алгоритма Прима}
+	\ \num INF = 10**9 \com{Введем условную бесконечность}
+	\ \num dist = [INF]*N \com{W[i][j] - вес ребра ij, который равен +бесконечность,\\ \phantom{\ 2\tab }если i не смежна j} 
+	\ \num dist[0] = 0
+	\ \num used = [\Falsei]*N
+	\ \num used[0] = \Truei
+	\ \num tree = []
+	\ \num tree_weight = 0
+	\ \num \fori i \ini \rangei(N):
+	\ \num \tab min_d = INF
+	\num \tab \fori j \ini \rangei(N):
+	\num \tab \tab \ifi \noti used[j] \andi dist[j] < min_d:
+	\num \tab \tab \tab min_d = dist[j]
+	\num \tab \tab \tab u = j
+	\num \tab tree.append((i, u))
+	\num \tab tree_weight += min_d
+	\num \tab used[u] = \Truei
+	\num \tab \fori v \ini \rangei(N):
+	\num \tab \tab dist[v] = \mini(dist[v], W[u][v])
+\end{infa}
+
+\item \begin{infa}{Реализация алгоритма Краскала}
+	\ \num N, M = [\inti(x) \fori x \ini \inputi().split()]
+	\ \num edges = []
+	\ \num \fori i \ini \rangei(M): 
+	\ \num \tab v1, v2, weight = \mapi(\inti, \inputi().split())
+	\ \num \tab edges.append((weight, v1, v2)) \com{Сначала будем добавлять вес}
+	\ \num edges.sort()
+	\ \num comp = \listi(range(N))
+	\ \num tree = []
+	\ \num tree_weight = 0
+	\num \fori weight, v1, v2 \ini edges:
+	\num \tab \ifi comp[v1] != comp[v2]:
+	\num \tab \tab tree.append((v1, v2))
+	\num \tab \tab tree_weight += weight
+	\num \tab \tab \fori i \ini \rangei(N):
+	\num \tab \tab \tab \ifi comp[i] == comp[v2]:
+	\num \tab \tab \tab \tab comp[i] = comp[v1]
+\end{infa}
+
+\item 
+\textbf{Топологическая сортировка} — упорядочивание вершин бесконтурного ориентированного графа согласно частичному порядку, заданному ребрами орграфа на множестве его вершин.
+\begin{infa}{Топологическая сортировка, алгоритм Тарьяна}
+\ \num Visited = [\Falsei]*(n + 1)
+\ \num Ans = []
+\ \num 
+\ \num \defi DFS(start):
+\ \num \tab Visited[start] = \Truei
+\ \num \tab \fori u \ini V[start]:
+\ \num \tab \tab \ifi \noti Visited[u]:
+\ \num \tab \tab \tab DFS(u)
+\ \num \tab Ans.append(start)
+\num
+\num \fori i \ini \rangei(1, n + 1): 
+\num \tab \ifi \noti Visited(i): 
+\num \tab \tab DFS(i) 
+\num Ans = Ans[::-1]
+\end{infa}
+\end{enumerate}
+
+
+\begin{center}
+	\vfill \emph{{\small Г. С. Демьянов, \href{https://vk.com/id37346992}{VK}\\
+	%		С. С. Клявинек, \href{https://vk.com/id85132547}{VK}
+	}}
+\end{center}
+\end{document} 
