@@ -4,6 +4,7 @@ $\phi: M_{2\times 2}\rightarrow M_{2\times 1}, \phi(\textbf{x})=\textbf{x}\begin
 	1\\4\\
 	\end{psm}$. Найти матрицу линейного преобразования $A$.
 \end{prim}\\
+
 Запишем базисы:\\
 $M_{2\times 2}: \textbf{e}
 \left\{
@@ -101,7 +102,7 @@ $A\alpha \textbf{x}=\alpha A\textbf{x}$.
 \end{center}
 Выберем в $L$ базис $\textbf{e}:\{\textbf{e$_1$}, \textbf{e$_2$}, \dots, \textbf{e$_n$}\}$.\\
 $\forall \textbf{x} \in L: \textbf{x}=\alpha_1\textbf{e$_1$}+\dots+\alpha_n\textbf{e$_n$} \leftarrow \phi$ (это обозначение значит <<подействуем преобразованием $\phi$>>)\\
-$\phi(\textbf{x})=\alpha_1 \underset{=\textbf{a$_1$}}{\phi(\textbf{e$_1$})}+\dots+\alpha_n \underset{=\textbf{a$_2$}}{\phi(\textbf{e$_n$})}=\langle \textbf{a$_1$},\dots, \textbf{a$_n$}\rangle$.\\
+$\phi(\textbf{x})=\alpha_1 \underset{=\textbf{a$_1$}}{\phi(\textbf{e$_1$})}+\dots+\alpha_n \underset{=\textbf{a$_n$}}{\phi(\textbf{e$_n$})}=\langle \textbf{a$_1$},\dots, \textbf{a$_n$}\rangle$.\\
 Заметим, что $\textbf{a$_1$},\dots, \textbf{a$_n$}$ --- столбцы матрицы $A$. Отсюда следует формула:
 \begin{equation}
 \boxed{\dim\im\phi=\Rg A=r}.
@@ -123,6 +124,7 @@ $\phi(\textbf{x})=\alpha_1 \underset{=\textbf{a$_1$}}{\phi(\textbf{e$_1$})}+\dot
 	1\\1\\1\\1\\
 \end{psm}$.
 \end{prim}\\
+
 $\phi: A\textbf{x}=\textbf{y}$, т.е. нужно перемножить матрицу $A$ и вектор $\textbf{x}$.\\
 $
 \begin{psm}
@@ -144,4 +146,5 @@ $
 	4\\0\\3
 \end{psm}.$
 \end{prim}\\
+
 Итак $\phi: \underline{A}\textbf{x}=\underline{\textbf{y}}$. Мы знаем то, что подчёркнуто. Очевидно, что мы получили СЛУ относительно \textbf{x}. Решим ее.

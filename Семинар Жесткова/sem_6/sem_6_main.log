@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.12.11)  26 MAR 2017 17:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.11.13)  27 MAR 2017 22:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -705,6 +705,10 @@ LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (d:/texlive/2016/texmf-dist/tex/latex/extsizes/extsizes.sty
 Package: extsizes 1996/10/08 v1.0 Non Standard LaTeX Package
 
+
+Package ExtSizes Warning: It is better to use one of the extsizes classes,
+ if you can.
+
 (d:/texlive/2016/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 ))
@@ -721,7 +725,7 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 Package: csquotes 2016/07/14 v5.1h context-sensitive quotations (JAW)
 
 (d:/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2016/12/01 v2.2b e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count104
 )
 \csq@reset=\count105
@@ -1025,9 +1029,10 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LT@p@ftn=\toks33
 )
 (d:/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+Package: multirow 2016/10/11 v2.1 Span multiple rows of a table
 \multirow@colwidth=\skip62
-\multirow@cntb=\count143
+\multirow@cnta=\count143
+\multirow@cntb=\count144
 \multirow@dima=\skip63
 \bigstrutjot=\dimen164
 )
@@ -1045,7 +1050,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen170
 \caption@hangindent=\dimen171
 )
-\c@ContinuedFloat=\count144
+\c@ContinuedFloat=\count145
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
@@ -1072,7 +1077,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen177
 \enit@toks=\toks35
 \enit@inbox=\box60
-\enitdp@description=\count145
+\enitdp@description=\count146
 )
 (d:/texlive/2016/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
@@ -1080,17 +1085,17 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks37
 \verbatim@in@stream=\read1
 )
-\c@theorem=\count146
-\c@definition=\count147
-\c@corollary=\count148
-\c@problem=\count149
-\c@zamech=\count150
+\c@theorem=\count147
+\c@definition=\count148
+\c@corollary=\count149
+\c@problem=\count150
+\c@zamech=\count151
 
 (d:/texlive/2016/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-\c@infa=\count151
-\c@num=\count152
+\c@infa=\count152
+\c@num=\count153
 )
 (d:/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -1110,7 +1115,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-\c@prim=\count153
+\c@prim=\count154
 
 (d:/texlive/2016/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2016/07/07 v1.2b Bold Symbol Support (DPC/FMi)
@@ -1123,9 +1128,9 @@ LaTeX Info: Redefining \bm on input line 208.
 )
 (d:/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count154
-\Gm@cntv=\count155
-\c@Gm@tempcnt=\count156
+\Gm@cnth=\count155
+\Gm@cntv=\count156
+\c@Gm@tempcnt=\count157
 \Gm@bindingoffset=\dimen178
 \Gm@wd@mp=\dimen179
 \Gm@odd@mp=\dimen180
@@ -1174,16 +1179,16 @@ Package gensymb Warning: Not defining \micro.
 
 (d:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count157
+\scratchcounter=\count158
 \scratchdimen=\dimen186
 \scratchbox=\box61
-\nofMPsegments=\count158
-\nofMParguments=\count159
+\nofMPsegments=\count159
+\nofMParguments=\count160
 \everyMPshowfont=\toks39
-\MPscratchCnt=\count160
+\MPscratchCnt=\count161
 \MPscratchDim=\dimen187
-\MPnumerator=\count161
-\makeMPintoPDFobject=\count162
+\MPnumerator=\count162
+\makeMPintoPDFobject=\count163
 \everyMPtoPDFconversion=\toks40
 ) (d:/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1211,7 +1216,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (d:/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count163
+\c@section@level=\count164
 )
 LaTeX Info: Redefining \ref on input line 32.
 LaTeX Info: Redefining \pageref on input line 32.
@@ -1274,32 +1279,69 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 3.
 (d:/texlive/2016/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 1--42
+Underfull \hbox (badness 10000) in paragraph at lines 1--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--43
 
  []
 
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 86.
+(babel)             in language  on input line 87.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 86.
-) (./sem_6_page5n6.tex
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 4.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 4.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 4.
- [1
+(babel)             in language  on input line 87.
 
-{d:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T2A+cmss on input line 13.
+Underfull \hbox (badness 10000) in paragraph at lines 122--127
 
- (d:/texlive/2016/texmf-dist/tex/latex/cyrillic/t2acmss.fd
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--149
+
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 149.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 149.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 149.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 149.
+[1
+
+{d:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+(./sem_6_page3n4.tex
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--107
+
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 147.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 147.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 152.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 152.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 152.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 152.
+[2]) (./sem_6_page5n6.tex
+LaTeX Font Info:    Try loading font information for T2A+cmss on input line 5.
+
+(d:/texlive/2016/texmf-dist/tex/latex/cyrillic/t2acmss.fd
 File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 15--18
+Underfull \hbox (badness 10000) in paragraph at lines 15--19
 
  []
 
@@ -1312,7 +1354,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--72
 
  []
 
-
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 72.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 72.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 72.
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
@@ -1322,15 +1372,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--95
 
  []
 
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 95.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 95.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 95.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 95.
-[2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
@@ -1341,82 +1383,93 @@ Package babel Info: Redefining russian shorthand "|
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 21.
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--39
+Underfull \hbox (badness 10000) in paragraph at lines 37--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--54
+Underfull \hbox (badness 10000) in paragraph at lines 47--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--54
+Underfull \hbox (badness 10000) in paragraph at lines 47--56
+
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 56.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 56.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 56.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 56.
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 56.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 54.
- [3]
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 54.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 54.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 54.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 54.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
+(babel)             in language  on input line 56.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
  (./sem_6_main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
 Package rerunfilecheck Info: File `sem_6_main.out' has not changed.
-(rerunfilecheck)             Checksum: 6C13237D964A1F8C04D2325B073B4136;750.
+(rerunfilecheck)             Checksum: B34693D4911BAD41811F13C917820D96;993.
  ) 
 Here is how much of TeX's memory you used:
- 15598 strings out of 493013
- 219187 string characters out of 6136992
- 333117 words of memory out of 5000000
- 18812 multiletter control sequences out of 15000+600000
- 24512 words of font info for 70 fonts, out of 8000000 for 9000
+ 15661 strings out of 493013
+ 220015 string characters out of 6136992
+ 337102 words of memory out of 5000000
+ 18839 multiletter control sequences out of 15000+600000
+ 32161 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,15n,38p,925b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,15n,38p,925b,536s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<d:/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2016/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2016/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmib10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/201
-6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2016/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2016/texmf-dist/fonts/
-type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2016/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/pu
-blic/cm-super/sfbx0800.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-su
-per/sfbx1200.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx17
-28.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:
-/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><d:/texlive/2
-016/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on sem_6_main.pdf (4 pages, 209495 bytes).
+st/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><d:/texlive/2016/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb><d:/texlive/2016/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.p
+fb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2016/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><d:/texlive/2016/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2016/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/sy
+mbols/msam10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx0800.p
+fb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/tex
+live/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2016/
+texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><d:/texlive/2016/texmf-dist
+/fonts/type1/public/cm-super/sfrm0700.pfb><d:/texlive/2016/texmf-dist/fonts/typ
+e1/public/cm-super/sfrm0800.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/
+cm-super/sfrm1000.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/s
+frm1200.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfss1200.pf
+b><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb><d:/texl
+ive/2016/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on sem_6_main.pdf (5 pages, 297063 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 180 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
+ 18 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
