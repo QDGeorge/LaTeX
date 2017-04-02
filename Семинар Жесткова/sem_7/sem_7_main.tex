@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{article}
+
+\input{preambula}
+
+
+\usepackage{graphicx,xcolor}
+
+\newcounter{prim}
+\newenvironment{prim}{%
+	\addtocounter{prim}{1}
+	\noindent{\\
+		\textbf{\noindentПример \arabic{prim}\\}}%
+}{}
+\definecolor{orange}{rgb}{1, 0.7, 0.1}
+%\usepackage{ulem}
+
+\usepackage{bm} %жирный греческий шрифт
+
+\newenvironment{psm}
+{\left(\begin{smallmatrix*}[r]}
+	{\end{smallmatrix*}\right)}
+
+\newenvironment{pmatrixr}
+{\begin{pmatrix*}[r]}
+	{\end{pmatrix*}}
+
+
+\title{sem_J_7}
+\author{Георгий Демьянов}
+\date{today}
+\usepackage[left=1.27cm,right=1.27cm,top=1.27cm,bottom=2cm]{geometry}
+\begin{document}
+\paragraph{{\LARGE Семинар 7. Инвариантные и собственные подпространства. Часть 1.}\\}
+\input{sem_7_page1n2}
+\input{sem_7_page2n3}
+\input{sem_7_page4}
+\input{sem_7_page5_1}
+\input{sem_7_page5_2}
+
+
+
+
+
+
+
+\begin{comment}
+\begin{center}
+	\vfill \emph{{\small Команда \href{https://vk.com/botay_fizteh}{BOTAY!}:\\
+			Д. Георгий, \href{https://vk.com/id37346992}{VK}\\
+			С. Паша,
+			\href{https://vk.com/id181006282}{VK}\\
+			Г. Мадина, \href{https://vk.com/id226312463}{VK}\\
+			К. Ксения, \href{https://vk.com/id143862366}{VK}\\
+	}}
+\end{center}
+\end{comment}
+\end{document}}

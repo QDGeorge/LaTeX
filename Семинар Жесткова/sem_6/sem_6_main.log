@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.11.13)  27 MAR 2017 22:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.12.11)  2 APR 2017 13:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -705,10 +705,6 @@ LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (d:/texlive/2016/texmf-dist/tex/latex/extsizes/extsizes.sty
 Package: extsizes 1996/10/08 v1.0 Non Standard LaTeX Package
 
-
-Package ExtSizes Warning: It is better to use one of the extsizes classes,
- if you can.
-
 (d:/texlive/2016/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 ))
@@ -725,7 +721,7 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 Package: csquotes 2016/07/14 v5.1h context-sensitive quotations (JAW)
 
 (d:/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2016/12/01 v2.2b e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count104
 )
 \csq@reset=\count105
@@ -1029,10 +1025,9 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LT@p@ftn=\toks33
 )
 (d:/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2016/10/11 v2.1 Span multiple rows of a table
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip62
-\multirow@cnta=\count143
-\multirow@cntb=\count144
+\multirow@cntb=\count143
 \multirow@dima=\skip63
 \bigstrutjot=\dimen164
 )
@@ -1050,7 +1045,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen170
 \caption@hangindent=\dimen171
 )
-\c@ContinuedFloat=\count145
+\c@ContinuedFloat=\count144
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
@@ -1077,7 +1072,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen177
 \enit@toks=\toks35
 \enit@inbox=\box60
-\enitdp@description=\count146
+\enitdp@description=\count145
 )
 (d:/texlive/2016/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
@@ -1085,17 +1080,17 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks37
 \verbatim@in@stream=\read1
 )
-\c@theorem=\count147
-\c@definition=\count148
-\c@corollary=\count149
-\c@problem=\count150
-\c@zamech=\count151
+\c@theorem=\count146
+\c@definition=\count147
+\c@corollary=\count148
+\c@problem=\count149
+\c@zamech=\count150
 
 (d:/texlive/2016/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-\c@infa=\count152
-\c@num=\count153
+\c@infa=\count151
+\c@num=\count152
 )
 (d:/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -1115,7 +1110,7 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-\c@prim=\count154
+\c@prim=\count153
 
 (d:/texlive/2016/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2016/07/07 v1.2b Bold Symbol Support (DPC/FMi)
@@ -1128,9 +1123,9 @@ LaTeX Info: Redefining \bm on input line 208.
 )
 (d:/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count155
-\Gm@cntv=\count156
-\c@Gm@tempcnt=\count157
+\Gm@cnth=\count154
+\Gm@cntv=\count155
+\c@Gm@tempcnt=\count156
 \Gm@bindingoffset=\dimen178
 \Gm@wd@mp=\dimen179
 \Gm@odd@mp=\dimen180
@@ -1179,16 +1174,16 @@ Package gensymb Warning: Not defining \micro.
 
 (d:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count158
+\scratchcounter=\count157
 \scratchdimen=\dimen186
 \scratchbox=\box61
-\nofMPsegments=\count159
-\nofMParguments=\count160
+\nofMPsegments=\count158
+\nofMParguments=\count159
 \everyMPshowfont=\toks39
-\MPscratchCnt=\count161
+\MPscratchCnt=\count160
 \MPscratchDim=\dimen187
-\MPnumerator=\count162
-\makeMPintoPDFobject=\count163
+\MPnumerator=\count161
+\makeMPintoPDFobject=\count162
 \everyMPtoPDFconversion=\toks40
 ) (d:/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1216,7 +1211,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (d:/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count164
+\c@section@level=\count163
 )
 LaTeX Info: Redefining \ref on input line 32.
 LaTeX Info: Redefining \pageref on input line 32.
@@ -1430,13 +1425,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 56.
  (./sem_6_main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 56.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 56.
-Package rerunfilecheck Info: File `sem_6_main.out' has not changed.
-(rerunfilecheck)             Checksum: B34693D4911BAD41811F13C917820D96;993.
+
+
+Package rerunfilecheck Warning: File `sem_6_main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `sem_6_main.out':
+(rerunfilecheck)             Before: 5C2C4910B68900E55BD3588606917E82;997
+(rerunfilecheck)             After:  B34693D4911BAD41811F13C917820D96;993.
  ) 
 Here is how much of TeX's memory you used:
  15661 strings out of 493013
- 220015 string characters out of 6136992
- 337102 words of memory out of 5000000
+ 220020 string characters out of 6136992
+ 337117 words of memory out of 5000000
  18839 multiletter control sequences out of 15000+600000
  32161 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191

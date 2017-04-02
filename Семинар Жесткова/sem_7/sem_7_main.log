@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.12.11)  1 APR 2017 23:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.12.11)  2 APR 2017 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./sem_5_main.tex
-(./sem_5_main.tex
+**./sem_7_main.tex
+(./sem_7_main.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (d:/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -1074,17 +1074,25 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box60
 \enitdp@description=\count145
 )
+(d:/texlive/2016/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks36
+\verbatim@line=\toks37
+\verbatim@in@stream=\read1
+)
 \c@theorem=\count146
-\c@definition=\count147
-\c@corollary=\count148
-\c@problem=\count149
-\c@zamech=\count150
+\c@predlog=\count147
+\c@lemma=\count148
+\c@definition=\count149
+\c@corollary=\count150
+\c@problem=\count151
+\c@zamech=\count152
 
 (d:/texlive/2016/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-\c@infa=\count151
-\c@num=\count152
+\c@infa=\count153
+\c@num=\count154
 )
 (d:/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -1104,13 +1112,22 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-\c@prim=\count153
+\c@prim=\count155
 
+(d:/texlive/2016/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2016/07/07 v1.2b Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup9
+\symboldletters=\mathgroup10
+\symboldsymbols=\mathgroup11
+\symboldugrf@m=\mathgroup12
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 142.
+LaTeX Info: Redefining \bm on input line 208.
+)
 (d:/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count154
-\Gm@cntv=\count155
-\c@Gm@tempcnt=\count156
+\Gm@cnth=\count156
+\Gm@cntv=\count157
+\c@Gm@tempcnt=\count158
 \Gm@bindingoffset=\dimen178
 \Gm@wd@mp=\dimen179
 \Gm@odd@mp=\dimen180
@@ -1119,80 +1136,57 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@layoutheight=\dimen183
 \Gm@layouthoffset=\dimen184
 \Gm@layoutvoffset=\dimen185
-\Gm@dimlist=\toks36
+\Gm@dimlist=\toks38
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'russian'.
- (./sem_5_main.aux
+ (./sem_7_main.aux)
+\openout1 = `sem_7_main.aux'.
 
-LaTeX Warning: Label `...' multiply defined.
-
-
-LaTeX Warning: Label `...' multiply defined.
-
-
-LaTeX Warning: Label `...' multiply defined.
-
-
-LaTeX Warning: Label `...' multiply defined.
-
-
-LaTeX Warning: Label `...' multiply defined.
-
-
-LaTeX Warning: Label `...' multiply defined.
-
-
-LaTeX Warning: Label `...' multiply defined.
-
-)
-\openout1 = `sem_5_main.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Info: Redefining \celsius on input line 30.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 30.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Info: Redefining \celsius on input line 32.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 32.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 30.
-Package gensymb Info: Using \Omega for \ohm on input line 30.
+LaTeX Info: Redefining \ohm on input line 32.
+Package gensymb Info: Using \Omega for \ohm on input line 32.
 
 Package gensymb Warning: Not defining \micro.
 
 (d:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count157
+\scratchcounter=\count159
 \scratchdimen=\dimen186
 \scratchbox=\box61
-\nofMPsegments=\count158
-\nofMParguments=\count159
-\everyMPshowfont=\toks37
-\MPscratchCnt=\count160
+\nofMPsegments=\count160
+\nofMParguments=\count161
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count162
 \MPscratchDim=\dimen187
-\MPnumerator=\count161
-\makeMPintoPDFobject=\count162
-\everyMPtoPDFconversion=\toks38
+\MPnumerator=\count163
+\makeMPintoPDFobject=\count164
+\everyMPtoPDFconversion=\toks40
 ) (d:/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1211,7 +1205,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring ON on input line 30.
+Package hyperref Info: Link coloring ON on input line 32.
 
 (d:/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1219,15 +1213,15 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (d:/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count163
+\c@section@level=\count165
 )
-LaTeX Info: Redefining \ref on input line 30.
-LaTeX Info: Redefining \pageref on input line 30.
-LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
 
-(./sem_5_main.out) (./sem_5_main.out)
+(./sem_7_main.out) (./sem_7_main.out)
 \@outlinefile=\write3
-\openout3 = `sem_5_main.out'.
+\openout3 = `sem_7_main.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -1266,296 +1260,258 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./sem_5_page_1n2.tex
+(./sem_7_page1n2.tex
 Package babel Info: Redefining russian shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 1.
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 
 (d:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
 (d:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 3.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 2.
 
 (d:/texlive/2016/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for T2A+cmss on input line 3.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 3.
+LaTeX Font Info:    Try loading font information for T2A+cmss on input line 5.
 
 (d:/texlive/2016/texmf-dist/tex/latex/cyrillic/t2acmss.fd
 File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-) (./surekt.pdf_tex
-<surekt.pdf, id=17, page=1, 349.73636pt x 374.17415pt>
-File: surekt.pdf Graphic file (type pdf)
-
-<use surekt.pdf, page 1>
-Package pdftex.def Info: surekt.pdf, page1 used on input line 52.
-(pdftex.def)             Requested size: 142.26378pt x 152.202pt.
-
-<surekt.pdf, id=18, page=2, 349.73636pt x 374.17415pt>
-File: surekt.pdf Graphic file (type pdf)
-
-<use surekt.pdf, page 2>
-Package pdftex.def Info: surekt.pdf, page2 used on input line 55.
-(pdftex.def)             Requested size: 142.26378pt x 152.202pt.
-) (./inekt.pdf_tex
-<inekt.pdf, id=19, page=1, 349.73636pt x 370.62463pt>
-File: inekt.pdf Graphic file (type pdf)
- <use inekt.pdf, page 1>
-Package pdftex.def Info: inekt.pdf, page1 used on input line 52.
-(pdftex.def)             Requested size: 142.26378pt x 150.75816pt.
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 52.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 12.
 
 (d:/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 23.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 50.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 50.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 51.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 51.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 74.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 74.
  [1
 
-{d:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./surekt.pdf> <
-./surekt.pdf
-
-pdfTeX warning: pdflatex.exe (file ./surekt.pdf): PDF inclusion: multiple pdfs 
-with page group included in a single page
-> <./inekt.pdf
-
-pdfTeX warning: pdflatex.exe (file ./inekt.pdf): PDF inclusion: multiple pdfs w
-ith page group included in a single page
->] (./prim1.pdf_tex <prim1.pdf, id=44, page=1, 213.49673pt x 173.91121pt>
-File: prim1.pdf Graphic file (type pdf)
-
-<use prim1.pdf, page 1>
-Package pdftex.def Info: prim1.pdf, page1 used on input line 52.
-(pdftex.def)             Requested size: 142.26378pt x 115.89096pt.
-) (./prim1b.pdf_tex
-<prim1b.pdf, id=45, page=1, 324.00534pt x 283.0678pt>
-File: prim1b.pdf Graphic file (type pdf)
- <use prim1b.pdf, page 1>
-Package pdftex.def Info: prim1b.pdf, page1 used on input line 52.
-(pdftex.def)             Requested size: 142.26378pt x 124.28673pt.
-)
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 117.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 117.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 132.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 132.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 132.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 132.
-[2 <./prim1.pdf> <./prim1b.pdf
-
-pdfTeX warning: pdflatex.exe (file ./prim1b.pdf): PDF inclusion: multiple pdfs 
-with page group included in a single page
->] (./prim2.pdf_tex <prim2.pdf, id=62, page=1, 312.34698pt x 325.05804pt>
-File: prim2.pdf Graphic file (type pdf)
-
-<use prim2.pdf, page 1>
-Package pdftex.def Info: prim2.pdf, page1 used on input line 52.
-(pdftex.def)             Requested size: 85.35826pt x 88.82828pt.
- <prim2.pdf, id=63, page=2, 312.34698pt x 325.05804pt>
-File: prim2.pdf Graphic file (type pdf)
-
-<use prim2.pdf, page 2>
-Package pdftex.def Info: prim2.pdf, page2 used on input line 56.
-(pdftex.def)             Requested size: 85.35826pt x 88.82828pt.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 155--165
-
- []
-
-(./prim3.pdf_tex <prim3.pdf, id=65, page=1, 454.67517pt x 247.19751pt>
-File: prim3.pdf Graphic file (type pdf)
-
-<use prim3.pdf, page 1>
-Package pdftex.def Info: prim3.pdf, page1 used on input line 52.
-(pdftex.def)             Requested size: 170.71652pt x 92.81198pt.
- <prim3.pdf, id=66, page=2, 454.67517pt x 247.19751pt>
-File: prim3.pdf Graphic file (type pdf)
-
-<use prim3.pdf, page 2>
-Package pdftex.def Info: prim3.pdf, page2 used on input line 56.
-(pdftex.def)             Requested size: 170.71652pt x 92.81198pt.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 183--203
-
- []
-
-) (./5_sem_4_page_fin.tex
+{d:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) (./sem_7_page2
+n3.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--4
 
  []
 
-(./prim4.pdf_tex <prim4.pdf, id=67, page=1, 494.52083pt x 296.85722pt>
-File: prim4.pdf Graphic file (type pdf)
 
-<use prim4.pdf, page 1>
-Package pdftex.def Info: prim4.pdf, page1 used on input line 52.
-(pdftex.def)             Requested size: 170.71652pt x 102.47925pt.
+Underfull \hbox (badness 10000) in paragraph at lines 12--14
+
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 15.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 15.
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
+
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 45.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 49.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 49.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 49.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 49.
+[2]
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 50.
+
+Overfull \hbox (7.68025pt too wide) in paragraph at lines 57--57
+|[]\T2A/cmr/bx/n/17.28 Алгоритм по-ис-ка соб-ствен-ных зна-че-ний и соб-ствен-н
+ых век-
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 57.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 57.
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--85
+
+ []
+
+) (./sem_7_page4.tex
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 70.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 70.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 70.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 70.
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 73--108
+
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 109.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 109.
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--136
+
+ []
+
+) (./sem_7_page5_1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 59--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--100
+
+ []
+
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 100.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 100.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 100.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 100.
+[4]) (./sem_7_page5_2.tex
+Underfull \hbox (badness 10000) in paragraph at lines 10--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--47
+
+ []
+
 )
-Underfull \hbox (badness 10000) in paragraph at lines 14--49
-
- []
-
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 57.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 57.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 49.
+(babel)             in language  on input line 57.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 49.
-[3 <./prim2.pdf> <./prim2.pdf
-
-pdfTeX warning: pdflatex.exe (file ./prim2.pdf): PDF inclusion: multiple pdfs w
-ith page group included in a single page
-> <./prim3.pdf
-
-pdfTeX warning: pdflatex.exe (file ./prim3.pdf): PDF inclusion: multiple pdfs w
-ith page group included in a single page
-> <./prim3.pdf
-
-pdfTeX warning: pdflatex.exe (file ./prim3.pdf): PDF inclusion: multiple pdfs w
-ith page group included in a single page
-> <./prim4.pdf
-
-pdfTeX warning: pdflatex.exe (file ./prim4.pdf): PDF inclusion: multiple pdfs w
-ith page group included in a single page
->]
-Underfull \hbox (badness 10000) in paragraph at lines 56--61
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--61
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--61
-
- []
-
-(./prim5.pdf_tex <prim5.pdf, id=84, page=1, 494.52083pt x 337.5167pt>
-File: prim5.pdf Graphic file (type pdf)
-
-<use prim5.pdf, page 1>
-Package pdftex.def Info: prim5.pdf, page1 used on input line 52.
-(pdftex.def)             Requested size: 227.62204pt x 155.35226pt.
- <prim5.pdf, id=85, page=2, 494.52083pt x 337.5167pt>
-File: prim5.pdf Graphic file (type pdf)
-
-<use prim5.pdf, page 2>
-Package pdftex.def Info: prim5.pdf, page2 used on input line 54.
-(pdftex.def)             Requested size: 227.62204pt x 155.35226pt.
-)
-Overfull \hbox (17.5302pt too wide) in paragraph at lines 59--66
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-
- []
-
-) (./5_sem_5_fin.tex
-Underfull \hbox (badness 10000) in paragraph at lines 73--31
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--39
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
-
- []
-
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 74.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 74.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 74.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 74.
-[4 <./prim5.pdf> <./prim5.pdf
-
-pdfTeX warning: pdflatex.exe (file ./prim5.pdf): PDF inclusion: multiple pdfs w
-ith page group included in a single page
->])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 53.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 53.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 53.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 53.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 53.
+(babel)             in language  on input line 57.
  [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 53.
- (./sem_5_main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 53.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 53.
-Package rerunfilecheck Info: File `sem_5_main.out' has not changed.
-(rerunfilecheck)             Checksum: 93FFBE173A7E395C699727BFF762D76A;582.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
+ (./sem_7_main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 57.
+Package rerunfilecheck Info: File `sem_7_main.out' has not changed.
+(rerunfilecheck)             Checksum: 9DA34E37463BECC9E892E39381D89028;2871.
  ) 
 Here is how much of TeX's memory you used:
- 15599 strings out of 493013
- 219575 string characters out of 6136992
- 335128 words of memory out of 5000000
- 18787 multiletter control sequences out of 15000+600000
- 24146 words of font info for 66 fonts, out of 8000000 for 9000
+ 15736 strings out of 493013
+ 221011 string characters out of 6136992
+ 333185 words of memory out of 5000000
+ 18886 multiletter control sequences out of 15000+600000
+ 34542 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,15n,39p,925b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,20n,38p,925b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<d:/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2016
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2016/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2016/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2016/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/texlive
-/2016/texmf-dist/fonts/type1/public/cm-super/sfbx0800.pfb><d:/texlive/2016/texm
-f-dist/fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2016/texmf-dist/fon
-ts/type1/public/cm-super/sfbx1728.pfb><d:/texlive/2016/texmf-dist/fonts/type1/p
-ublic/cm-super/sfrm0700.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm0800.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1
-000.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d
-:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb><d:/texlive/
-2016/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on sem_5_main.pdf (5 pages, 233058 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><d:/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2016/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2016/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmib10.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+d:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2016/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><d:/texlive/2016/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><d:/texlive/2016/texmf-dist/
+fonts/type1/public/cm-super/sfbx1200.pfb><d:/texlive/2016/texmf-dist/fonts/type
+1/public/cm-super/sfbx1440.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/c
+m-super/sfbx1728.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sf
+bx2074.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb
+><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><d:/texli
+ve/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><d:/texlive/2016/te
+xmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2016/texmf-dist/f
+onts/type1/public/cm-super/sfss1200.pfb><d:/texlive/2016/texmf-dist/fonts/type1
+/public/cm-super/sfti1200.pfb>
+Output written on sem_7_main.pdf (5 pages, 274155 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 97 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 192 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
