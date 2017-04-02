@@ -10,7 +10,7 @@ $$
 Например:
 \begin{itemize}
 	\item \textbf{o}, L --- вырожденные случаи.
-	\item Поворот $\mathbb{R}^3$ вокруг \textbf{e$_3$} на $\pi/2$. Инвариантные подпространства: $\textbf{o}, \mathbb{R}^3, \langle \textbf{e$_1$}, \textbf{e$_2$} \rangle, \langle \textbf{e$_3$}\rangle$.
+	\item Поворот $\mathbb{R}^3$ вокруг \textbf{e$_3$} на $\pi/2$ (рис. \ref{prim1}). Инвариантные подпространства: $\textbf{o}, \mathbb{R}^3, \langle \textbf{e$_1$}, \textbf{e$_2$} \rangle, \langle \textbf{e$_3$}\rangle$.
 	\item Ядро преобразования $\phi \ (\ker \phi)$ всегда инвариантно относительно этого преобразования $\phi$.
 	\item $\im \phi$
 	\begin{theorem}
@@ -51,6 +51,14 @@ $$
 \subsection{Вид матрицы преобразования}
 Рассмотрим линейное пространство $L$, $\dim L=n$. Пусть $L' \subset L$, $\dim L' = k$ --- инвариантное подпространство относительно $\phi$, базис в $L': \{\textbf{e$_1$}, \dots, \textbf{e$_k$}\}$, базис в $L: \{\textbf{e$_1$}, \dots, \textbf{e$_k$}, \textbf{e$_{k+1}$}, \dots, \textbf{e$_n$}\}$. %22:44 23:10
 
+\begin{figure}
+	\centering
+	\def\svgwidth{5cm} % если надо изменить размер
+	\input{podpr.pdf_tex}
+	\caption{Подпространство в L}
+	\label{podpr}
+\end{figure}
+
 Напомним, что матрица преобразования $A$ строится из образов базисных векторов:
 $$A=
 \left(\hspace{1mm}
@@ -74,6 +82,15 @@ $O$ & $A_4$\\
 $$
 
 Пусть теперь $L=L_1\oplus L_2 \oplus \dots \oplus L_s, \forall i\ L_i$ --- инвариантное подпространство относительно $\phi$.
+
+\begin{figure}[h!]
+	\centering
+	\def\svgwidth{10cm} % если надо изменить размер
+	\input{summa.pdf_tex}
+	\caption{Прямая сумма подпространств}
+	\label{summa}
+\end{figure}
+
 Тогда матрица преобразования имеет вид:
 $$
 A =\left(
