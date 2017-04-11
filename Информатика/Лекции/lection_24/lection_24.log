@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.11.13)  4 APR 2017 13:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.11.13)  11 APR 2017 13:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1685,60 +1685,69 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 217.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 246.
+(babel)             in language  on input line 255.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 246.
+(babel)             in language  on input line 255.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 247.
+(babel)             in language  on input line 256.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 247.
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 248
+(babel)             in language  on input line 256.
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 257
 .
 
 (d:/texlive/2016/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 268.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 268.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 268.
+(babel)             in language  on input line 272.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 268.
+(babel)             in language  on input line 272.
  [1
 
 {d:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 317.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 308.
+(babel)             in language  on input line 317.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 333.
+(babel)             in language  on input line 330.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 333.
+(babel)             in language  on input line 330.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 333.
+(babel)             in language  on input line 330.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 333.
-Package atenddvi Info: Last page = 2.
+(babel)             in language  on input line 330.
  [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 333.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 333.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 364.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 364.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 364.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 364.
+Package atenddvi Info: Last page = 3.
+ [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 364.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 364.
  (./lection_24.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 333.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 333.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 364.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 364.
 Package rerunfilecheck Info: File `lection_24.out' has not changed.
-(rerunfilecheck)             Checksum: 56461FE1F417D0FE0EEC14D6424A81C2;1106.
+(rerunfilecheck)             Checksum: 74A06F213FF04852655428C37AA83AEF;1122.
  ) 
 Here is how much of TeX's memory you used:
- 32715 strings out of 493013
- 586383 string characters out of 6136992
- 648653 words of memory out of 5000000
+ 32716 strings out of 493013
+ 586389 string characters out of 6136992
+ 649653 words of memory out of 5000000
  35734 multiletter control sequences out of 15000+600000
  17224 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,10n,54p,10416b,537s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,10n,54p,10416b,411s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<d:/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2016/texmf-di
@@ -1753,10 +1762,10 @@ mf-dist/fonts/type1/public/cm-super/sfbx2074.pfb><d:/texlive/2016/texmf-dist/fo
 nts/type1/public/cm-super/sfrm1200.pfb><d:/texlive/2016/texmf-dist/fonts/type1/
 public/cm-super/sfrm2074.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-
 super/sftt1200.pfb>
-Output written on lection_24.pdf (2 pages, 161889 bytes).
+Output written on lection_24.pdf (3 pages, 163565 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
+ 105 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
  65 words of extra memory for PDF output out of 10000 (max. 10000000)
 

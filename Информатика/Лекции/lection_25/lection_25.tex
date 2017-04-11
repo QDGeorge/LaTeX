@@ -220,8 +220,10 @@
 \ \num \tab x = 0
 \ \num \tab \fori i \ini \rangei(1, \leni(s)):
 \ \num \tab \tab \ifi i <= right:
-\ \num \tab \tab \tab x = \mini(z[i-left], right - i + 1) 
-\ \num \tab \tab \whilei i+x < \leni(s) and s[x] == s[i+x]:
+\ \num \tab \tab \tab x = \mini(z[i-left], right - i + 1)
+\ \num \tab \tab \elsei:
+\num \tab \tab \tab x = 0 
+\num \tab \tab \whilei i+x < \leni(s) and s[x] == s[i+x]:
 \num \tab \tab \tab x += 1
 \num \tab \tab \ifi i + x - 1  > right:
 \num \tab \tab \tab left, right = i, i + x - 1
