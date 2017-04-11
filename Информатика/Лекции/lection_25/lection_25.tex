@@ -211,6 +211,7 @@
 \
 \setcounter{lec}{24}
 \lec{Z--функция строки и ее вычисление}
+Основной материал лекции взят с \href{http://e-maxx.ru/algo/z_function}{сайта}.
 \section{Z--функция}
 \subsection{Определение}
 Пусть дана строка $s$ длины $n$. Тогда Z--функция от этой строки --- это массив длины $n$, i-ый элемент которого равен наибольшему числу символов, начиная с позиции i, совпадающих с первыми символами строки $s$.
@@ -249,7 +250,7 @@
 \ \num \tab \tab \tab x = \mini(z[i-left], right - i + 1)
 \ \num \tab \tab \elsei:
 \num \tab \tab \tab x = 0 
-\num \tab \tab \whilei i+x < \leni(s) and s[x] == s[i+x]:
+\num \tab \tab \whilei i+x < \leni(s) \andi s[x] == s[i+x]:
 \num \tab \tab \tab x += 1
 \num \tab \tab \ifi i + x - 1  > right:
 \num \tab \tab \tab left, right = i, i + x - 1
