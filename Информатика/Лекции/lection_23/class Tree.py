@@ -14,7 +14,7 @@ class Tree:
                 p = p.right
             else:
                 p = p.left
-                return p
+        return p
     def insert(self, data):
         p = self.find(data)
         if p is not None:
@@ -33,7 +33,7 @@ class Tree:
                 else:
                     p = p.left
             else:
-                if p.right in None:
+                if p.right is None:
                     p.right = node
                     node.parent = p
                     break
