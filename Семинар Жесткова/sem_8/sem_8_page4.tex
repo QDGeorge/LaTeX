@@ -1,0 +1,40 @@
+$A=\begin{pmatrix}
+\cos \alpha & -\sin \alpha & 0\\
+\sin \alpha & \cos \alpha & 0\\
+0 & 0 & 1\\
+\end{pmatrix};$
+
+$\tr A=2\cos \alpha +1 = \const~~\Rightarrow ~~\boxed{\cos \alpha = \cfrac{1}{2}~ (\tr A-1)}$
+
+\bigskip
+
+\begin{prim}
+	
+Пусть $\lambda_1,~ \dots ~, \lambda_n$ --- собственные значения преобразования $\varphi$ с матрицей A. Какие собственные значения у ~а) $\varphi^2$;~ б)$\varphi^{-1}$ ?
+	\end{prim}
+\begin{align}
+	\det(A-\lambda E)=0  \tag{*}\label{*} 
+\end{align}
+
+\begin{enumerate}
+	\item[1).] $\varphi^2:~\det(A^2-\widetilde \lambda E)$\\
+	$$~(\ref{*}) \cdot \det(A+\lambda E) = \det(A-\lambda E) \det(A+\lambda E)=\det(A^2-\lambda^2 E) = 0~~\Rightarrow \widetilde \lambda = \lambda^2$$
+	
+	\item[2).] $\varphi^{-1}:~\det(A^{-1}-\tilde {\tilde \lambda} E)= \det(A^{-1}-\tilde {\tilde \lambda} A^{-1}A)=0$
+	$$\Rightarrow \det A^{-1} \cdot \det(E-\tilde {\tilde \lambda} A)=0$$
+	Так как $\det A^{-1} \ne 0$ (невырожденная матрица), то верно:
+	 $$\det(E-\tilde {\tilde \lambda} A)=0$$
+	 Домножим это на $(-1)^n \tilde {\tilde \lambda}^n$:
+	 $$\det(A-\cfrac{E}{\tilde {\tilde \lambda}})=0 ~\Rightarrow~ \tilde {\tilde \lambda}=\cfrac{1}{\lambda}=\lambda^{-1}$$
+\end{enumerate}
+
+\section{Проекторы}
+Пусть $L=L_1 \oplus L_2$;\\
+$\textbf{x}=\textbf{x$_1$}+\textbf{x$_2$}$--- единственный прообраз, где $\textbf{x} \in L, ~ \textbf{x$_1$} \in L_1,~ \textbf{x$_2$} \in L_2$
+\begin{center}
+Тогда: $P_1(\textbf{x})=\textbf{x$_1$}$ --- проектор на $L_1 \parallel L_2$\\
+$P_2(\textbf{x})=\textbf{x$_2$}$ --- проектор на $L_2 \parallel L_1$\\
+$\im P_1 = L_1$ и $\ker P_1=L_2$\\
+$\im P_2 = L_2$ и $\ker P_2=L_1$\\
+\end{center}
+$$P_1(\textbf{x})+P_2(\textbf{x})=\textbf{x$_1$}+\textbf{x$_2$}=\textbf{x}~\Rightarrow ~(P_1+P_2)(\textbf{x})=\textbf{x}~ \Rightarrow ~P_1+P_2=id$$ 

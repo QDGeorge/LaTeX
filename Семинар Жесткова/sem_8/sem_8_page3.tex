@@ -1,0 +1,44 @@
+Очевидно, собственные значения не меняются при замене базиса;\\
+
+Рассмотрим подробнее характеристический многочлен.\\
+$$
+\det (A-\lambda E)=P(\lambda)=
+\begin{vmatrix*}[c]
+ a_{11}-\lambda & a_{12} & \cdots & a_{1n}\\
+ a_{21} & a_{22}-\lambda & \cdots & a_{2n}\\
+ \vdots & \vdots & \ddots & \vdots \\
+ a_{n1} & a_{n2} & \cdots & a_{nn}-\lambda\\
+\end{vmatrix*}
+=
+$$
+$$
+=\underset{\text{только в этом члене есть $\lambda^{n}$ и $\lambda^{n-1}$ }}
+{( a_{11}-\lambda)(a_{22}-\lambda)\dots ( a_{nn}-\lambda)} + \dots + \tilde P(0)=
+$$
+$$
+=(-1)^{n}\lambda^{n}-(-1)^{n}( a_{11}+a_{22}+\dots+a_{nn})\lambda^{n-1}+\dots+\det A
+$$
+\\
+
+$ax^{2}+bx+c=0, a\neq 0$ \\
+
+$\left.
+\begin{aligned}
+x_{1}+x_{2}=-b/a\\
+x_{1}x_{2}=c/a\\
+\end{aligned}
+\right\}$
+--- теорема Виета\\
+
+\textbf{Обобщенная теорема Виета:}\\
+Произведение корней: $(-1)^{n}\cdot \frac{\{ \text{свободный член}\}}{\{ \text{первый коэффициент}\}}$\\
+Сумма корней: $-\frac{\{ \text{второй коэффициент}\}}{\{ \text{первый коэффициент}\}}$\\
+$\lambda_{1}\lambda_{2}\dots \lambda_{n}=(-1)^{n}\cdot \frac{\det A}{(-1)^{n}}=\det A$\\
+$\lambda_{1}+ \dots + \lambda_{n}=(a_{11}+a_{22}+\dots+a_{nn})=\tr A$ (т.е. след A)\\
+
+\begin{prim}
+Пусть A --- матрица вращения $\mathbb{R}^{3}$. Найти угол вращения.\\
+
+Выберем ортонормированный базис так, что поворот вокруг \textbf{e$_{3}$}.\\
+В этом базисе:
+\end{prim}

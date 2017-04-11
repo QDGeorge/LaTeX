@@ -1,0 +1,96 @@
+\setcounter{prim}{5}
+\begin{prim}
+	Найти собственные значения и собственные векторы.\\ $p = \langle1, t, t^2\rangle$, если $\phi(p) = t^2 p''-tp'+2p.$
+\end{prim}
+$
+\left.
+\begin{array}{rl}
+\phi(1) &= 2: \begin{psm}
+	2\\0\\0\\
+\end{psm}\\
+\phi(t) &= t: \begin{psm}
+	0\\1\\0
+\end{psm}\\
+\phi(t^2) &= 2t: \begin{psm}
+	0\\0\\2
+\end{psm}
+\end{array}
+\right\}
+\Rightarrow
+A_{\phi}=\begin{pmatrixr}
+2&0&0\\
+0&1&0\\
+0&0&2\\
+\end{pmatrixr}
+\\
+\lambda_1=1,\text{ собственный вектор: }\{t\}.\\
+\lambda_{2, 3}=2,\text{ собственный вектор: }\{1, t^2\}.\\
+\text{Для } \lambda_1: 
+\left(
+\begin{array}{rrr|r}
+1&0&0&0\\
+0&0&0&0\\
+0&0&1&0\\
+\end{array}
+\right)
+\Rightarrow
+L_1=\langle\begin{pmatrixr}
+0\\1\\0
+\end{pmatrixr}\rangle.\\
+\text{Проверим: }\underline{\phi(7t)}=-7t+14t=\underline{7t}.
+$
+
+\begin{prim}
+	При каких $\alpha$ преобразование диагонализируемо?
+	$$
+	\begin{pmatrix}
+	1&0&\alpha^2-\alpha\\
+	0&1&0\\
+	0&0&\alpha^2\\
+	\end{pmatrix}
+	$$
+\end{prim}
+\vspace{-0.5cm}
+\begin{enumerate}
+\item[I.] $\alpha^2=1:$
+\begin{enumerate}
+	\item$ \alpha=1: \begin{psm}
+		1&0&0\\
+		0&1&0\\
+		0&0&1\\
+	\end{psm}$ --- матрица уже диагональная.
+	\item $\alpha=-1: \begin{psm}
+		1&0&2\\
+		0&1&0\\
+		0&0&1\\
+	\end{psm}\Rightarrow \lambda=1\text{ --- корень алгебраической кратности 3.}\\
+	\text{Тогда система уравнений: }
+	\begin{psm}
+	0&0&2&\vrule&0\\
+	0&0&0&\vrule&0\\
+	0&0&0&\vrule&0\\	
+	\end{psm}\Rightarrow$ 2 вектора, т.е. для построения базиса собственных векторов не хватает.
+\end{enumerate}
+\item[II.] $\alpha^2 \neq 1:$\\
+$\lambda=1$ --- корень алгебраической кратности 2.\\
+$\lambda=\alpha^2$ --- простой корень.
+\begin{enumerate}
+	\item $\lambda =1:\\
+	\left(
+	\begin{smallmatrix}
+		0&0&\alpha^2-\alpha&\vrule&0\\
+		0&0&0&\vrule&0\\
+		0&0&\alpha-1&\vrule&0\\
+	\end{smallmatrix}\right),\quad
+	\Rg=1, n=3 \Rightarrow$ 2 собственных вектора.
+	\item $\lambda=\alpha^2:\\
+	\left(
+	\begin{smallmatrix}
+		1-\alpha^2&0&\alpha^2-\alpha&\vrule&0\\
+		0&1-\alpha^2&0&\vrule&0\\
+		0&0&0&\vrule&0
+	\end{smallmatrix}\right),\quad \Rg=2, n =3 \Rightarrow$ 1 собственный вектор.
+\end{enumerate}
+\end{enumerate}\
+
+Ответ: $\alpha \neq -1$.
