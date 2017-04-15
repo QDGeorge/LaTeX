@@ -211,7 +211,34 @@
 \
 \setcounter{lec}{24}
 \lec{Z--функция строки и ее вычисление}
+Основной материал лекции взят с \href{http://e-maxx.ru/algo/z_function}{сайта}.
 \section{Z--функция}
+\subsection{Определение}
+Пусть дана строка $s$ длины $n$. Тогда Z--функция от этой строки --- это массив длины $n$, i-ый элемент которого равен наибольшему числу символов, начиная с позиции i, совпадающих с первыми символами строки $s$.
+
+Иными словами, \texttt{z[i]} -- это наибольший общий префикс строки $s$ и её i--го суффикса.
+
+Во избежание неопределённости, мы будем считать строку 0--индексированной --- т.е. первый символ строки имеет индекс 0, а последний --- $n-1$.
+
+Первый элемент Z--функции, \texttt{z[0]}, обычно считают неопределённым. Мы будем считать, что он равен нулю.
+
+\subsection{Реализация}
+\subsubsection{Тривиальный алгоритм}
+\begin{infa}{Тривиальный алгоритм}
+\num \defi z_function_trivial(s):
+\num \tab n = \leni(s)
+\num \tab z = [0]*n
+\num \tab i = 1
+\num \tab \whilei i < n:
+\num \tab  \tab \whilei i + z[i] < n \andi s[z[i]] == s[i+z[i]]: \com{Пока мы не дошли до\\\phantom{3\ \ \ \ \ \ \ } конца и символ на позиции z[i] равен символу на рассматриваемой позиции + z[i]\\\phantom{3\ \ \ \ \ \ \ } (т.е., это и есть основная проверка)}
+\num \tab \tab \tab z[i] += 1
+\num \tab \tab i += 1
+\num \tab \returni z
+\end{infa}
+Сложность такого алгоритма $O(N^2)$. 
+
+\subsubsection{Эффективный алгоритм}
+Чтобы получить эффективный алгоритм, будем вычислять значения \texttt{z[i]} по очереди — от i=1 до $n-1$, и при этом постараемся при вычислении очередного значения \texttt{z[i]} максимально использовать уже вычисленные значения.
 \begin{infa}{Эффективная реализация Z--функции}
 \ \num \defi z_function(s):
 \ \num \tab z = [0]*\leni(s)
@@ -223,12 +250,35 @@
 \ \num \tab \tab \tab x = \mini(z[i-left], right - i + 1)
 \ \num \tab \tab \elsei:
 \num \tab \tab \tab x = 0 
-\num \tab \tab \whilei i+x < \leni(s) and s[x] == s[i+x]:
+\num \tab \tab \whilei i+x < \leni(s) \andi s[x] == s[i+x]:
 \num \tab \tab \tab x += 1
 \num \tab \tab \ifi i + x - 1  > right:
 \num \tab \tab \tab left, right = i, i + x - 1
 \num \tab \tab z[i] = x
 \num \tab \returni z
+\end{infa}
+Этот алгоритм выполняется за линейное время.
+
+\subsection{Применение}
+Применения Z--функции:
+\begin{itemize}
+	\item Поиск подстроки в строке.
+	\item Поиск количества различных подстрок в строке.
+	\item Сжатие строки.
+\end{itemize}
+
+Запишем реализацию поиска количества различных подстрок в строке.
+\begin{infa}{Поиск количества различных подстрок в строке}
+\ \num \defi count_different_substrings(s):
+\ \num \tab n = \leni(s)
+\ \num \tab start = s[0]
+\ \num \tab res = 0
+\ \num \tab \fori i \ini \rangei(1, n):
+\ \num \tab \tab t = start[::-1]
+\ \num \tab \tab k = \leni(t) - \maxi(z_function(t))
+\ \num \tab \tab res += k
+\ \num \tab \tab start += s[i]
+\num \tab \returni res
 \end{infa}
 
 
@@ -236,14 +286,12 @@
 
 
 
-
-\begin{comment}
 \begin{center}
 	\vfill \emph{{\small Г. С. Демьянов, \href{https://vk.com/id37346992}{VK}\\
-С. С. Клявинек, \href{https://vk.com/id85132547}{VK}
+С. С. Клявинек, \href{https://vk.com/id85132547}{VK}\\
+А. С. Кожарин, \href{https://vk.com/id92540660}{VK}
 }}
 \end{center}
-\end{comment}
 
 
 
