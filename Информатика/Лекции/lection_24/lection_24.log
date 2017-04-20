@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.11.13)  11 APR 2017 17:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.11.13)  20 APR 2017 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1726,34 +1726,57 @@ Package babel Info: Redefining russian shorthand "|
 (babel)             in language  on input line 339.
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 339.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 340.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 340.
 
-Underfull \hbox (badness 10000) in paragraph at lines 344--346
+Underfull \hbox (badness 10000) in paragraph at lines 345--347
 
  []
 
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 384.
+(babel)             in language  on input line 353.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 384.
+(babel)             in language  on input line 353.
+
+Overfull \hbox (11.8562pt too wide) in paragraph at lines 360--360
+[]\T2A/cmtt/m/n/12 6        []return[] []min[](lev(a[1:], b[1:])+(a[0] != b[0])
+, lev(a[1:], b)+1, lev(a, b[1:])+1)[] 
+ []
+
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 384.
+(babel)             in language  on input line 365.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 384.
-Package atenddvi Info: Last page = 3.
+(babel)             in language  on input line 365.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 365.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 365.
 [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 384.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 384.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 415.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 415.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 415.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 415.
+Package atenddvi Info: Last page = 4.
+ [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 415.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 415.
  (./lection_24.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 384.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 384.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 415.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 415.
 Package rerunfilecheck Info: File `lection_24.out' has not changed.
-(rerunfilecheck)             Checksum: EAE6E779B9D13E8922CD05A779EFEC1C;1411.
+(rerunfilecheck)             Checksum: 8C5DB971D6D80B413500F66F341B8383;2013.
  ) 
 Here is how much of TeX's memory you used:
- 32732 strings out of 493013
- 586578 string characters out of 6136992
+ 32737 strings out of 493013
+ 586644 string characters out of 6136992
  648653 words of memory out of 5000000
- 35739 multiletter control sequences out of 15000+600000
+ 35741 multiletter control sequences out of 15000+600000
  19790 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,9n,54p,10416b,536s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1773,10 +1796,10 @@ public/cm-super/sfrm1200.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-
 super/sfrm2074.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfti
 1095.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb><
 d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on lection_24.pdf (3 pages, 225115 bytes).
+Output written on lection_24.pdf (4 pages, 235145 bytes).
 PDF statistics:
- 128 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 141 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
+ 16 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
