@@ -278,15 +278,15 @@ $
 \section{Поиск подстроки в строке}
 \subsection{Наивный поиск подстроки в строке}
 \begin{infa}{Примитивный поиск подстроки в строке}
-\num s = "abbbbabbaaabbababaabb"
-\num subs = "bbbaba"
-\num \defi find(s, sub):
-\num \tab \fori pos range(0, len(s)-len(sub)+1):
-\num \tab \tab \fori i \ini \rangei(\leni(sub)):
-\num \tab \tab \tab \ifi sub[i] != s[pos+i]:
-\num \tab \tab \tab \tab \breaki
-\num \tab \tab \elsei:
-\num \tab \tab \tab \returni pos
+\ \num s = "abbbbabbaaabbababaabb"
+\ \num subs = "bbbaba"
+\ \num \defi find(s, sub):
+\ \num \tab \fori pos \ini \rangei(0, \leni(s)-\leni(sub)+1):
+\ \num \tab \tab \fori i \ini \rangei(\leni(sub)):
+\ \num \tab \tab \tab \ifi sub[i] != s[pos+i]:
+\ \num \tab \tab \tab \tab \breaki
+\ \num \tab \tab \elsei:
+\ \num \tab \tab \tab \returni pos
 \num \tab \returni -1
 \end{infa}
 Построчный комментарий кода:\\
@@ -337,6 +337,7 @@ $
 \num \tab \tab \tab state = 0
 \end{infa}
 \section{Расстояние Левенштейна}
+\subsection{Определение}
 \textbf{Расстояние Левенштейна} (также редакционное расстояние или дистанция редактирования) \textbf{между двумя строками в теории информации и компьютерной лингвистике} --- \textit{это минимальное количество операций вставки одного символа, удаления одного символа и замены одного символа на другой, необходимых для превращения одной строки в другую.}
 
 Есть 2 строки Мама и Мим. Мы можем превратить их друг в друга путем вставки символа, удаления символа. Минимальный путь в данном случае --- удаление последнего и замена, т.е. длина пути 2. Так и определяется расстояние Левенштейна.
@@ -349,7 +350,37 @@ $$F_{ij}=
 1+\min(F_{(i-1)(j-1)}, F_{(i-1)j}, F_{i(j-1)})
 \end{cases}
 $$
+\subsection{Реализация алгоритма поиска расстояния Левенштейна}
+\begin{infa}{Рекуррентная реализация поиска расстояния Левенштейна}
+\num \defi lev(a, b):
+\num \tab \ifi \noti a: 
+\num \tab \tab \returni \leni(b)
+\num \tab \ifi \noti b: 
+\num \tab \tab \returni \leni(a)
+\num \tab \returni \mini(lev(a[1:], b[1:])+(a[0] != b[0]), lev(a[1:], b)+1, lev(a, b[1:])+1)
+\end{infa}
+Данный алгоритм записывается компактно, но асимптотика этого алгоритма ужасна.
 
+\begin{infa}{Реализация поиска расстояния Левенштейна}
+\ \num \defi levenshtein(s1, s2):
+\ \num \tab \ifi \leni(s1) < \leni(s2):
+\ \num \tab \tab \returni levenshtein(s2, s1)
+\ \num 
+\ \num \tab \ifi \leni(s2) == 0:
+\ \num \tab \tab \returni \leni(s1)
+\ \num
+\ \num \tab previous_row = \rangei(\leni(s2) + 1)
+\ \num \tab \fori i, c1 \ini \enumeratei(s1):
+\num \tab \tab current_row = [i + 1]
+\num \tab \tab \fori j, c2 \ini \enumeratei(s2):
+\num \tab \tab \tab insertions = previous_row[j + 1] + 1
+\num \tab \tab \tab deletions = current_row[j] + 1     
+\num \tab \tab \tab substitutions = previous_row[j] + (c1 != c2)
+\num \tab \tab \tab current_row.append(\mini(insertions, deletions, substitutions))
+\num \tab \tab previous_row = current_row
+\num
+\num \tab \returni previous_row[-1]
+\end{infa}
 
 
 
