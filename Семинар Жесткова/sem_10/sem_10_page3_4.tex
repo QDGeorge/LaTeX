@@ -1,0 +1,51 @@
+\section{Евклидовы пространства}
+\subsection{Определения}
+\begin{definition}
+Линейное пространство $\mathcal{E}$ называется евклидовы, если на нем задано скалярное произведение.
+\end{definition}
+\begin{definition}
+Скалярное произведение в вещественном линейном пространстве $L$ ставит в~соответствие число, обозначаемое \textbf{(x, y)}, таким образом, что для любых векторов \textbf{x}, \textbf{y}, \textbf{z} и чисел $\alpha$, $\beta$ выполнены следующие условия:
+\renewcommand{\labelenumi}{\theenumi)}
+\begin{enumerate}
+	\item $\textbf{(x, y)} = \textbf{(y, x)}$.
+	\item $\textbf{(x+y, z)} = \textbf{(x, z)}+\textbf{(y, z)}$.
+	\item $\textbf{(}\alpha\textbf{x, y)} = \alpha \textbf{(x, y)}$.
+	\item $\forall \textbf{x}\neq0 \longmapsto \textbf{(x, x)} > 0$.
+\end{enumerate}
+\end{definition}
+Видно, что <<школьное>> скалярное произведение подходит.
+Иначе говоря, \emph{задана положительно определенная квадратичная форма}.
+\begin{prim}
+Является ли в пространстве многочленов степени $ \leq n $ скалярным произведением
+$$
+\textbf{(p, q)} = \int\limits_{-1}^{1} p(t)q(t)dt
+$$
+\end{prim}
+Проверим условия, определенные для скалярного произведения:
+\renewcommand{\labelenumi}{\theenumi)}
+\begin{enumerate}
+	\item $p\cdot q=q\cdot p$.
+	\item[2, 3)] Определённый интеграл обладает свойствами линейности.
+	\item[4)] Если $p(t) \not\equiv 0 $ на отрезке $ [-1, 1] $:
+	$$
+	\textbf{(p, p)} = \int\limits_{-1}^{1}p^2(t)dt,
+	$$
+	$ p^2(t) $ --- четная функция. Значение этого интеграла --- площадь подграфика. Т.к. $ p(t) \not\equiv 0 $, эта площадь не отрицательна $ \Rightarrow \textbf{(p, p)}>0 $.
+\end{enumerate}
+Таким образом, так действительно определено скалярное произведение в пространстве многочленов.
+\subsection{Матрица Грама}
+Выберем базис $\textbf{e}\, \{\textbf{e$_1$},\dots,\textbf{e$_n$}\}$. Тогда $\textbf{x}\equiv \bm\xi$, $\textbf{y}\equiv \bm\eta$ --- координаты векторов $ x $, $ y $ в базисе $ e $. Вспомним, что тогда скалярное произведение запишется так:
+$$
+\textbf{(x, y)} = \bm\xi \Gamma \bm\eta,
+$$
+где 
+$$
+\Gamma = 
+\begin{pmatrix}
+\textbf{(e$_1$, e$_1$)} & \textbf{(e$_1$, e$_2$)} & \hdots & \textbf{(e$_1$, e$_n$)}\\
+\textbf{(e$_2$, e$_1$)} & \textbf{(e$_2$, e$_2$)} & \hdots & \textbf{(e$_2$, e$_n$)}\\
+\vdots & \hdotsfor{2} & \vdots\\
+\textbf{(e$_n$, e$_1$)} & \textbf{(e$_n$, e$_2$)} & \hdots & \textbf{(e$_n$, e$_n$)}\\
+\end{pmatrix}
+$$
+--- матрица Грама.
