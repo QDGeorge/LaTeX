@@ -33,8 +33,10 @@ $$
 	$ p^2(t) $ --- четная функция. Значение этого интеграла --- площадь подграфика. Т.к. $ p(t) \not\equiv 0 $, эта площадь не отрицательна $ \Rightarrow \textbf{(p, p)}>0 $.
 \end{enumerate}
 Таким образом, так действительно определено скалярное произведение в пространстве многочленов.
-\subsection{Матрица Грама}
-Выберем базис $\textbf{e}\, \{\textbf{e$_1$},\dots,\textbf{e$_n$}\}$. Тогда $\textbf{x}\equiv \bm\xi$, $\textbf{y}\equiv \bm\eta$ --- координаты векторов $ x $, $ y $ в базисе $ e $. Вспомним, что тогда скалярное произведение запишется так:
+\section{Матрица Грама}
+\subsection{Определение}
+\begin{definition}
+Выберем базис $\textbf{e}\, \{\textbf{e$_1$},\dots,\textbf{e$_n$}\}$. Тогда $\textbf{x}= \bm\xi$, $\textbf{y} = \bm\eta$ --- координаты векторов $ \textbf{x} $, $ \textbf{y} $ в базисе $ \textbf{e} $. Вспомним, что тогда скалярное произведение запишется так:
 $$
 \textbf{(x, y)} = \bm\xi \Gamma \bm\eta,
 $$
@@ -44,8 +46,9 @@ $$
 \begin{pmatrix}
 \textbf{(e$_1$, e$_1$)} & \textbf{(e$_1$, e$_2$)} & \hdots & \textbf{(e$_1$, e$_n$)}\\
 \textbf{(e$_2$, e$_1$)} & \textbf{(e$_2$, e$_2$)} & \hdots & \textbf{(e$_2$, e$_n$)}\\
-\vdots & \hdotsfor{2} & \vdots\\
+\vdots & \vdots&\ddots & \vdots\\
 \textbf{(e$_n$, e$_1$)} & \textbf{(e$_n$, e$_2$)} & \hdots & \textbf{(e$_n$, e$_n$)}\\
 \end{pmatrix}
 $$
 --- матрица Грама.
+\end{definition}
