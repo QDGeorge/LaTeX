@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.4.20)  20 APR 2017 19:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.4.20)  22 APR 2017 14:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**sem_4_main.tex
-(./sem_4_main.tex
+**sem_9_main.tex
+(./sem_9_main.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 10 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -1065,17 +1065,33 @@ Package: titlesec 2016/03/15 v2.10.1 Sectioning titles
 \titlewidthlast=\dimen175
 \titlewidthfirst=\dimen176
 )
-\c@theorem=\count144
-\c@definition=\count145
-\c@corollary=\count146
-\c@problem=\count147
-\c@zamech=\count148
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip64
+\enit@outerparindent=\dimen177
+\enit@toks=\toks35
+\enit@inbox=\box60
+\enitdp@description=\count144
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks36
+\verbatim@line=\toks37
+\verbatim@in@stream=\read1
+)
+\c@theorem=\count145
+\c@predlog=\count146
+\c@lemma=\count147
+\c@definition=\count148
+\c@corollary=\count149
+\c@problem=\count150
+\c@zamech=\count151
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-\c@infa=\count149
-\c@num=\count150
+\c@infa=\count152
+\c@num=\count153
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
@@ -1095,92 +1111,101 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-\c@prim=\count151
+\c@prim=\count154
 
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup9
+\symboldletters=\mathgroup10
+\symboldsymbols=\mathgroup11
+\symboldugrf@m=\mathgroup12
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count152
-\Gm@cntv=\count153
-\c@Gm@tempcnt=\count154
-\Gm@bindingoffset=\dimen177
-\Gm@wd@mp=\dimen178
-\Gm@odd@mp=\dimen179
-\Gm@even@mp=\dimen180
-\Gm@layoutwidth=\dimen181
-\Gm@layoutheight=\dimen182
-\Gm@layouthoffset=\dimen183
-\Gm@layoutvoffset=\dimen184
-\Gm@dimlist=\toks35
+\Gm@cnth=\count155
+\Gm@cntv=\count156
+\c@Gm@tempcnt=\count157
+\Gm@bindingoffset=\dimen178
+\Gm@wd@mp=\dimen179
+\Gm@odd@mp=\dimen180
+\Gm@even@mp=\dimen181
+\Gm@layoutwidth=\dimen182
+\Gm@layoutheight=\dimen183
+\Gm@layouthoffset=\dimen184
+\Gm@layoutvoffset=\dimen185
+\Gm@dimlist=\toks38
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'russian'.
 
-(./sem_4_main.aux)
-\openout1 = `sem_4_main.aux'.
+(./sem_9_main.aux)
+\openout1 = `sem_9_main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Info: Redefining \celsius on input line 29.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Info: Redefining \celsius on input line 36.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 36.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 29.
-Package gensymb Info: Using \Omega for \ohm on input line 29.
+LaTeX Info: Redefining \ohm on input line 36.
+Package gensymb Info: Using \Omega for \ohm on input line 36.
 
 Package gensymb Warning: Not defining \micro.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count155
-\scratchdimen=\dimen185
-\scratchbox=\box60
-\nofMPsegments=\count156
-\nofMParguments=\count157
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count158
-\MPscratchDim=\dimen186
-\MPnumerator=\count159
-\makeMPintoPDFobject=\count160
-\everyMPtoPDFconversion=\toks37
+\scratchcounter=\count158
+\scratchdimen=\dimen186
+\scratchbox=\box61
+\nofMPsegments=\count159
+\nofMParguments=\count160
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count161
+\MPscratchDim=\dimen187
+\MPnumerator=\count162
+\makeMPintoPDFobject=\count163
+\everyMPtoPDFconversion=\toks40
 )
-\AtBeginShipoutBox=\box61
-Package hyperref Info: Link coloring ON on input line 29.
+\AtBeginShipoutBox=\box62
+Package hyperref Info: Link coloring ON on input line 36.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count161
+\c@section@level=\count164
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 36.
+LaTeX Info: Redefining \pageref on input line 36.
+LaTeX Info: Redefining \nameref on input line 36.
 
-(./sem_4_main.out) (./sem_4_main.out)
+(./sem_9_main.out) (./sem_9_main.out)
 \@outlinefile=\write3
-\openout3 = `sem_4_main.out'.
+\openout3 = `sem_9_main.out'.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -1235,159 +1260,134 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(./sem_4_page1and2.tex
+(./sem_9_page1.tex
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 23.
+(babel)             in language append on input line 1.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 23.
+(babel)             in language append on input line 1.
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 24.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Try loading font information for T2A+cmss on input line 50.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/cyrillic/t2acmss.fd
-File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
+)) (./sem_9_page2.tex
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 159.
+(babel)             in language append on input line 7.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 159.
+(babel)             in language append on input line 7.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 159.
+(babel)             in language append on input line 7.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 159.
- [1
+(babel)             in language append on input line 7.
+[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 271.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 271.
-) (./sem_4_page4.tex
-<prim_a_cvet.pdf, id=41, 614.295pt x 794.97pt>
-File: prim_a_cvet.pdf Graphic file (type pdf)
- <use prim_a_cvet.pdf>
-Package pdftex.def Info: prim_a_cvet.pdf used on input line 6.
-(pdftex.def)             Requested size: 171.40805pt x 221.82587pt.
-
-<prim_b_cvet.pdf, id=42, 614.295pt x 794.97pt>
-File: prim_b_cvet.pdf Graphic file (type pdf)
- <use prim_b_cvet.pdf>
-Package pdftex.def Info: prim_b_cvet.pdf used on input line 10.
-(pdftex.def)             Requested size: 205.89624pt x 266.45306pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 37.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 37.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 37.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 37.
-[2]
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 42.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 42.
-
-Underfull \hbox (badness 10000) in paragraph at lines 46--100
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./sem_9_page3.tex
+Underfull \hbox (badness 10000) in paragraph at lines 32--3
 
  []
 
+) (./sem_9_page4.tex
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 124.
+(babel)             in language append on input line 5.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 124.
+(babel)             in language append on input line 5.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 124.
+(babel)             in language append on input line 5.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 124.
-[3 <./prim_a_cvet.pdf> <./prim_b_cvet.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 182--221
-
- []
-
-) (./4_sem_page_6.tex
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 17.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 17.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 17.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 17.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 17--33
+(babel)             in language append on input line 5.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 10--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 49--68
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 43.
+(babel)             in language append on input line 31.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 43.
+(babel)             in language append on input line 31.
+) (./sem_9_page5.tex
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language append on input line 43.
+(babel)             in language append on input line 14.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language append on input line 43.
+(babel)             in language append on input line 14.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language append on input line 14.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language append on input line 14.
+ [3]
+
+LaTeX Font Warning: Command \LARGE invalid in math mode on input line 30.
+
+) (./sem_9_page6.tex
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language append on input line 24.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language append on input line 24.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language append on input line 24.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language append on input line 24.
+ [4])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language append on input line 63.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language append on input line 63.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language append on input line 63.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language append on input line 63.
  [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
- (./sem_4_main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 43.
-Package rerunfilecheck Info: File `sem_4_main.out' has not changed.
-(rerunfilecheck)             Checksum: D1F2F1F3A0170BCC1D1ED7340491D62E;854.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
+ (./sem_9_main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
+Package rerunfilecheck Info: File `sem_9_main.out' has not changed.
+(rerunfilecheck)             Checksum: F822BAA8C2F66EADDB54589D3BEFD74A;262.
  ) 
 Here is how much of TeX's memory you used:
- 15135 strings out of 494440
- 212736 string characters out of 6173198
- 324969 words of memory out of 5000000
- 18137 multiletter control sequences out of 15000+600000
- 17051 words of font info for 47 fonts, out of 8000000 for 9000
+ 15607 strings out of 494440
+ 219272 string characters out of 6173198
+ 324263 words of memory out of 5000000
+ 18539 multiletter control sequences out of 15000+600000
+ 33383 words of font info for 97 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 38i,16n,39p,923b,489s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,18n,38p,923b,536s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/aleksei/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/lati1095.600pk> </home/a
 leksei/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk> </home/aleksei/.tex
-mf-var/fonts/pk/ljfour/lh/lh-t2a/lass1200.600pk> </home/aleksei/.texmf-var/font
+mf-var/fonts/pk/ljfour/lh/lh-t2a/lati1200.600pk> </home/aleksei/.texmf-var/font
 s/pk/ljfour/lh/lh-t2a/larm1200.600pk> </home/aleksei/.texmf-var/fonts/pk/ljfour
-/lh/lh-t2a/labx1728.600pk> </home/aleksei/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/
-labx1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb>
-Output written on sem_4_main.pdf (5 pages, 502972 bytes).
+/lh/lh-t2a/labx1200.600pk> </home/aleksei/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/
+labx1728.600pk> </home/aleksei/.texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx2074.60
+0pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbol
+s/msbm10.pfb>
+Output written on sem_9_main.pdf (5 pages, 176090 bytes).
 PDF statistics:
- 346 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
- 55 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 343 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
+ 20 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 
