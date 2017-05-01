@@ -1,0 +1,90 @@
+\begin{prim}
+	Найти проекцию $\textbf{x}$ на подпространство $U$. % поподробней само условие
+	$
+	\text{(Здесь Г}=E \text{)} \vspace{0.2cm}\\
+	U\!:~
+\begin{matrix}
+\overset{\langle
+	\begin{pmatrix*}[r]
+	1\\ -1\\ 1\\ 0 
+	\end{pmatrix*},
+	\begin{pmatrix*}[r]
+	2\\ -1\\ 0\\ 1
+	\end{pmatrix*}
+	\rangle}{
+	\begin{matrix*}[r]
+	~\textbf{a}\phantom{md}&\textbf{b}
+	\end{matrix*}}
+\end{matrix}
+	,
+	~~~~~ \textbf{x} = \begin{pmatrixr} %векторы жирным
+	1\\0\\2\\-2
+	\end{pmatrixr}
+	~~~~ \text{Пр}_U^\textbf{x}=~?
+	$
+\end{prim}
+\textbf{\underline{Первый способ:}}\vspace{0.2cm}\\
+$
+\textbf{x}=\underbrace {\alpha \textbf{a} + \beta \textbf{b}}_
+{\substack{
+		~\in~\textbf{\small a} }}
++\underbrace{c}_
+{\substack{
+		~\in~\textbf{\small b} }}
+$, причем $\textbf{c}\perp \textbf{a},~\textbf{c}\perp \textbf{b}$.\vspace{0.2cm} \\
+Домножим это выражение скалярно на $\textbf{a}$~и на $\textbf{b}$~и составим систему:
+$$
+\left\{ 
+\begin{aligned}
+\textbf{(x, a)} = \alpha \abs{\textbf{a}}^2 + \beta \textbf{(a, b)} + 0\\
+\textbf{(x, b)} = \alpha \textbf{(a, b)} + \beta \abs{\textbf{b}}^2 + 0
+\end{aligned}
+\right. \Leftrightarrow 
+\left\{
+\begin{aligned}
+3 = 3\alpha + 3\beta\\
+0 = 3\alpha + 6\beta
+\end{aligned}
+\right.
+$$
+Отсюда $\alpha=2, \beta = -1$.~Искомая проекция равна:\\
+$\text{Пр}_U^\textbf{x}=\alpha \textbf{a} + \beta \textbf{b} = 2\textbf{a} - \textbf{b} = \begin{pmatrixr} % выравнивание матриц по правому краю
+0\\ -1\\ 2\\ 1
+\end{pmatrixr}
+$
+\\
+\textbf{\underline{Второй способ:}}\vspace{0.2cm}\\
+Как было показано выше, в ОНБ проекция вектора равна сумме проекций
+на каждый из базисных векторов. Однако в случае произвольного базиса это не так:
+$$
+\text{Пр}_U^\textbf{x} \neq \text{Пр}_\textbf{a}^\textbf{x} + \text{Пр}_\textbf{b}^\textbf{x} \text{ --- не работает, если } \textbf{a} \not\perp \textbf{b} ~~!
+$$
+Было бы здорово, если бы в $U$ был базис $\{\textbf{a}', \textbf{b}'\}$ такой, что $\textbf{a}'\perp \textbf{b}'$, тогда соотношение будет работать. Для этого \textit{ортогонализируем} базис:\\
+\hspace*{0.2cm}
+$
+\textbf{a}' = \textbf{a}
+$\\
+\hspace*{0.2cm}
+$
+\textbf{b}' = \textbf{b} - \text{Пр}_\textbf{a}^\textbf{b} = \textbf{b} - \cfrac{\textbf{(b, a)}}{\abs{\textbf{a}}^2} \textbf{a} = 
+\begin{pmatrixr}
+1\\ 0\\ -1\\ 1
+\end{pmatrixr}
+\\
+\text{Итак, в } U \text{ мы нашли новый базис}\!:~ \{\textbf{a}', \textbf{b}'\} = \left\{
+\begin{pmatrixr}
+1\\ -1\\ 1\\ 0
+\end{pmatrixr},
+\begin{pmatrixr}
+1\\ 0\\ -1\\ 1
+\end{pmatrixr}
+\right\}\\
+\text{Здесь уже можем пользоваться приведенным соотношением для нахождения проекции:}\\
+\text{Пр}_U^\textbf{x} = \text{Пр}_{\textbf{a}'}^\textbf{x} + \text{Пр}_{\textbf{b}'}^\textbf{x} = \cfrac{\textbf{(x, a}'\textbf{)}}{\abs{\textbf{a}'}^2}\,\textbf{a}' + \cfrac{\textbf{(x, b}'\textbf{)}}{\abs{\textbf{b}'}^2}\,\textbf{b}' = %раз выражение "высокое" можно и cfrac{}{} + между дробью и вектором мало места: можно воспользоваться микропробелом \, + скалярное произведение тоже жирным
+\begin{pmatrixr}
+0\\ -1\\ 2\\ 1
+\end{pmatrixr}
+$
+\vspace{0.7cm}
+\\
+\textit{Замечание.} Хотя мы и нашли новый базис, координаты векторов $\textbf{x}$, $\textbf{a}$, $\textbf{b}$ все ещё выражены в старом базисе, а поэтому и скалярное произведение мы считаем, используя матрицу Грама в \emph{старом} базисе.% ну точку то после замечания надо поставить + ненавижу в техе подчеркивание текста, оно тут почему-то убого выглядит
