@@ -1,0 +1,83 @@
+\begin{prim}
+Может ли данная матрица быть матрицей Грама?
+
+$$A=\left(\begin{array}{rrr}
+    1 & 2&1 \\
+     2&1&1\\
+     1&1&2
+\end{array}\right)$$
+Вспомним из семинара 10 свойства матрицы Грама.
+\begin{itemize}
+    \item Симмитричность 
+    \item Положительная определенность
+\end{itemize}
+
+Наша матрица симметрична, проверим на положительную определенность.
+
+$M_1=1\geq0 $
+
+$M_2=-3\leq0$
+
+Матрица не положительно определена $\Rightarrow$ не матрица Грама.
+\end{prim}
+
+\begin{prim}
+Найти ортогноальную проекцию вектора $a (1\quad 0 -2 \quad2)^T$ на $U: x_1+x_2+x_3+x_4=0;\quad \Gamma =E$.
+
+Можно записать $U$ как
+
+$U(1\quad1\quad1\quad1|0)$\qquad $U:\langle \begin{pmatrix}
+     -1 \\
+      1\\
+      0\\
+      0
+\end{pmatrix},\begin{pmatrix}
+     -1 \\
+      0\\
+      1\\
+      0
+\end{pmatrix},\begin{pmatrix}
+     -1 \\
+      0\\
+      0\\
+      1
+\end{pmatrix}\rangle$
+
+$U^{\perp}:\langle\begin{pmatrix}
+     1 \\
+     1\\
+     1\\
+      1
+\end{pmatrix}\rangle$
+\vspace{2mm}
+
+$\textbf{a}= \text{Пр}_U^\textbf{a}+\text{Пр}_{U^{\perp}}^\textbf{a} \Leftrightarrow \text{Пр}_U^\textbf{a} = \textbf{a} - \text{Пр}_{U^{\perp}}^\textbf{a}=\textbf{a} - \frac{(\textbf{a,b})}{|\textbf{b}|^2}\textbf{b}$
+
+$\text{Пр}_U^\textbf{a} = \begin{pmatrix}
+     1 \\
+      0\\
+      -2\\
+      2
+\end{pmatrix}-\frac{1}{4}\begin{pmatrix}
+     1 \\
+     1\\
+     1\\
+      1
+\end{pmatrix}=\frac{1}{4}\begin{pmatrix}
+     3 \\
+     -1\\
+     -9\\
+      7
+\end{pmatrix}$
+\end{prim}
+\section{Ортогонализация Грама-Шмидта}
+
+Пусть дан базис $f_1,\dots,f_n$
+
+Наша задача: построить отрогональный базис $h_1,\dots,h_n$
+
+\begin{enumerate}
+    \item $h_1=f_1$
+    \item $h_2=f_2 - \text{Пр}_{h_1}^{f_2} =f_2 =-\frac{(h_1,f_2)}{|h_1|^2}h_1$
+    \item $h_3 = f_3 - \text{Пр}_{\langle h_1,h_2\rangle}^{f_3}=f_3 - \frac{(f_3,h_1)}{|h_1|^2}h_1 - \frac{(f_3,h_2)}{|h_2|^2}h_2 $
+    \end{enumerate}
