@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.11.13)  18 APR 2017 13:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.12.11)  7 MAY 2017 18:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -702,10 +702,6 @@ LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (d:/texlive/2016/texmf-dist/tex/latex/extsizes/extsizes.sty
 Package: extsizes 1996/10/08 v1.0 Non Standard LaTeX Package
 
-
-Package ExtSizes Warning: It is better to use one of the extsizes classes,
- if you can.
-
 (d:/texlive/2016/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 ))
@@ -722,7 +718,7 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 Package: csquotes 2016/07/14 v5.1h context-sensitive quotations (JAW)
 
 (d:/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2016/12/01 v2.2b e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count104
 )
 \csq@reset=\count105
@@ -1026,10 +1022,9 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LT@p@ftn=\toks33
 )
 (d:/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2016/10/11 v2.1 Span multiple rows of a table
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip62
-\multirow@cnta=\count143
-\multirow@cntb=\count144
+\multirow@cntb=\count143
 \multirow@dima=\skip63
 \bigstrutjot=\dimen164
 )
@@ -1047,7 +1042,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen170
 \caption@hangindent=\dimen171
 )
-\c@ContinuedFloat=\count145
+\c@ContinuedFloat=\count144
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
@@ -1068,11 +1063,11 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \titlewidthlast=\dimen175
 \titlewidthfirst=\dimen176
 )
-\c@theorem=\count146
-\c@definition=\count147
-\c@corollary=\count148
-\c@problem=\count149
-\c@zamech=\count150
+\c@theorem=\count145
+\c@definition=\count146
+\c@corollary=\count147
+\c@problem=\count148
+\c@zamech=\count149
 
 (d:/texlive/2016/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (d:/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
@@ -1116,10 +1111,10 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 \pgf@yc=\dimen186
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count151
-\c@pgf@countb=\count152
-\c@pgf@countc=\count153
-\c@pgf@countd=\count154
+\c@pgf@counta=\count150
+\c@pgf@countb=\count151
+\c@pgf@countc=\count152
+\c@pgf@countd=\count153
 \t@pgf@toka=\toks39
 \t@pgf@tokb=\toks40
 \t@pgf@tokc=\toks41
@@ -1136,8 +1131,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count155
-\pgfsyssoftpath@bigbuffer@items=\count156
+\pgfsyssoftpath@smallbuffer@items=\count154
+\pgfsyssoftpath@bigbuffer@items=\count155
 )
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
@@ -1167,7 +1162,7 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen187
-\pgfmath@count=\count157
+\pgfmath@count=\count156
 \pgfmath@box=\box61
 \pgfmath@toks=\toks42
 \pgfmath@stack@operand=\toks43
@@ -1191,7 +1186,7 @@ x)
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
 etics.code.tex)))
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count158
+\c@pgfmathroundto@lastzeros=\count157
 ))
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
@@ -1227,7 +1222,7 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box62
 \pgf@hbox=\box63
 \pgf@layerbox@main=\box64
-\pgf@picture@serial@count=\count159
+\pgf@picture@serial@count=\count158
 )
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
 .tex
@@ -1258,7 +1253,7 @@ File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen267
-\pgf@sys@shading@range@num=\count160
+\pgf@sys@shading@range@num=\count159
 )
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -1313,7 +1308,7 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
 de.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count161
+\pgf@plot@mark@count=\count160
 \pgfplotmarksize=\dimen272
 )
 \tikz@lastx=\dimen273
@@ -1326,18 +1321,18 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikz@figbox@bg=\box68
 \tikz@tempbox=\box69
 \tikz@tempbox@bg=\box70
-\tikztreelevel=\count162
-\tikznumberofchildren=\count163
-\tikznumberofcurrentchild=\count164
-\tikz@fig@count=\count165
+\tikztreelevel=\count161
+\tikznumberofchildren=\count162
+\tikznumberofcurrentchild=\count163
+\tikz@fig@count=\count164
 
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count166
-\pgfmatrixcurrentcolumn=\count167
-\pgf@matrix@numberofcolumns=\count168
+\pgfmatrixcurrentrow=\count165
+\pgfmatrixcurrentcolumn=\count166
+\pgf@matrix@numberofcolumns=\count167
 )
-\tikz@expandcount=\count169
+\tikz@expandcount=\count168
 
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarytopaths.code.tex
@@ -1346,14 +1341,14 @@ File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 (d:/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/graphs
 /tikzlibrarygraphs.code.tex
 File: tikzlibrarygraphs.code.tex 2015/06/05 v3.0.1a (rcs-revision 1.44)
-\tikz@lib@auto@number=\count170
-\tikz@qnode@count=\count171
+\tikz@lib@auto@number=\count169
+\tikz@qnode@count=\count170
 )
 (d:/texlive/2016/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-\c@infa=\count172
-\c@num=\count173
+\c@infa=\count171
+\c@num=\count172
 
 (d:/texlive/2016/texmf-dist/tex/latex/animate/animate.sty
 Package: animate 2016/09/07 PDF animations from files and inline graphics
@@ -1376,7 +1371,7 @@ Package zref Info: New property list: main on input line 759.
 Package zref Info: New property: default on input line 760.
 Package zref Info: New property: page on input line 761.
 )
-\c@abspage=\count174
+\c@abspage=\count173
 Package zref Info: New property: abspage on input line 62.
 )
 (d:/texlive/2016/texmf-dist/tex/latex/oberdiek/zref-lastpage.sty
@@ -1385,10 +1380,10 @@ Package zref Info: New property list: LastPage on input line 55.
 ))
 (d:/texlive/2016/texmf-dist/tex/latex/media9/pdfbase.sty
 (d:/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2016/10/19 v6730 L3 programming layer (loader) 
+Package: expl3 2016/11/21 v6760 L3 programming layer (loader) 
 
 (d:/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2016/10/19 v6730 L3 programming layer (code)
+Package: expl3 2016/11/21 v6760 L3 programming layer (code)
 L3 Module: l3bootstrap 2016/06/13 v6596 L3 Bootstrap code
 L3 Module: l3names 2016/10/13 v6722 L3 Namespace for primitives
 L3 Module: l3basics 2016/09/01 v6696 L3 Basic definitions
@@ -1397,24 +1392,24 @@ L3 Module: l3tl 2016/08/19 v6692 L3 Token lists
 L3 Module: l3str 2016/08/19 v6692 L3 Strings
 L3 Module: l3seq 2016/08/19 v6685 L3 Sequences and stacks
 L3 Module: l3int 2016/09/07 v6700 L3 Integers
-\c_max_int=\count175
-\l_tmpa_int=\count176
-\l_tmpb_int=\count177
-\g_tmpa_int=\count178
-\g_tmpb_int=\count179
+\c_max_int=\count174
+\l_tmpa_int=\count175
+\l_tmpb_int=\count176
+\g_tmpa_int=\count177
+\g_tmpb_int=\count178
 L3 Module: l3quark 2016/08/19 v6685 L3 Quarks
 L3 Module: l3prg 2016/08/18 v6679 L3 Control structures
-\g__prg_map_int=\count180
+\g__prg_map_int=\count179
 L3 Module: l3clist 2016/08/19 v6685 L3 Comma separated lists
 L3 Module: l3token 2016/09/01 v6695 L3 Experimental token manipulation
 L3 Module: l3prop 2016/08/19 v6685 L3 Property lists
 L3 Module: l3msg 2016/08/19 v6691 L3 Messages
 L3 Module: l3file 2016/08/19 v6685 L3 File and I/O operations
-\l_iow_line_count_int=\count181
-\l__iow_target_count_int=\count182
-\l__iow_current_line_int=\count183
-\l__iow_current_word_int=\count184
-\l__iow_current_indentation_int=\count185
+\l_iow_line_count_int=\count180
+\l__iow_target_count_int=\count181
+\l__iow_current_line_int=\count182
+\l__iow_current_word_int=\count183
+\l__iow_current_indentation_int=\count184
 L3 Module: l3skip 2016/08/19 v6692 L3 Dimensions and skips
 \c_zero_dim=\dimen279
 \c_max_dim=\dimen280
@@ -1435,17 +1430,17 @@ L3 Module: l3skip 2016/08/19 v6692 L3 Dimensions and skips
 \g_tmpa_muskip=\muskip16
 \g_tmpb_muskip=\muskip17
 L3 Module: l3keys 2016/09/21 v6711 L3 Key-value interfaces
-\l_keys_choice_int=\count186
-L3 Module: l3fp 2016/08/19 v6685 L3 Floating points
-\c__fp_leading_shift_int=\count187
-\c__fp_middle_shift_int=\count188
-\c__fp_trailing_shift_int=\count189
-\c__fp_big_leading_shift_int=\count190
-\c__fp_big_middle_shift_int=\count191
-\c__fp_big_trailing_shift_int=\count192
-\c__fp_Bigg_leading_shift_int=\count193
-\c__fp_Bigg_middle_shift_int=\count194
-\c__fp_Bigg_trailing_shift_int=\count195
+\l_keys_choice_int=\count185
+L3 Module: l3fp 2016/11/21 v6761 L3 Floating points
+\c__fp_leading_shift_int=\count186
+\c__fp_middle_shift_int=\count187
+\c__fp_trailing_shift_int=\count188
+\c__fp_big_leading_shift_int=\count189
+\c__fp_big_middle_shift_int=\count190
+\c__fp_big_trailing_shift_int=\count191
+\c__fp_Bigg_leading_shift_int=\count192
+\c__fp_Bigg_middle_shift_int=\count193
+\c__fp_Bigg_trailing_shift_int=\count194
 L3 Module: l3box 2016/08/19 v6685 L3 Experimental boxes
 \c_empty_box=\box71
 \l_tmpa_box=\box72
@@ -1495,59 +1490,59 @@ L3 Module: l3luatex 2016/08/18 v6679 L3 Experimental LuaTeX-specific functions
 )
 (d:/texlive/2016/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2016/08/18 v6679 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count196
+\l__driver_color_stack_int=\count195
 \l__driver_tmp_box=\box86
 ))
 (d:/texlive/2016/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2016/10/19 v6730 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2016/11/21 v6760 LaTeX2e option processing using LaTeX3 keys
 )
 Package: pdfbase 2016/11/08 v0.10 driver independent access to low-level PDF fe
 atures
-\g@pbs@page@int=\count197
-\g_pbs_oc_int=\count198
+\g@pbs@page@int=\count196
+\g_pbs_oc_int=\count197
 )
 (d:/texlive/2016/texmf-dist/tex/latex/ocgx2/ocgbase.sty
 Package: ocgbase 2016/03/11 v0.6 support package for ocgx2.sty
 )
 (d:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count199
+\scratchcounter=\count198
 \scratchdimen=\dimen310
 \scratchbox=\box87
-\nofMPsegments=\count266
-\nofMParguments=\count267
+\nofMPsegments=\count199
+\nofMParguments=\count266
 \everyMPshowfont=\toks47
-\MPscratchCnt=\count268
+\MPscratchCnt=\count267
 \MPscratchDim=\dimen311
-\MPnumerator=\count269
-\makeMPintoPDFobject=\count270
+\MPnumerator=\count268
+\makeMPintoPDFobject=\count269
 \everyMPtoPDFconversion=\toks48
 )
 \@anim@box=\box88
 \@anim@measbox=\box89
 \@anim@tmpdima=\dimen312
 \@anim@tmpdimb=\dimen313
-\@anim@num=\count271
-\@anim@curframe=\count272
-\@anim@curframe@zb=\count273
-\@anim@resizeflags=\count274
-\@anim@skipfram=\count275
-\@anim@mulframecnt=\count276
+\@anim@num=\count270
+\@anim@curframe=\count271
+\@anim@curframe@zb=\count272
+\@anim@resizeflags=\count273
+\@anim@skipfram=\count274
+\@anim@mulframecnt=\count275
 \@anim@@tmlnfile=\read2
-\@anim@tmpcnt=\count277
-\c@@anim@ltxcnt=\count278
-\@anim@curlayer=\count279
-\@anim@lineno=\count280
-\@anim@curfield=\count281
-\@anim@@resizeflags=\count282
+\@anim@tmpcnt=\count276
+\c@@anim@ltxcnt=\count277
+\@anim@curlayer=\count278
+\@anim@lineno=\count279
+\@anim@curfield=\count280
+\@anim@@resizeflags=\count281
 ) (d:/texlive/2016/texmf-dist/tex/latex/beamer/multimedia/xmpmulti.sty
-\@mpm@count=\count283
+\@mpm@count=\count282
 )
 (d:/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count284
-\Gm@cntv=\count285
-\c@Gm@tempcnt=\count286
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
 \Gm@bindingoffset=\dimen314
 \Gm@wd@mp=\dimen315
 \Gm@odd@mp=\dimen316
@@ -1616,7 +1611,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (d:/texlive/2016/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count287
+\c@section@level=\count286
 )
 LaTeX Info: Redefining \ref on input line 199.
 LaTeX Info: Redefining \pageref on input line 199.
@@ -1663,74 +1658,96 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lec=\count288
+\c@lec=\count287
 Package babel Info: Redefining russian shorthand "|
 (babel)             in language  on input line 214.
 Package babel Info: Redefining russian shorthand "~
 (babel)             in language  on input line 214.
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 216
+.
+(d:/texlive/2016/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
+File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
+)
+Overfull \hbox (28.96487pt too wide) in paragraph at lines 228--230
+[]\T2A/cmr/m/n/12 Зачем нуж-на z--функция? Бу-дем ис-кать строч-ку \T2A/cmtt/m/
+n/12 p=aba \T2A/cmr/m/n/12 и все ее вхож-де-ния в стро-ке \T2A/cmtt/m/n/12 abac
+abadabacaba\T2A/cmr/m/n/12 .
+ []
+
 <<ot1.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+msa on input line 236.
+LaTeX Font Info:    Try loading font information for U+msa on input line 234.
 
 (d:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 236.
+LaTeX Font Info:    Try loading font information for U+msb on input line 234.
 
 (d:/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 236.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 234.
 
 (d:/texlive/2016/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 237
-.
-
-(d:/texlive/2016/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
-File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
-)
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 266.
+(babel)             in language  on input line 264.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 266.
+(babel)             in language  on input line 264.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 264.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 269.
-Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 269.
-Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 264.
  [1
 
 {d:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 299.
+(babel)             in language  on input line 269.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 299.
+(babel)             in language  on input line 269.
 Package babel Info: Redefining russian shorthand "|
-(babel)             in language  on input line 299.
+(babel)             in language  on input line 270.
 Package babel Info: Redefining russian shorthand "~
-(babel)             in language  on input line 299.
-Package atenddvi Info: Last page = 2.
+(babel)             in language  on input line 270.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 305.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 305.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 308.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 308.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 308.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 308.
  [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 299.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 336.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 336.
+Package babel Info: Redefining russian shorthand "|
+(babel)             in language  on input line 336.
+Package babel Info: Redefining russian shorthand "~
+(babel)             in language  on input line 336.
+Package atenddvi Info: Last page = 3.
+ [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 336.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 336.
  (./lection_26.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 299.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 336.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 336.
 Package rerunfilecheck Info: File `lection_26.out' has not changed.
-(rerunfilecheck)             Checksum: F48B809719321005D8A3C69CC4CA11D9;741.
+(rerunfilecheck)             Checksum: CF137D45659380D806A46C3D6E483820;1228.
  ) 
 Here is how much of TeX's memory you used:
- 32721 strings out of 493013
- 586456 string characters out of 6136992
- 647653 words of memory out of 5000000
- 35738 multiletter control sequences out of 15000+600000
+ 32762 strings out of 493013
+ 587208 string characters out of 6136992
+ 648645 words of memory out of 5000000
+ 35776 multiletter control sequences out of 15000+600000
  18971 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,54p,10416b,405s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,6n,54p,10416b,537s stack positions out of 5000i,500n,10000p,200000b,80000s
 {d:/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}<d:/tex
 live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2016
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2016/texmf-dis
@@ -1741,10 +1758,10 @@ fbx2074.pfb><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pf
 b><d:/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><d:/texl
 ive/2016/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb><d:/texlive/2016/t
 exmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on lection_26.pdf (2 pages, 147166 bytes).
+Output written on lection_26.pdf (3 pages, 156186 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 93 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 65 words of extra memory for PDF output out of 10000 (max. 10000000)
 
