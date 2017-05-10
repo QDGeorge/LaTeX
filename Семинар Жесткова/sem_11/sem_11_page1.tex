@@ -1,3 +1,4 @@
+Решим пару примеров на пройденные темы.
 \begin{prim}
 Может ли данная матрица быть матрицей Грама?
 
@@ -6,10 +7,11 @@ $$A=\left(\begin{array}{rrr}
      2&1&1\\
      1&1&2
 \end{array}\right)$$
+\end{prim}
 Вспомним из семинара 10 свойства матрицы Грама.
 \begin{itemize}
-    \item Симмитричность 
-    \item Положительная определенность
+    \item Симметричность 
+    \item Положительная определённость
 \end{itemize}
 
 Наша матрица симметрична, проверим на положительную определенность.
@@ -19,65 +21,64 @@ $M_1=1\geq0 $
 $M_2=-3\leq0$
 
 Матрица не положительно определена $\Rightarrow$ не матрица Грама.
-\end{prim}
 
 \begin{prim}
-Найти ортогноальную проекцию вектора $a (1\quad 0 -2 \quad2)^T$ на $U: x_1+x_2+x_3+x_4=0;\quad \Gamma =E$.
-
+Найти ортогональную проекцию вектора $\textbf{a} (1\quad 0 -2 \quad2)^T$ на $U: x_1+x_2+x_3+x_4=0;\quad \Gamma =E$.
+\end{prim}
 Можно записать $U$ как
 
-$U(1\quad1\quad1\quad1|0)$\qquad $U:\langle \begin{pmatrix}
+$U(1\quad1\quad1\quad1|0)$\qquad $U:\langle \begin{pmatrixr}
      -1 \\
       1\\
       0\\
       0
-\end{pmatrix},\begin{pmatrix}
+\end{pmatrixr},\begin{pmatrixr}
      -1 \\
       0\\
       1\\
       0
-\end{pmatrix},\begin{pmatrix}
+\end{pmatrixr},\begin{pmatrixr}
      -1 \\
       0\\
       0\\
       1
-\end{pmatrix}\rangle$
+\end{pmatrixr}\rangle$
 
-$U^{\perp}:\langle\begin{pmatrix}
+$U^{\perp}:\langle\begin{pmatrixr}
      1 \\
      1\\
      1\\
       1
-\end{pmatrix}\rangle$
+\end{pmatrixr}\rangle$
 \vspace{2mm}
 
-$\textbf{a}= \text{Пр}_U^\textbf{a}+\text{Пр}_{U^{\perp}}^\textbf{a} \Leftrightarrow \text{Пр}_U^\textbf{a} = \textbf{a} - \text{Пр}_{U^{\perp}}^\textbf{a}=\textbf{a} - \frac{(\textbf{a,b})}{|\textbf{b}|^2}\textbf{b}$
+$\textbf{a}= \text{Пр}_U^\textbf{a}+\text{Пр}_{U^{\perp}}^\textbf{a} \Leftrightarrow \text{Пр}_U^\textbf{a} = \textbf{a} - \text{Пр}_{U^{\perp}}^\textbf{a}=\textbf{a} - \cfrac{(\textbf{a, b})}{|\textbf{b}|^2}\textbf{b}$
 
-$\text{Пр}_U^\textbf{a} = \begin{pmatrix}
+$\text{Пр}_U^\textbf{a} = \begin{pmatrixr}
      1 \\
       0\\
       -2\\
       2
-\end{pmatrix}-\frac{1}{4}\begin{pmatrix}
+\end{pmatrixr}-\cfrac{1}{4}\begin{pmatrixr}
      1 \\
      1\\
      1\\
       1
-\end{pmatrix}=\frac{1}{4}\begin{pmatrix}
+\end{pmatrixr}=\cfrac{1}{4}\begin{pmatrixr}
      3 \\
      -1\\
      -9\\
       7
-\end{pmatrix}$
-\end{prim}
+\end{pmatrixr}$
+
 \section{Ортогонализация Грама-Шмидта}
 
-Пусть дан базис $f_1,\dots,f_n$
+Пусть дан базис $\textbf{f}_1,\dots,\textbf{f}_n$
 
-Наша задача: построить отрогональный базис $h_1,\dots,h_n$
+Наша задача: построить отрогональный базис $\textbf{h}_1,\dots,\textbf{h}_n$
 
 \begin{enumerate}
-    \item $h_1=f_1$
-    \item $h_2=f_2 - \text{Пр}_{h_1}^{f_2} =f_2 =-\frac{(h_1,f_2)}{|h_1|^2}h_1$
-    \item $h_3 = f_3 - \text{Пр}_{\langle h_1,h_2\rangle}^{f_3}=f_3 - \frac{(f_3,h_1)}{|h_1|^2}h_1 - \frac{(f_3,h_2)}{|h_2|^2}h_2 $
+    \item $\textbf{h}_1=\textbf{f}_1$
+    \item $\textbf{h}_2=\textbf{f}_2 - \text{Пр}_{\textbf{h}_1}^{\textbf{f}_2} =\textbf{f}_2 -\cfrac{(\textbf{h}_1, \textbf{f}_2)}{|\textbf{h}_1|^2}\textbf{h}_1$
+    \item $\textbf{h}_3 = \textbf{f}_3 - \text{Пр}_{\langle \textbf{h}_1, \textbf{h}_2\rangle}^{\textbf{f}_3}=\textbf{f}_3 - \cfrac{(\textbf{f}_3, \textbf{h}_1)}{|\textbf{h}_1|^2}\textbf{h}_1 - \cfrac{(\textbf{f}_3, \textbf{h}_2)}{|\textbf{h}_2|^2}\textbf{h}_2 $
     \end{enumerate}

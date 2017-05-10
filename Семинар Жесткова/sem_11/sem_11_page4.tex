@@ -22,30 +22,33 @@
 \end{proof}
 \begin{lemma}
 	Собственные подпространства самосопряженных преобразований $\phi$ ортогональны (собственные векторы, отвечающие различным собственным значениям, ортогональны).
+	\label{lemm2}
 \end{lemma}
 \begin{proof}
 	$\left\{
 	\begin{matrix}
-	\phi(x) = \lambda x\\
-	\phi(y) = \mu y \\
+	\phi(\textbf{x}) = \lambda \textbf{x}\\
+	\phi(\textbf{y}) = \mu \textbf{y} \\
 	\lambda \neq \mu
 	\end{matrix}
 	\right. \Rightarrow
 	\left\{
 	\begin{matrix}
-	(\phi(x), y) = \lambda (x, y) \\
-	(x, \phi(y)) = \mu (x, y)
+	(\phi(\textbf{x}), \textbf{y}) = \lambda (\textbf{x}, \textbf{y}) \\
+	(\textbf{x}, \phi(\textbf{y})) = \mu (\textbf{x}, \textbf{y})
 	\end{matrix}
 	\right. )\ominus \\
-	0 = ( \lambda - \mu )(x,y) \Rightarrow
-	(x, y) = 0 \Rightarrow x \perp y
-	$, что и требовалось доказать
+	0 = ( \lambda - \mu )(\textbf{x}, \textbf{y}) \Rightarrow
+	(\textbf{x}, \textbf{y}) = 0 \Rightarrow \textbf{x} \perp \textbf{y}
+	$, что и требовалось доказать.
 \end{proof}
 
-\section{Центральная теорема}
-$\phi$ - самосопряженное $\Leftrightarrow \exists
+\subsection{Центральная теорема}
+\begin{theorem}
+$\phi$ --- самосопряженное $\Leftrightarrow \exists
 $ ОНБ из собственных векторов.
+\end{theorem}
 \begin{proof}
-	($\Rightarrow$) Пусть $U=U_1 \oplus ... \oplus U_n$ - сумма всех собственных подпространств. Докажем, что $U= \mathcal{E} \Leftrightarrow U^\perp = 0$ \\
-	$\phi(U^\perp)$ - самосопряженное $	\overset{\text{Лемма 1}}{\Rightarrow}  \exists \lambda \in \mathcal{R} \Rightarrow \exists \text{~с.в.} \in U^\perp \text{~, но все собственные векторы} \in U \Rightarrow U^\perp = 0 \Rightarrow U = \mathcal{E} \Rightarrow$ существует базис из собственных векторов, этот базис можно сделать
+	($\Rightarrow$) Пусть $U=U_1 \oplus ... \oplus U_n$ --- сумма всех собственных подпространств. Докажем, что $U= \mathcal{E} \Leftrightarrow U^\perp = 0$ \\
+	$\phi(U^\perp)$ --- самосопряженное $	\overset{\text{Лемма 1}}{\Rightarrow}  \exists \lambda \in \mathbb{R} \Rightarrow \exists \text{~собственный вектор} \in U^\perp$, но все собственные векторы $\in U \Rightarrow U^\perp = 0 \Rightarrow U = \mathcal{E} \Rightarrow$ существует базис из собственных векторов, этот базис можно сделать.
 \end{proof}
