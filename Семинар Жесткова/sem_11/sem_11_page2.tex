@@ -1,116 +1,81 @@
-\textbf{\large{Свойства:}} \\
-\hspace*{0.07cm} 1) Ортогональное преобразование инъективно.
-\begin{proof}
-	Пусть $x \in Ker~\phi \text{, т.е. } \phi(x) = 0 \\
-	(\phi(x), \phi(x)) = (x, x) = 0 \Rightarrow x = 0 \Rightarrow $ инъекция
-\end{proof}
-\hspace*{-0.5cm}
-2) Собственные значения ортогонального преобразования равны $\pm 1$
-\begin{proof}
-	$ \phi (x) = \lambda x, x \neq 0 \\
-	(\phi(x), \phi(x)) = \lambda^2(x, x) = (x, x) \Leftrightarrow \lambda^2 = 1
-	$
-\end{proof}
-\hspace*{-0.5cm}
-3) Пусть подпространство $ U \subset \mathcal{E} $. Если $U$ инвариантно относительно $\phi$, то $U^\perp$ инвариантно относительно $\phi$
+% FIXME надо k-ый шаг прописать
+Для построения ортонормированного базиса, каждый вектор нужно разделить на его длину, т.е.
+$$
+\textbf{e}_i=\cfrac{\textbf{h}_i}{\abs{\textbf{h}_i}}.
+$$
+\begin{prim}
+Ортонормировать систему векторов со стандартным (т.е. $\Gamma = E$) скалярным произведением
+\begin{center}
+		$
+		\textbf{f}_1 = \begin{pmatrixr}
+			1&2&1&2
+		\end{pmatrixr}^{\text{T}}, \quad \textbf{f}_2 = \begin{pmatrixr}
+		4&0&4&1
+		\end{pmatrixr}^{\text{T}}, \quad \textbf{f$_3$} = \begin{pmatrixr}
+		1&13&-1&-3
+		\end{pmatrixr}^{\text{T}}.
+		$
+\end{center}
+~\
+\end{prim}
+На первом шаге возьмем вектор $\textbf{f}_1$ за основу нового базиса, т.е. $\textbf{h}_1 = \textbf{f}_1 =\begin{pmatrixr}1&2&1&2\end{pmatrixr}^{\text{T}}, \abs{\textbf{h}_1} = \sqrt{10}$. На втором шаге найдем следующий вектор по рекуррентной формуле, полученной выше
+$$
+\textbf{h}_2 = \textbf{f}_2 - \cfrac{\textbf{(f}_2, \textbf{h}_1\textbf{)}}{\abs{\textbf{h}_1}^2}\, \textbf{h}_1=\begin{psm}
+4\\0\\4\\1
+\end{psm} - \cfrac{10}{10} \begin{psm}
+1\\2\\1\\2
+\end{psm}=\begin{psm}
+3\\-2\\3\\-1
+\end{psm}, \quad \abs{\textbf{h}_2} = \sqrt{23}.
+$$
+Можно убедиться, что $\textbf{(h}_2, \textbf{h}_1\textbf{)} = 0$.\\
+Далее, найдем третий вектор
+$$
+\textbf{h}_3=\textbf{f}_3-\cfrac{\textbf{(f}_3, \textbf{h}_1\textbf{)}}{\abs{\textbf{h}_1}^2}\, \textbf{h}_1-\cfrac{\textbf{(f}_2, \textbf{h}_2\textbf{)}}{\abs{\textbf{h}_2}^2}\, \textbf{h}_2=\begin{pmatrixr}
+2&7&0&-8
+\end{pmatrixr}^\text{T}, \quad \abs{\textbf{h}_3} = \sqrt{17}.
+$$
+Осталось только нормировать полученный базис, т.е. разделить каждый вектор на его длину.\\
+Ответ:
+$\textbf{e}_1=\frac{1}{\sqrt{10}}\begin{pmatrixr}
+	1&2&1&2
+\end{pmatrixr}^\text{T},
+\textbf{e}_2=\frac{1}{\sqrt{23}}\begin{pmatrixr}
+3&-2&3&-1
+\end{pmatrixr}^\text{T},
+\textbf{e}_3=\frac{1}{\sqrt{17}}\begin{pmatrixr}
+2&7&0&8
+\end{pmatrixr}^\text{T}.
+$
 
 \begin{prim}
-	$\phi$ переводит столбцы матрицы $A$ в столбцы $B$. Скалярное произведение стандартное. Ортогонально ли $\phi$?
+	В пространстве многочленов, степени не выше второй, задано скалярное произведение в таком виде:
+	$$
+	(f, g) = \int\limits_{-1}^1f(t)g(t)dt.
+	$$
+	Построить ортогональный	базис в этом пространстве.
 \end{prim}
-\underline{Первый способ}\\
-$A = \left(
-\begin{array}{ccc}
-4 && 2 \\
-7 && 1
-\end{array}
-\right) \rightarrow B = \left(
-\begin{array}{ccc}
-8 && 2 \\
-1 && -1
-\end{array}
-\right)$ \\  
-\\
-$
-\hspace*{0.2cm} x \left( \begin{array}{ccc}
-4 \\ 7
-\end{array} \right) \hspace{0.7cm} \phi(x) \left(
-\begin{array}{ccc}
-8 \\ 1
-\end{array}
-\right) \hspace{0.7cm} (x, y) = 15 \\ \\
-\hspace*{0.2cm} y \left( \begin{array}{ccc}
-2 \\ 1
-\end{array} \right) \hspace{0.7cm} \phi(y) \left(
-\begin{array}{ccc}
-2 \\ -1
-\end{array}
-\right) \hspace{0.4cm} (\phi(x), \phi(y)) = 15 \\ \\ 
-\begin{array}{ccc}
-(x, x) = 65 && (\phi(x), \phi(x)) = 65 \\
-(y, y) = 5 && (\phi(y), \phi(y)) = 5
-\end{array} \\
-\hspace*{0.2cm} \Rightarrow \phi - \text{ ортогональное}
-$ \\ 
-Может возникнуть мысль, что достаточно проверить два соотношения из трех, однако этого оказывается недостаточно: \\
-$ (x, z) = (x, \alpha x + \beta y) = \alpha \uline{(x, x)} + \beta \uwave{(x, y)} = (\phi(x), \phi(z)) = (\phi(x), \alpha \phi (x) + \beta \phi (y)) \\ = \alpha( \uwave{\phi(x), \phi(x)}) + \beta (\uline{\phi(x), \phi(y)})
-$ \\
-\textit{Контрпример:} \\
-$
-\hspace*{0.2cm} x \left( \begin{array}{ccc}
--2 \\ 2
-\end{array} \right) \hspace{0.7cm} \phi(x) \left(
-\begin{array}{ccc}
-3 \\ 1
-\end{array}
-\right) \hspace{0.7cm} (x, y) = 6 \hspace*{0.5cm} (\phi(x), \phi(y)) = 15 \\ \\
-\hspace*{0.2cm} y \left( \begin{array}{ccc}
--2 \\ 1
-\end{array} \right) \hspace{0.7cm} \phi(y) \left(
-\begin{array}{ccc}
-0 \\ 6
-\end{array}
-\right) \hspace{0.4cm} \textbf{но!} \hspace{0.2cm} (x, x) = 8 \hspace*{0.5cm} (\phi(x), \phi(x)) = 10 \\ \\ 
-\begin{array}{ccc}
-(x, x) = 65 && (\phi(x), \phi(x)) = 65 \\
-(y, y) = 5 && (\phi(y), \phi(y)) = 5
-\end{array}
-$ \\ \\
-Длины не сохраняются $ \Rightarrow $ не ортогонально! \vspace{0.3cm} \\
-\underline{Второй способ: } \\
-$ X \left(
-\begin{array}{ccc}
-4 && 2 \\
-7 && 1
-\end{array}
-\right) = \left(
-\begin{array}{ccc}
-8 && 2 \\
-1 && -1
-\end{array} \right) \hspace*{0.5cm} \text{Транспонируя с обеих сторон: } \vspace*{0.2cm} \\
-\left(
-\begin{array}{ccc}
-4 && 7 \\
-2 && 1
-\end{array} \right) X^T = \left(
-\begin{array}{ccc}
-8 && 1 \\
-2 && -1
-\end{array} \right) \hspace*{0.3cm} \text{Умножая второе уравнение на первое \textit{слева}, получим} \vspace{0.2cm} \\
-\left(
-\begin{array}{ccc}
-4 && 7 \\
-2 && 1
-\end{array} \right) X X^T \left(
-\begin{array}{ccc}
-4 && 2 \\
-7 && 1
-\end{array} \right) = \left(
-\begin{array}{ccc}
-8 && 1 \\
-2 && -1
-\end{array} \right) \left(
-\begin{array}{ccc}
-8 && 2 \\
-1 && -1
-\end{array} \right)
-$
+За основу возьмем стандартный базис $\underset{\textbf{f}_1\, \textbf{f}_2\, \textbf{f}_3}{\{1, t, t^2\}}$. Пусть первый вектор в нашем новом базисе $\textbf{h}_1 = \textbf{f}_1 = 1$. Найдем длину $\textbf{h}_1$\footnote{Как может показаться длина единицы равна 1. Но т.к. по определению длина вектора --- корень из его скалярного произведения самого на себя, это не так.}:
+$$
+\abs{\textbf{h}_1}^2=\int\limits_{-1}^11^2dt=2.
+$$
+Для ортогонализации необходимо найти скалярное произведения $\textbf{f}_1$ и $\textbf{f}_2$. Будем искать их по заданному определению:
+$$
+\textbf{(f}_1, \textbf{f}_2\textbf{)} = \int\limits_{-1}^1 1\cdot t=0 \Rightarrow 1\perp t.
+$$
+Теперь подставим числа в рекуррентную формулу и получим второй вектор базиса:
+$$
+\textbf{h}_2 = \textbf{f}_2 -\cfrac{\textbf{(f}_2, \textbf{h}_1\textbf{)}}{\abs{\textbf{h}_1}^2}\,\textbf{h}_1=\textbf{\textbf{f}}_2\quad \abs{\textbf{h}_2}^2=\int\limits_{-1}^1t^2dt=\cfrac{2}{3}.
+$$
+Т.к. $\textbf{(f}_3, \textbf{h}_2\textbf{)}=0$,
+$$
+\textbf{(h}_1, \textbf{f}_3\textbf{)} = \int\limits_{-1}^1 1\cdot t^2=\left.\frac{t^3}{3}\right|_{-1}^1 = \frac{2}{3},
+$$
+$$
+\textbf{h}_3 = \textbf{f}_3 - \cfrac{\textbf{(f}_3, \textbf{h}_2\textbf{)}}{\abs{\textbf{h}_2}^2}\,\textbf{h}_2-\cfrac{\textbf{(f}_3, \textbf{h}_1\textbf{)}}{\abs{\textbf{h}_1}^2}\,\textbf{h}_1,
+$$
+то
+$$
+\textbf{h}_3 = t^2-\cfrac{2}{3\cdot2}\cdot1=t^2-\cfrac{1}{3}.
+$$
+Ответ: $\{1, t, t^2 - \frac{1}{3}\}$.
