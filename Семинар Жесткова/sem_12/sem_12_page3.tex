@@ -1,0 +1,47 @@
+Если $X$~---~ортогональна $\Rightarrow XX^{\text{T}}=E$
+$$\left(\begin{array}{rr}
+    65 & 15 \\
+     15&5
+\end{array}\right)=\left(\begin{array}{rr}
+    65 & 15 \\
+     15&5
+\end{array}\right) \Rightarrow \text{Предложение верно} \Rightarrow \varphi \text{ ортогонально}$$
+
+\section{Полярное разложение}
+
+\begin{theorem}
+Любое линейное преобразование евклидова пространства $\varphi$ представимо в виде $\varphi=qы$, где $q$~---~ортогональное преобразование, а $s$~---~самосопряженное преобразование.
+\end{theorem}
+Иначе говоря, любая матрица $A$ раскладывается в произведение
+\begin{equation}
+A=QS,\tag{\sun}
+\label{sun}
+\end{equation}
+где $Q$~---~ортогональная матрица, $S$~---~симметрическая матрица.
+
+То есть существует такое ортогональное преобразование $P: \, P^{-1}SP=D$~---~диагональная матрица.
+
+$S=PDP^{-1} \Rightarrow \eqref{sun} \Rightarrow A=\underbrace{QP}_{Q_1}D\underbrace{P^{-1}}_{Q_2} \Rightarrow$ \boxed{A=Q_1DQ_2}, где $Q_1,Q_2$~---~ортогональные матрицы, $D$~---~диагональная.
+\section{Билинейные функции на евклидовом пространстве}
+\begin{definition}
+Линейное преобразование $\varphi$ называется присоединенным к билинейной форме $b(\textbf{x}, \textbf{y})$, если $\forall \textbf{x}, \textbf{y} \in \mathcal{E} \rightarrow b(\textbf{x}, \textbf{y})=(\textbf{x}, \varphi(\textbf{y}))$
+\end{definition}
+Фиксируем базис $\textbf{e}, \varphi: A, \textbf{x}=\bm\xi, \textbf{y}=\bm\eta, \varphi(\textbf{y})=A\bm\eta.$
+
+Пусть $B$~---~матрица билинейной формы.
+
+$$b(\textbf{x}, \textbf{y}) = \bm\xi^T B\bm\eta=\bm\xi^T \Gamma A \bm\eta$$
+$$\boxed{B = \Gamma A}\Rightarrow A=\Gamma^{-1}B$$
+
+\begin{prim}
+Найти матрицу присоединенного преобразования.
+
+$\Gamma=\left(\begin{array}{rr}
+    1 & 1 \\
+     1&3
+\end{array}\right) \quad k(\textbf{x})=4x_1^2+16x_1x_2+6x_2^2$
+\end{prim}
+$\exists T_1\dots T_m$ элементарные преобразования строк такие, что
+
+$$T_1\dots T_m \Gamma=E | \cdot \Gamma^{-1}B$$
+$$T_1\dots T_mB=A$$

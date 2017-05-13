@@ -1,116 +1,122 @@
+\\
 \textbf{\large{Свойства:}} \\
 \hspace*{0.07cm} 1) Ортогональное преобразование инъективно.
 \begin{proof}
-	Пусть $x \in Ker~\phi \text{, т.е. } \phi(x) = 0 \\
-	(\phi(x), \phi(x)) = (x, x) = 0 \Rightarrow x = 0 \Rightarrow $ инъекция
+	Пусть $\textbf{x} \in Ker~\phi \text{, т.е. } \phi(\textbf{x}) = 0. \\
+	(\phi(\textbf{x}), \phi(\textbf{x})) = (\textbf{x}, \textbf{x}) = 0 \Rightarrow \textbf{x} = \textbf{o} \Rightarrow $ инъекция.
 \end{proof}
 \hspace*{-0.5cm}
-2) Собственные значения ортогонального преобразования равны $\pm 1$
+2) Собственные значения ортогонального преобразования равны $\pm 1$.
 \begin{proof}
-	$ \phi (x) = \lambda x, x \neq 0 \\
-	(\phi(x), \phi(x)) = \lambda^2(x, x) = (x, x) \Leftrightarrow \lambda^2 = 1
+	$ \phi (\textbf{x}) = \lambda \textbf{x}, \textbf{x} \neq \textbf{o}. \\
+	(\phi(\textbf{x}), \phi(\textbf{x})) = \lambda^2(\textbf{x}, \textbf{x}) = (\textbf{x}, \textbf{x}) \Leftrightarrow \lambda^2 = 1.
 	$
 \end{proof}
 \hspace*{-0.5cm}
-3) Пусть подпространство $ U \subset \mathcal{E} $. Если $U$ инвариантно относительно $\phi$, то $U^\perp$ инвариантно относительно $\phi$
+3) Пусть подпространство $ U \subset \mathcal{E} $. Если $U$ инвариантно относительно $\phi$, то $U^\perp$ инвариантно относительно $\phi$.
 
 \begin{prim}
 	$\phi$ переводит столбцы матрицы $A$ в столбцы $B$. Скалярное произведение стандартное. Ортогонально ли $\phi$?
 \end{prim}
 \underline{Первый способ}\\
 $A = \left(
-\begin{array}{ccc}
-4 && 2 \\
-7 && 1
+\begin{array}{rr}
+4 & 2 \\
+7 & 1
 \end{array}
 \right) \rightarrow B = \left(
-\begin{array}{ccc}
-8 && 2 \\
-1 && -1
+\begin{array}{rr}
+8 & 2 \\
+1 & -1
 \end{array}
 \right)$ \\  
 \\
 $
-\hspace*{0.2cm} x \left( \begin{array}{ccc}
+\hspace*{0.2cm} \textbf{x} \left( \begin{array}{r}
 4 \\ 7
-\end{array} \right) \hspace{0.7cm} \phi(x) \left(
-\begin{array}{ccc}
+\end{array} \right) \hspace{0.7cm} \phi(\textbf{x}) \left(
+\begin{array}{r}
 8 \\ 1
 \end{array}
-\right) \hspace{0.7cm} (x, y) = 15 \\ \\
-\hspace*{0.2cm} y \left( \begin{array}{ccc}
+\right) \hspace{0.7cm} (\textbf{x}, \textbf{y}) = 15 \\ \\
+\hspace*{0.2cm} \textbf{y} \left( \begin{array}{r}
 2 \\ 1
-\end{array} \right) \hspace{0.7cm} \phi(y) \left(
-\begin{array}{ccc}
+\end{array} \right) \hspace{0.7cm} \phi(\textbf{y}) \left(
+\begin{array}{r}
 2 \\ -1
 \end{array}
-\right) \hspace{0.4cm} (\phi(x), \phi(y)) = 15 \\ \\ 
-\begin{array}{ccc}
-(x, x) = 65 && (\phi(x), \phi(x)) = 65 \\
-(y, y) = 5 && (\phi(y), \phi(y)) = 5
+\right) \hspace{0.4cm} (\phi(\textbf{x}), \phi(\textbf{y})) = 15 \\ \\ 
+\begin{array}{ll}
+(\textbf{x}, \textbf{x}) = 65 & (\phi(\textbf{x}), \phi(\textbf{x})) = 65 \\
+(\textbf{y}, \textbf{y}) = 5 & (\phi(\textbf{y}), \phi(\textbf{y})) = 5
 \end{array} \\
-\hspace*{0.2cm} \Rightarrow \phi - \text{ ортогональное}
+\hspace*{0.2cm} \Rightarrow \phi \text{ --- ортогональное.}
 $ \\ 
 Может возникнуть мысль, что достаточно проверить два соотношения из трех, однако этого оказывается недостаточно: \\
-$ (x, z) = (x, \alpha x + \beta y) = \alpha \uline{(x, x)} + \beta \uwave{(x, y)} = (\phi(x), \phi(z)) = (\phi(x), \alpha \phi (x) + \beta \phi (y)) \\ = \alpha( \uwave{\phi(x), \phi(x)}) + \beta (\uline{\phi(x), \phi(y)})
+$ (\textbf{x}, \textbf{z}) = (\textbf{x}, \alpha \textbf{x} + \beta \textbf{y}) = \alpha \uline{(\textbf{x}, \textbf{x})} + \beta \uwave{(\textbf{x}, \textbf{y})} = (\phi(\textbf{x}), \phi(\textbf{z})) = (\phi(\textbf{x}), \alpha \phi (\textbf{x}) + \beta \phi (\textbf{y})) \\ = \alpha( \uwave{\phi(\textbf{x}), \phi(\textbf{x})}) + \beta (\uline{\phi(\textbf{x}), \phi(\textbf{y})})
 $ \\
 \textit{Контрпример:} \\
 $
-\hspace*{0.2cm} x \left( \begin{array}{ccc}
+\hspace*{0.2cm} \textbf{x} \left( \begin{array}{r}
 -2 \\ 2
-\end{array} \right) \hspace{0.7cm} \phi(x) \left(
-\begin{array}{ccc}
+\end{array} \right) \hspace{0.7cm} \phi(\textbf{x}) \left(
+\begin{array}{r}
 3 \\ 1
 \end{array}
-\right) \hspace{0.7cm} (x, y) = 6 \hspace*{0.5cm} (\phi(x), \phi(y)) = 15 \\ \\
-\hspace*{0.2cm} y \left( \begin{array}{ccc}
+\right) \hspace{0.7cm} (\textbf{x}, \textbf{y}) = 6 \hspace*{0.5cm} (\phi(\textbf{x}), \phi(\textbf{y})) = 15 \\ \\
+\hspace*{0.2cm} \textbf{y} \left( \begin{array}{r}
 -2 \\ 1
-\end{array} \right) \hspace{0.7cm} \phi(y) \left(
-\begin{array}{ccc}
+\end{array} \right) \hspace{0.7cm} \phi(\textbf{y}) \left(
+\begin{array}{r}
 0 \\ 6
 \end{array}
-\right) \hspace{0.4cm} \textbf{но!} \hspace{0.2cm} (x, x) = 8 \hspace*{0.5cm} (\phi(x), \phi(x)) = 10 \\ \\ 
-\begin{array}{ccc}
-(x, x) = 65 && (\phi(x), \phi(x)) = 65 \\
-(y, y) = 5 && (\phi(y), \phi(y)) = 5
+\right) \hspace{0.4cm} \textbf{но!} \hspace{0.2cm} (\textbf{x}, \textbf{x}) = 8 \hspace*{0.5cm} (\phi(\textbf{x}), \phi(\textbf{x})) = 10 \\ \\ 
+\begin{array}{ll}
+(\textbf{x}, \textbf{x}) = 65 & (\phi(\textbf{x}), \phi(\textbf{x})) = 65 \\
+(\textbf{y}, \textbf{y}) = 5 & (\phi(\textbf{y}), \phi(\textbf{y})) = 5
 \end{array}
 $ \\ \\
 Длины не сохраняются $ \Rightarrow $ не ортогонально! \vspace{0.3cm} \\
 \underline{Второй способ: } \\
-$ X \left(
-\begin{array}{ccc}
-4 && 2 \\
-7 && 1
+$$ X \left(
+\begin{array}{rr}
+4 & 2 \\
+7 & 1
 \end{array}
 \right) = \left(
-\begin{array}{ccc}
-8 && 2 \\
-1 && -1
-\end{array} \right) \hspace*{0.5cm} \text{Транспонируя с обеих сторон: } \vspace*{0.2cm} \\
-\left(
-\begin{array}{ccc}
-4 && 7 \\
-2 && 1
-\end{array} \right) X^T = \left(
-\begin{array}{ccc}
-8 && 1 \\
-2 && -1
-\end{array} \right) \hspace*{0.3cm} \text{Умножая второе уравнение на первое \textit{слева}, получим} \vspace{0.2cm} \\
-\left(
-\begin{array}{ccc}
-4 && 7 \\
-2 && 1
-\end{array} \right) X X^T \left(
-\begin{array}{ccc}
-4 && 2 \\
-7 && 1
+\begin{array}{rr}
+8 & 2 \\
+1 & -1
+\end{array} \right) \hspace*{0.5cm}$$
+Транспонируя с обеих сторон, получаем:
+\vspace*{0.2cm} \\
+$$\left(
+\begin{array}{rr}
+4 & 7 \\
+2 & 1
+\end{array} \right) X^{\text{T}} = \left(
+\begin{array}{rr}
+8 & 1 \\
+2 & -1
+\end{array} \right) \hspace*{0.3cm}
+$$
+Умножая второе уравнение на первое \textit{слева}, получим
+\vspace{0.2cm} \\
+$$\left(
+\begin{array}{rr}
+4 & 7 \\
+2 & 1
+\end{array} \right) X X^{\text{T}} \left(
+\begin{array}{rr}
+4 & 2 \\
+7 & 1
 \end{array} \right) = \left(
-\begin{array}{ccc}
-8 && 1 \\
-2 && -1
+\begin{array}{rr}
+8 & 1 \\
+2 & -1
 \end{array} \right) \left(
-\begin{array}{ccc}
-8 && 2 \\
-1 && -1
+\begin{array}{rr}
+8 & 2 \\
+1 & -1
 \end{array} \right)
-$
+$$
