@@ -1,7 +1,63 @@
-\chapter{{Инвариантные и собственные подпространства. Часть 2.}}
-\input{sem/sem_9/sem_9_page1}
-\input{sem/sem_9/sem_9_page2}
-\input{sem/sem_9/sem_9_page3}
-\input{sem/sem_9/sem_9_page4}
-\input{sem/sem_9/sem_9_page5}
-\input{sem/sem_9/sem_9_page6}
+\documentclass[a4paper,12pt]{article}
+
+\input{preambula}
+
+
+\usepackage{graphicx,xcolor}
+
+\newcommand{\resh}{\noindent\textit{Решение:}\\}
+
+\newcounter{prim}
+\newenvironment{prim}{%
+	\addtocounter{prim}{1}
+	\noindent{\\
+		\textbf{\noindentПример \arabic{prim}\\}}%
+}{\vspace{2mm}\\
+\resh
+}
+\definecolor{orange}{rgb}{1, 0.7, 0.1}
+%\usepackage{ulem}
+
+\usepackage{bm} %жирный греческий шрифт
+
+\newenvironment{psm}
+{\left(\begin{smallmatrix*}[r]}
+	{\end{smallmatrix*}\right)}
+
+\newenvironment{pmatrixr}
+{\begin{pmatrix*}[r]}
+	{\end{pmatrix*}}
+
+
+\title{sem_J_9}
+\author{Георгий Демьянов}
+\date{today}
+\usepackage[left=1.27cm,right=1.27cm,top=1.27cm,bottom=2cm]{geometry}
+\begin{document}
+\paragraph{{\LARGE Семинар 8. Инвариантные и собственные подпространства. Часть 2.}\\}
+\input{sem_9_page1}
+\input{sem_9_page2}
+\input{sem_9_page3}
+\input{sem_9_page4}
+\input{sem_9_page5}
+\input{sem_9_page6}
+
+
+
+
+
+
+
+
+
+\begin{center}
+	\vfill \emph{{\small Команда \href{https://vk.com/botay_fizteh}{BOTAY!}:\\
+			Д. Георгий, \href{https://vk.com/id37346992}{VK}\\
+			К. Ксения, \href{https://vk.com/id143862366}{VK}\\
+			Г. Мадина, \href{https://vk.com/id226312463}{VK}\\
+			С. Паша, \href{https://vk.com/id181006282}{VK}\\
+			М. Матвей, \href{https://vk.com/id62009425}{VK}\\
+	}}
+\end{center}
+
+\end{document}}
