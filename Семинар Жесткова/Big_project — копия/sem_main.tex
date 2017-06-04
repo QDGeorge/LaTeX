@@ -7,11 +7,43 @@
 \date{today}
 \usepackage[left=1.27cm,right=1.27cm,top=2cm,bottom=2cm]{geometry}
 
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyhead[RO, RE]{\textbf{\large \thepage}} 
+\fancyhead[CE]{\hrule\smallskip\smallskip\small \rightmark}% odd-center, with the name of the Section
+\fancyhead[CO]{\hrule\smallskip\smallskip\small \thechapter}% Even-center, with the name of the Chapter.
+\fancyfoot[L,R,C]{}
+
+\fancypagestyle{plain}{ %
+	\fancyhead{} % remove everything
+	%\renewcommand{\headrulewidth}{0pt} % remove lines as well
+	\renewcommand{\footrulewidth}{0pt}
+	\fancyhead[RO, RE]{\textbf{\large \thepage}} 
+	\fancyhead[CE]{\hrule\smallskip{\small \text{\rightmark}}}% odd-center, with the name of the Section
+	\fancyhead[CO]{\hrule\smallskip Семинар \thechapter}% Even-center, with the name of the Chapter.
+	\fancyfoot[L,R,C]{}
+	%\fancyhead[C]{\normalsize\thepage}
+}
+\fancypagestyle{plain2}{ %
+	\fancyhead{} % remove everything
+	%\renewcommand{\headrulewidth}{0pt} % remove lines as well
+	%\renewcommand{\footrulewidth}{0pt}
+	%\fancyhead[RO, RE]{\textbf{\large \thepage}} 
+	%\fancyhead[CE]{\hrule\smallskip{\small \text{\rightmark}}}% odd-center, with the name of the Section
+	%\fancyhead[CO]{\hrule\smallskip\small Семинар \thechapter}% Even-center, with the name of the Chapter.
+	%\fancyfoot[L,R,C]{}
+	%\fancyhead[C]{\normalsize\thepage}
+}
+
 \begin{document}
+\pagestyle{plain2}
+
 \def\chaptername{Семинар}
 \setcounter{tocdepth}{1}
-\tableofcontents
 
+\tableofcontents
+\newpage
+\pagestyle{plain}
 \include{sem/sem_1/sem_1}
 \include{sem/sem_2/sem_2}
 \include{sem/sem_3/sem_3}
