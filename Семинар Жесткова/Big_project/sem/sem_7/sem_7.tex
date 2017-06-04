@@ -1,0 +1,543 @@
+\section{Инвариантные подпространства}
+\underline{Будем работать только с преобразованиями.} %22:15
+\subsection{Определение}
+\begin{definition}
+Подпространство $L' \subset L$ называется \textsf{инвариантным} \textbf{относительно преобразования $\bm\phi$}, если
+$$
+\forall \textbf{x} \in L' \mapsto \phi(\textbf{x}) \in L'\text{ или }\phi(L')\subset L'.
+$$
+\end{definition}
+Например:
+\begin{itemize}
+	\item \textbf{o}, L --- вырожденные случаи.
+	\item Поворот $\mathbb{R}^3$ вокруг \textbf{e$_3$} на $\pi/2$ (рис. \ref{prim1}). Инвариантные подпространства: $\textbf{o}, \mathbb{R}^3, \langle \textbf{e$_1$}, \textbf{e$_2$} \rangle, \langle \textbf{e$_3$}\rangle$.
+	\item Ядро преобразования $\phi \ (\ker \phi)$ всегда инвариантно относительно этого преобразования $\phi$.
+	\item $\im \phi$
+	\begin{theorem}
+	Если какое-то подпространство содержит в себе образ, то $L'$ инвариантно относительно $\phi$.
+	\end{theorem}
+	\begin{proof}
+		$$\forall \textbf{x} \in L' \mapsto \phi(\textbf{x}) \subset \im\phi\subset L'$$
+	\end{proof}
+\end{itemize}
+\subsection{Свойства инвариантных подпространств}
+\begin{predlog}
+	Сумма инвариантных подпространств инвариантна.
+\end{predlog}
+\begin{proof}
+	$$
+	\left.
+	\begin{array}{r}
+		\textbf{x} \in L_1, \phi(\textbf{x}) \in L_1\\
+		\textbf{y} \in L_2, \phi(\textbf{y}) \in L_2\\
+	\end{array}
+	\right\} \Rightarrow \phi(\textbf{x}) + \phi(\textbf{y}) \in L_1 + L_2
+	$$
+\end{proof}
+\begin{predlog}
+	Пересечение инвариантных подпространств инвариантно.
+\end{predlog}
+\begin{proof}
+	$$
+	\left.
+	\begin{array}{r}
+	\textbf{x} \in L_1, \phi(\textbf{x}) \in L_1\\
+	\textbf{x} \in L_2, \phi(\textbf{x}) \in L_2\\
+	\end{array}
+	\right\} \Rightarrow \phi(\textbf{x}) \in L_1 \cap L_2
+	$$
+\end{proof}
+\section{Матрица преобразования}
+\subsection{Вид матрицы преобразования}
+Рассмотрим линейное пространство $L$, $\dim L=n$. Пусть $L' \subset L$, $\dim L' = k$ --- инвариантное подпространство относительно $\phi$, базис в $L': \{\textbf{e$_1$}, \dots, \textbf{e$_k$}\}$, базис в $L: \{\textbf{e$_1$}, \dots, \textbf{e$_k$}, \textbf{e$_{k+1}$}, \dots, \textbf{e$_n$}\}$. %22:44 23:10
+
+\begin{figure}
+	\centering
+	\def\svgwidth{5cm} % если надо изменить размер
+	\input{sem/sem_7/podpr.pdf_tex}
+	\caption{Подпространство в L}
+	\label{podpr}
+\end{figure}
+
+Напомним, что матрица преобразования $A$ строится из образов базисных векторов:
+$$A=
+\left(\hspace{1mm}
+\begin{array}{|c|c|c|}
+\cline{1-1} \cline{3-3}
+\multirow{4}{*}{$\phi(e_1)$} & \multirow{4}{*}{$\cdots$} & \multirow{4}{*}{$\phi(e_n)$} \\
+&                           &                              \\
+&                           &                              \\
+&                           &                              \\ \cline{1-1} \cline{3-3} 
+\end{array}\hspace{1mm}\right)
+$$
+Т.о. матрица преобразования в выбранном базисе имеет следующий вид:
+$$
+A =\left(
+\begin{tabular}{c|c}
+$A_1$ & $A_2$\\
+\hline
+$O$ & $A_4$\\
+\end{tabular}
+\right)^{\square}\text{ --- \textsf{клетчочно--треугольный вид}.}\footnote{Квадрат над матрицей значит, что матрица блочная.}
+$$
+
+Пусть теперь $L=L_1\oplus L_2 \oplus \dots \oplus L_s, \forall i\ L_i$ --- инвариантное подпространство относительно $\phi$.
+
+\begin{figure}[h!]
+	\centering
+	\def\svgwidth{10cm} % если надо изменить размер
+	\input{sem/sem_7/summa.pdf_tex}
+	\caption{Прямая сумма подпространств}
+	\label{summa}
+\end{figure}
+
+Тогда матрица преобразования имеет вид:
+$$
+A =\left(
+\begin{array}{cccc}\cline{1-1}
+\multicolumn{1}{|c|}{A_1} & O & \dots & O\\\cline{1-1} \cline{2-2}
+O & \multicolumn{1}{|c|}{A_2} &\dots& O\\\cline{2-2}
+\vdots&\vdots&\ddots&\vdots\\\cline{4-4}
+O & O &\dots & \multicolumn{1}{|c|}{A_s}\\\cline{4-4}
+\end{array}
+\right)^{\square}\text{ --- \textsf{клеточно--диагноальный вид}.}
+$$
+Ширина и высота каждой клетки равны размерности инвариантного подпространства.
+\begin{prim} %\begin{prim} !!!
+	Найти инвариантные подпространства в $\mathbb{R}^3$ относительно $\varphi$. %подпрострашнства, R^3!!!!
+\end{prim}\\
+
+\begin{wrapfigure}{r}{0.27\linewidth}
+	\def\svgwidth{3cm} % если надо изменить размер
+	\input{sem/sem_7/prim2.pdf_tex}
+	\caption{К примеру 1}
+	\label{prim1}
+	\vspace{-1cm}
+\end{wrapfigure}
+
+$A = \left( \begin{array}{rr|r} % ВЫРАВНИВАНИЕ
+0&-1&0\\
+1&0&0\\ 
+\hline
+0&0&1
+\end{array} \right)$
+
+Из вида $A$ видно, что существует два не пересекающихся инвариантных подпространства.\\
+$\textbf{o}, \mathbb{R}^3, \langle \textbf{e$_1$}, \textbf{e$_2$} \rangle, \langle \textbf{e$_3$} \rangle.$\\ % Векторы жирным!!!!!  
+
+\subsection{Геометрический смысл матрицы преобразования}
+Поговорим о геометрии. Научимся определять по внешнему виду матрицы ее геометрический смысл.
+
+$\left( \begin{array}{rrr}
+1 & 0 & 0  \\
+0 & 1& 0\\
+0&0&-1
+\end{array}\right)$~---~отражение относительно $\langle \textbf{e$_1$}, \textbf{e$_2$} \rangle.$ %Точки в конце предложений надо ставить!
+
+$\left( \begin{array}{rrr}
+1 & 0 & 0  \\
+0 & 1& 0\\
+0&0&0
+\end{array}\right)$~---~проекция.
+%Меньше \vspace{}
+
+$\left( \begin{array}{rrr}
+1 & 0 & 0  \\
+0 & 3& 0\\
+0&0&1
+\end{array}\right)$~---~растяжение вдоль $\textbf{e$_2$}$ в 3 раза.\\
+
+Нам интересны матрицы вида:
+
+$A=\left( \begin{array}{ccc} %Здесь выравниваение пришлось оставить из-за того, что выравниваение по правому краю происходит по индексам, что выглядит ужасно
+\lambda_1 & 0 & 0  \\
+0 & \lambda_2& 0\\
+0&0&\lambda_3
+\end{array}\right)$~---~ обобщённое растяжение $\Leftrightarrow \varphi(\textbf{e$_i$}) = \lambda_i\textbf{e$_i$}$.
+
+\section{Собственный вектор}
+\subsection{Определение}
+Рассмотрим преобразование  $\varphi$ с матрицей $A$, тогда ненулевой вектор $\textbf{x}$ называется \textsf{собственным вектором}, если  $\varphi(\textbf{x}) = \lambda \textbf{x}$; $\lambda$~---~собственное значение. %Точки в конце предложений!!! + лучше выделять не почеркиванием, а рубленым шрифтом + векторы жирным!!!
+
+Множество собственных векторов, отвечающих одному и тому же собственному значению, образует \textsf{собственное пространство}.
+\subsection{Свойства}
+\begin{predlog} % Оформление под теорему!
+	Собственный вектор (и только он) порождает одномерное инвариантное подпространство. % "Собственный вектор (и только он) порождает одномерное инвариантно пространство" - я конечно все понимаю, но "инвариантно пространство" ни в какие ворота, так еще и породить пространство он ну никак не может.
+\end{predlog}
+\begin{proof}
+	Рассмотрим инвариантное подпространство  $\langle \textbf{x} \rangle \Rightarrow \varphi(\alpha \textbf{x}) = \alpha \varphi(\textbf{x}) = \alpha\lambda \textbf{x} \in~\langle \textbf{x}\rangle$.
+\end{proof}
+\section{Алгоритм поиска собственных значений и собственных векторов}
+\vspace{-0.5cm}
+$$\varphi(\textbf{x}) = \lambda \textbf{x}$$
+$$\varphi(\textbf{x}) - \lambda \textbf{x} = \textbf{o}$$
+Рассмотрим тождественное преобразование $Id$, матрица его преобразования $E$. % Без сокращений!!!
+$$(\varphi -\lambda Id)(\textbf{x})=\textbf{o}$$
+Перейдём к матричному виду:
+\begin{equation}
+(\varphi -\lambda E)\textbf{x}=\textbf{o} \tag{$*$}
+\end{equation}
+Итак, мы получили СЛУ размеров $n\times n$. Она имеет либо одно решение (нулевое), но оно нам не интересно, т.~к. $\textbf{x}\neq\textbf{o}$, либо бесконечно много решений $\Rightarrow A$ должна быть вырожденной $\Rightarrow \det(A-\lambda E) = 0 \rightarrow \lambda_i\text{ --- cобственное значение} \rightarrow (*) \rightarrow \textbf{x}\text{ --- cобственный вектор}.$ %ТОЧКА!, тире ---!!!!
+\begin{prim}
+	Найти собственные значения и собственные векторы.\\
+	$$A = \left( \begin{array}{rrr}
+	2 & 2 & 1  \\
+	-2 & -3& 2\\
+	3&6&0
+	\end{array}\right)
+	$$
+\end{prim}\\
+
+Найдём $\lambda$ из условия $\det(A-\lambda E) = 0$:
+
+$\begin{array}{|ccc|}
+2-\lambda & 2 & 1  \\
+-2 & -3 -\lambda& 2\\
+3&6&-\lambda
+\end{array} = 0 = -\lambda^3- \lambda^2+17\lambda -15 \Rightarrow \lambda_1 =1, \lambda_2 =3, \lambda_3 = -5$\\
+Далее подставим числа $\lambda$ в $(*)$:
+
+\begin{enumerate}
+	\item{
+		$\lambda_1=1 :$
+		$\begin{pmatrix*}[r]
+		1 & 2 & 1 & \vrule & 0\\
+		-2 & -4 & 2 & \vrule & 0\\
+		3 & 6 & -1 & \vrule & 0\\
+		\end{pmatrix*} , $\\
+		$
+		L_1=
+		\left(
+		\begin{smallmatrix*}[r]
+		x_1\\ x_2\\ x_3\\ 
+		\end{smallmatrix*}
+		\right) 
+		=
+		\langle
+		\left(
+		\begin{smallmatrix*}[r]
+		2\\ -1\\ 0\\ 
+		\end{smallmatrix*}
+		\right) 
+		\rangle
+		$
+		$\leftarrow $
+		Собственный вектор, перейдёт сам в себя т.к. $\lambda=1$.
+	}
+	\item{
+		$\lambda_2=3 :
+		L_2=
+		\left(
+		\begin{smallmatrix*}[r]
+		x_1\\ x_2\\ x_3\\ 
+		\end{smallmatrix*}
+		\right) 
+		=
+		\langle
+		\left(
+		\begin{smallmatrix*}[r]
+		1\\ 0\\ 1\\ 
+		\end{smallmatrix*}
+		\right) 
+		\rangle
+		$
+	}
+	\item{
+		$\lambda_3=-5 :
+		L_3=
+		\left(
+		\begin{smallmatrix*}[r]
+		x_1\\ x_2\\ x_3\\ 
+		\end{smallmatrix*}
+		\right) 
+		=
+		\langle
+		\left(
+		\begin{smallmatrix*}[r]
+		1\\ -8\\ 9\\ 
+		\end{smallmatrix*}
+		\right) 
+		\rangle
+		$
+	}
+\end{enumerate}
+
+\begin{lemma} % окружение лемма!
+	Собственные векторы, соответствующие различным собственным значениям, попарно линейно независимы.
+\end{lemma}
+
+
+Соберём базис $\textbf{f}$ %f в мат режиме
+$  %для красоты пришлось сделать ужас: в матрице матрица, у которой в подписи матрица.
+\begin{matrix}
+\overset{\left\{
+	\begin{pmatrix*}[r]
+	2\\ -1\\ 0\\ 
+	\end{pmatrix*},
+	\begin{pmatrix*}[r]
+	1\\ 0\\ 1\\ 
+	\end{pmatrix*},
+	\begin{pmatrix*}[r]
+	1\\ -8\\ 9\\ 
+	\end{pmatrix*}
+	\right\}}{
+	\begin{matrix*}[r]
+	\textbf{f$_1$}\phantom{3}&\textbf{f$_2$}&\phantom{2}\textbf{f$_3$}
+	\end{matrix*}}
+\end{matrix}
+$\\
+$
+\left.
+\begin{aligned} %раз уж aligned, сделай выравнивание
+\varphi (\textbf{f$_1$})&=\textbf{f$_1$}\\ %ВЕКТОРЫ
+\varphi (\textbf{f$_2$})&=3\textbf{f$_2$} \\
+\varphi (\textbf{f$_3$})&=5\textbf{f$_3$}\\
+\end{aligned}
+\right.
+\to A'=
+\begin{pmatrix*}[r]
+1 & 0 & 0\\
+0 & 3 & 0\\
+0 & 0 & -5\\
+\end{pmatrix*}
+$
+в базисе $\textbf{f}$.\\ %точки в конце предложений!
+
+\section{Диагонализируемость матрицы}
+\begin{prim}
+	Диагонализировать матрицу\\
+	$$
+	A=
+	\begin{pmatrix*}[r]
+	3 & 1 & -2\\
+	2 & 2 & -2\\
+	2 & 1 & -1\\
+	\end{pmatrix*}
+	$$
+\end{prim}\\
+
+$
+\det(A-\lambda E)=0$:\\ %заебался уже говорить о мат функциях, об их оформлениях. Почему нельзя делать правильно - я не понимаю.
+$
+\begin{vmatrix*}[c] %лучше сделать центрирование
+3-\lambda & 1 & -2\\
+2 & 2-\lambda & -2\\
+2 & 1 & -1-\lambda\\
+\end{vmatrix*}
+=0
+\leftrightarrow
+\underset{ \text{Не забывайте про свойства детерминанта}}{(\lambda-1)^2(\lambda-2)=0}\\
+$
+$\lambda =1$ --- корень алгебраической кратности 2.\\ % тире тройное!!!!!!!!!!!!+что такое алгоритмическая кратность?
+$\lambda =2$ --- корень алгебраической кратности 1 (простой корень).\\
+\begin{enumerate}
+	\item{
+		$\lambda =1   $ \\ 
+		$
+		\begin{pmatrix*}[r]
+		2 & 1 & -2 & \vrule & 0\\
+		2 & 1 & -2 & \vrule & 0\\
+		2 & 1 & -2 & \vrule & 0\\
+		\end{pmatrix*} ,
+		$
+		$
+		L_1=
+		\left(
+		\begin{smallmatrix*}[r]
+		x_1\\ x_2\\ x_3\\ 
+		\end{smallmatrix*}
+		\right) 
+		=
+		\langle
+		\underbrace{
+			\left(
+			\begin{smallmatrix*}[r] % в матрицах лучше не пользоваться frac
+			-1/2\\ -1\\ 0\\ 
+			\end{smallmatrix*}
+			\right) ,
+			\left(
+			\begin{smallmatrix*}[r]
+			1\\ 0\\ 1\\ 
+			\end{smallmatrix*}
+			\right) 
+		}_{\substack{\text{формирует}\\\text{плоскость}}}
+		\rangle
+		$\\
+		$ \dim L_1=2$ --- геометрическая кратность (размерность собственного подпространства). % мат функции
+	}
+	\item $\lambda = 2$ $$\Longrightarrow
+	\begin{pmatrix}
+	1 & 1 & -2 & \vrule & 0\\
+	2 & 0 & -2 & \vrule & 0\\
+	2 & 1 & -3 & \vrule & 0\\
+	\end{pmatrix}
+	\Rightarrow
+	~L_1 = 
+	\langle
+	\left(
+	\begin{smallmatrix*}[c]
+	x_1\\ x_2\\ x_3\\ 
+	\end{smallmatrix*}
+	\right) 
+	\rangle=
+	\langle
+	\left(
+	\begin{smallmatrix*}[c]
+	1\\ 1\\ 1\\ 
+	\end{smallmatrix*}
+	\right) 
+	\rangle $$
+\end{enumerate}
+Выберем базис: $\left\{
+\left(
+\begin{smallmatrix*}[c]
+-1/2\\ 1\\ 0\\
+\end{smallmatrix*}
+\right) 
+,
+\left(
+\begin{smallmatrix*}[c]
+1\\ 0\\ 1\\
+\end{smallmatrix*}
+\right) 
+,
+\left(
+\begin{smallmatrix*}[c]
+1\\ 1\\ 1\\
+\end{smallmatrix*}
+\right) 
+\right\}$\\
+
+Поэтому $\varphi(\textbf{f$_1$})=\textbf{f$_1$},~\varphi(\textbf{f$_2$})=\textbf{f$_2$},~\varphi(\textbf{\textbf{f$_3$}})=2\textbf{f$_3$}$\\ % ВЕКТОРЫ!
+
+\textbf{Ответ:} $A'=\begin{pmatrix}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 2\\
+\end{pmatrix}.$
+
+\bigskip
+
+$\bullet$ Геометрическая кратность $\le$ алгебраическая кратность\\
+
+$\bullet$ Если геометрическая кратность строго меньше ($<$) алгебраической кратности хотя бы для одного $\lambda$, то преобразование \textsf{недиагонализируемо}.
+
+\begin{prim}
+	Диагонализировать матрицу:~~$A=\begin{pmatrix}
+	2 & 1 & 0\\
+	0 & 2 & 1\\
+	0 & 0 & 2\\
+	\end{pmatrix}$\\
+\end{prim}
+
+$$
+\det~(A - \lambda E) = 0 \Rightarrow
+\begin{vmatrix*}[c]
+2-\lambda & 1 & 0\\
+0 & 2-\lambda  & 1\\
+0 & 0  & 2-\lambda\\
+\end{vmatrix*}
+= (2-\lambda)^3= 0 $$
+
+Получаем, что $\lambda = 2$ алгебраической кратности 3.
+
+$$\Longrightarrow
+\begin{pmatrix}
+0 & 1 & 0 & \vrule & 0\\
+0 & 0 & 1 & \vrule & 0\\
+0 & 0 & 0 & \vrule & 0\\
+\end{pmatrix};
+~L_1 = 
+\langle
+\left(
+\begin{smallmatrix*}[c]
+x_1\\ x_2\\ x_3\\ 
+\end{smallmatrix*}
+\right) 
+\rangle=
+\langle
+\left(
+\begin{smallmatrix*}[c]
+1\\ 0\\ 0\\ 
+\end{smallmatrix*}
+\right) 
+\rangle $$
+
+Получили, что геометрическая кратность (равна 1) меньше алгебраической кратности (равна 3). Тогда матрица недиагонализируема (не хватило собственных векторов).    
+\newpage
+\begin{prim}
+	Диагонализировать матрицу:
+	
+	$$A =
+	\begin{pmatrix*}[r]
+	0 & -1 & 0\\
+	1 & 0  & 0\\
+	0 & 0  & 1\\
+	\end{pmatrix*}\\
+	$$	
+\end{prim}\\
+
+$
+\det~(A - \lambda E) = 0 \Rightarrow % мат функции
+\begin{vmatrix*}[c] % лучше центрирование
+-\lambda & -1 & 0\\
+1 & -\lambda  & 0\\
+0 & 0  & 1-\lambda\\
+\end{vmatrix*}
+= (\lambda - 1)(\lambda^{2} + 1) = 0 $
+\\
+$\lambda = 1, ~ \underbrace {\lambda = \pm ~i}_
+{\substack{
+		\text{отвечают за}\\
+		\text{инвариантную}\\
+		\text{плоскость} }} \\
+\\
+\\
+\begin{pmatrix*}[r]
+-1 & -1 & 0 & \vrule & 0\\
+1 & -1 & 0 & \vrule & 0\\
+0 & 0 & 0 & \vrule & 0\\
+\end{pmatrix*};
+~L_1 = 
+\langle
+\left(
+\begin{smallmatrix*}[r]
+0\\ 0\\ 1\\ 
+\end{smallmatrix*}
+\right) 
+\rangle $
+\\
+\\
+\\
+\textbf {Условие диагонализируемости матрицы:} 
+\begin{enumerate}
+	\item {\itshape В частности}: $A_{n \times n}$ диагонализируема, если $A$ имеет $n$ различных вещественных собственных значений. % перед двоеточием пробелов не ставят
+	\item {\itshape В общем случае}: $A$ диагонализируема $\Leftrightarrow$ $L$ раскладывается в прямую сумму собственных подпространств. % тройное тире!, да и вообще оно тут и не нужно
+	
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

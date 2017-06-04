@@ -1,0 +1,71 @@
+\begin{definition}
+Ортонормированный базис --- базис, в котором
+$$
+\textbf{(e$_i$, e$_j$)}= % скалярное произведение
+\left\{
+\begin{aligned}
+0, i\ne j\\
+1, i=j.\\
+\end{aligned}
+\right.$$
+Здесь $\Gamma=E$, $\textbf{(x, y)}=\bm \xi^{T} \bm \eta$.
+\end{definition}
+
+\begin{definition}
+Рассмотрим подпространство $U\in E$.
+Тогда $U^{\perp}$ называется ортогональным дополнением подпространства $U$, если
+$$
+U^{\perp}: \{\textbf{y}: \textbf{y}\perp U\},\text{ т.е. }\textbf{y}\perp \textbf{x},  \forall\textbf{x}\in U, U\oplus U^{\perp}= \mathcal{E}$$%ВЕКТОРЫ!!!
+\end{definition}
+\begin{prim}
+Дано $U$. Найти $U^{\perp}$ в $\mathcal{E}^3$. % E^3 - непонятно, что 
+\end{prim}
+$ \Gamma=E$; 
+$U=\langle \left(
+\begin{smallmatrix*}[r]
+1\\ -5\\ 1\\ 
+\end{smallmatrix*}
+\right) ,
+\left(
+\begin{smallmatrix*}[r]
+-1\\ 1\\ 1\\ 
+\end{smallmatrix*}
+\right) \rangle $;
+\:\:
+$U^{\perp}=\left(
+\begin{smallmatrix*}[r]
+y_1\\ y_2\\ y_3\\ 
+\end{smallmatrix*}
+\right)$;
+
+$\left\{
+\begin{aligned}
+y_1-5y_2+y_3=0;\\
+-y_1+y_2+y_3=0;\\
+\end{aligned}
+\right.$ \:\:\:
+$\begin{pmatrix*}[r]
+1 & -5 & 1 & \vrule & 0\\
+-1 & 1 & 1 & \vrule & 0\\
+\end{pmatrix*}
+\thicksim
+\begin{pmatrix*}[r]
+1 & -5 & 1 & \vrule & 0\\
+0 & -4 & 2 & \vrule & 0\\
+\end{pmatrix*}
+\thicksim \\
+\thicksim
+\begin{pmatrix*}[r]
+1 & 0 & -3/2 & \vrule & 0\\
+0 & 1 & -1/2 & \vrule & 0\\
+\end{pmatrix*}
+\Rightarrow
+U^{\perp}=
+\langle \left(
+\begin{smallmatrix*}[r]
+3\\ 1\\ 2\\ 
+\end{smallmatrix*}
+\right) \rangle $\\
+
+Почему $U^{\perp}$ ортогональное дополнение? Дело в том, что его сумма с $U$ дает нам все евклидово пространство.\\
+$$\underset{k}U\oplus \underset{n-k}U^{\perp}= \underset{n}{\mathcal{E}}$$

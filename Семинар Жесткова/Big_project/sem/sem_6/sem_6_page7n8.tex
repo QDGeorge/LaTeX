@@ -1,0 +1,71 @@
+$$
+A'=
+\begin{pmatrix*}[r]
+ 1 & 1\\
+ -1 & 2\\
+\end{pmatrix*}
+\begin{pmatrix*}[r]
+ 0 & 2\\
+ -1 & -3\\
+\end{pmatrix*}
+\begin{pmatrix*}[r]
+ 2 & 1\\
+ -1 & -1\\
+\end{pmatrix*}
+=
+\begin{pmatrix*}[r]
+ -1 & 0\\
+ 0 & -2\\
+\end{pmatrix*}
+$$
+\section{Линейные функции}
+\begin{definition}
+\textsf{Функция} $f(x)$ на линейном пространстве $L$ --- правило, которое $\forall x \in L$ ставит в соответствие $f(x) \rightarrow \mathbb{R} $.
+
+Функция $f$ линейная, если 
+$$
+\left\{
+\begin{array}{rl} % некрасивое выравнивание 
+f(x+y)&=f(x)+f(y)\\
+f(\alpha x)&=\alpha f(x)\\
+\end{array}
+\right.
+$$
+\end{definition}
+
+
+Это частный случай линейного отображения при $m=1$.\\
+Примеры:\\ % enumerate, не стал исправлять
+а) Присвоить вектору его $i$-тую координату.\\
+б) Скалярное произведение \textbf{(\textbf{x}, \textbf{a})}, где \textbf{a} --- фиксированный вектор в $\mathbb{R}^3$.\\
+в) Определённый интеграл.\\
+
+$\underset{1 \times n}A$- строка функции $A=(\varphi_1 \cdots \varphi_n)$, где $\varphi_i$ --- образ $i$-го базисного вектора (т.е. $\varphi_i=\varphi$(\textbf{e$_i$}))\\
+
+Линейные функции образуют линейное пространство.
+
+\begin{prim}
+Может ли $ \forall x \in L$ выполняться:\\
+а) $f(x)>0$? Ответ: нет, так как нет нуля;\\
+б) $f(x)\geq 0$? Ответ: только если $f(x)\equiv0$;\\
+в) $f(x)=\alpha $? Ответ: только для $\alpha\equiv0$, $f(x)\equiv0$.\\
+\end{prim}
+\begin{prim}
+$P(t)$ ---  многочлен степени $\leq n$, $f(P(t))=P'(1)$. Найти $A$.
+\end{prim}\\
+
+Базис: $\{ 1, t,\cdots, t^n\}$\\
+$$
+\begin{array}{rl}
+\varphi (\text{\textbf{e$_1$}})=&0\\
+\varphi (\text{\textbf{e$_2$}})=&1\\
+\varphi (\text{\textbf{e$_3$}})=&2\\
+\hdotsfor{2}\\
+\varphi (\text{\textbf{e$_{n+1}$}})=&n\\
+\end{array}
+$$
+Отсюда получаем ответ:
+$$A=
+\begin{pmatrix*}[r]
+ 0 & 1 & 2 & \cdots & n\\
+\end{pmatrix*}$$
