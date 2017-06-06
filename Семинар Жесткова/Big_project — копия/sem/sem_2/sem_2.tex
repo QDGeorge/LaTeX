@@ -11,7 +11,7 @@ a_{m1}x_1+...+a_{mn}x_n=b_m\\
 $$
 Можно записать расширенную матрицу:
 $$(*)\Leftrightarrow
-\left( \begin{array}{cccc|c}
+\left( \begin{array}{rrrr|r}
 a_{11} & \hdotsfor{2} & a_{1n} & b_1\\
 a_{21} & \hdotsfor{2} & a_{2n} & b_2\\
 \hdotsfor{4} & \hdotsfor{1}\\
@@ -73,43 +73,43 @@ $T_M\cdot \dots\cdot T_1 b=A^{-1}b=x$
 \end{prim}
 Запишем расширенную матрицу СЛУ:\\
 $
-\left( \begin{array}{ccc|c}
+\left( \begin{array}{rrr|r}
 	1 & 1 & -1 & 7\\
 	2 & -3 & 3 & 4\\
 	3 & -1 & -2 & 4\\
 \end{array} \right)
 \xrightarrow[(3)-3(1)]{(2)-2(1)}
-\left( \begin{array}{ccc|c}
+\left( \begin{array}{rrr|r}
 1 & 1 & -1 & 7\\
 0 & -5 & 5 & -10\\
 0 & -4 & 1 & -17\\
 \end{array} \right)
 \xrightarrow{(2)/(-5)}
-\left( \begin{array}{ccc|c}
+\left( \begin{array}{rrr|r}
 1 & 1 & -1 & 7\\
 0 & 1 & -1 & 2\\
 0 & -4 & 1 & -17\\
 \end{array} \right)
 \xrightarrow{(3)+4(2)}\\
-\rightarrow\left( \begin{array}{ccc|c}
+\rightarrow\left( \begin{array}{rrr|r}
 1 & 1 & -1 & 7\\
 0 & 1 & -1 & 2\\
 0 & 0 & -3 & -9\\
 \end{array} \right)
 \xrightarrow{(3)/(-3)}
-\left( \begin{array}{ccc|c}
+\left( \begin{array}{rrr|r}
 1 & 1 & -1 & 7\\
 0 & 1 & -1 & 2\\
 0 & 0 & 1 & 3\\
 \end{array} \right)
 \xrightarrow[(2)+(3)]{(1)+(3)}
-\left( \begin{array}{ccc|c}
+\left( \begin{array}{rrr|r}
 1 & 1 & 0 & 10\\
 0 & 1 & 0 & 5\\
 0 & 0 & 1 & 3\\
 \end{array} \right)
 \xrightarrow{(1)-(2)}
-\left( \begin{array}{ccc|c}
+\left( \begin{array}{rrr|r}
 1 & 0 & 0 & 5\\
 0 & 1 & 0 & 5\\
 0 & 0 & 1 & 3\\
@@ -131,39 +131,39 @@ $
 \end{prim}
 Данная система уравнений называется однородной. Она всегда совместна, т.к. имеет частное решение $x_i=0, i=\overline{1,5}$.\\
 $
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 	1 & 3 & 3 & 2 & 6 & 0\\
 	1 & -1 & -2 & 0 & -3 & 0\\
 	1 & 11 & 7 & 6 & 18 & 0\\
 \end{array} \right)
 \xrightarrow[(3)-(1)]{(2)-(1)}
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 1 & 3 & 3 & 2 & 6 & 0\\
 0 & -4 & -5 & -2 & -9 & 0\\
 0 & 8 & 4 & 4 & 12 & 0\\
 \end{array} \right)
 \xrightarrow{(3)+2(2)}
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 1 & 3 & 3 & 2 & 6 & 0\\
 0 & -4 & -5 & -2 & -9 & 0\\
 0 & 0 & -6 & 0 & -6 & 0\\
 \end{array} \right)
 \rightarrow\\
 \xrightarrow{(3)/(-6)}
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 1 & 3 & 3 & 2 & 6 & 0\\
 0 & -4 & -5 & -2 & -9 & 0\\
 0 & 0 & 1 & 0 & 1 & 0\\
 \end{array} \right)
 \xrightarrow[(1)-3(3)]{(2)+5(3)}
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 1 & 3 & 0 & 2 & 3 & 0\\
 0 & -4 & 0 & -2 & -4 & 0\\
 0 & 0 & 1 & 0 & 1 & 0\\
 \end{array} \right)
 \xrightarrow{(2)/(-4)}\\
 \rightarrow
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 1 & 3 & 0 & 2 & 3 & 0\\
 0 & 1 & 0 & 1/2 & 1 & 0\\
 0 & 0 & 1 & 0 & 1 & 0\\
@@ -178,7 +178,7 @@ $
 
 \vspace{-15pt}
 \noindent$\rightarrow
-\left( \begin{array}{ccc|cc|c}\cline{4-5}
+\left( \begin{array}{rrr|rr|r}\cline{4-5}
 1 & 0 & 0 & 1/2 & 0 & 0\\ 
 0 & 1 & 0 & 1/2 & 1 & 0\\
 0 & 0 & 1 & 0 & 1 & 0\\\cline{4-5}
@@ -243,7 +243,7 @@ c_2\\
 $\\
 Это и есть ответ к данной задаче.
 $$
-<\begin{pmatrix}
+\langle\begin{pmatrix}
 -1/2 \\
 -1/2 \\
 0 \\
@@ -256,7 +256,7 @@ $$
 -1\\
 0\\
 1\\  
-\end{pmatrix}>\text{--- линейная оболочка.}
+\end{pmatrix}\rangle\text{--- линейная оболочка.}
 $$
 \vspace{2cm}
 \begin{prim}
@@ -272,14 +272,14 @@ $$
 $$
 \end{prim}
 $
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 	2 & -3 & 8 & 4 & -4 & 3\\
 	0 & 2 & 0 & 0 & 4 & 2\\
 	-3 & 1 & 12 & -6 & -1 & -8\\
 	-1 & -2 & 4 & -2 & -5 & -5\\
 \end{array} \right)
 \xrightarrow[(4)\longleftrightarrow(1)]{(4)\times(-1);(2)/(2)}
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 1 & 2 & -4 & 2 & 5 & 5\\
 0 & 1 & 0 & 0 & 2 & 1\\
 -3 & 1 & 12 & -6 & -1 & -8\\
@@ -287,21 +287,21 @@ $
 \end{array} \right)
 \xrightarrow[(3)+3(1)]{(4)-2(1)}\\
 \rightarrow
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 1 & 2 & -4 & 2 & 5 & 5\\
 0 & 1 & 0 & 0 & 2 & 1\\
 0 & 7 & 0 & 0 & 14 & 7\\
 0 & -7 & 0 & 0 & -14 & -7\\
 \end{array} \right)
 \xrightarrow[(3)-7(2)]{(4)+7(2)}
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 1 & 2 & -4 & 2 & 5 & 5\\
 0 & 1 & 0 & 0 & 2 & 1\\
 0 & 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0 & 0\\
 \end{array} \right)
 \xrightarrow{(1)-2(2)}
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 1 & 0 & -4 & 2 & 1 & 3\\
 0 & 1 & 0 & 0 & 2 & 1\\
 \end{array} \right)
@@ -400,7 +400,7 @@ $$
 	$$
 \end{prim}
 $
-\left( \begin{array}{cccc|c}
+\left( \begin{array}{rrrr|r}
 3 & 2& 1 & 0& 7\\
 -4 & 5& 0 & 1& 3\\
 \end{array}\right)
@@ -450,7 +450,6 @@ $$
 	$$
 	Найти $Ax=0$.
 \end{prim}
-
 Припишем справа столбец неизвестных. Т.к. он линейно выражается через строки матрицы $A$, то это не изменит ранг нашей матрицы.\\
 $
 \left( \begin{array}{cc|c}
@@ -499,14 +498,14 @@ $\\
 \end{prim}
 
 $
-\left( \begin{array}{cccc|c}
+\left( \begin{array}{rrrr|r}
 2&-4&3&-2&3\\
 0&0&1&-2&\alpha\\
 3&-6&2&2&2\\
 -3&6&-1&-4&\beta\\
 \end{array}\right)
 \xrightarrow[(3)\cdot 2; (4)\cdot 2]{(1)\cdot 3}
-\left( \begin{array}{cccc|c}
+\left( \begin{array}{rrrr|r}
 6&-12&9&-6&9\\
 0&0&1&-2&\alpha\\
 6&-12&4&4&4\\
@@ -514,7 +513,7 @@ $
 \end{array}\right)
 \xrightarrow[(4)+(1);(1)/3]{(3)-(1)}\\
 \rightarrow
-\left( \begin{array}{cccc|c}
+\left( \begin{array}{rrrr|r}
 2&-4&3&-2&3\\
 0&0&1&-2&\alpha\\
 0&0&-5&10&-5\\
@@ -524,23 +523,23 @@ $
 $\\
 То есть $\alpha = 1, \beta=-1$.\\
 $
-\left( \begin{array}{cccc|c}
+\left( \begin{array}{rrrr|r}
 2&-4&3&-2&3\\
 0&0&1&-2&1\\
 \end{array}\right)
 \xrightarrow{(1)-3(2)}
-\left( \begin{array}{cccc|c}
+\left( \begin{array}{rrrr|r}
 2&-4&0&4&0\\
 0&0&1&-2&1\\
 \end{array}\right)
 \xrightarrow{(1)/2}
-\left( \begin{array}{cccc|c}
+\left( \begin{array}{rrrr|r}
 1&-2&0&2&0\\
 0&0&1&-2&1\\
 \end{array}\right)
 \rightarrow\\
 \rightarrow
-\left( \begin{array}{cccc|c}
+\left( \begin{array}{rrrr|r}
 1&0&-2&2&0\\
 0&1&0&-2&1\\
 \end{array}\right)\\
@@ -601,7 +600,7 @@ $$
 \subsection{Примечание}
 Обратимся к примеру 3. Мы получили такую расширенную матрицу:
 $$
-\left( \begin{array}{ccccc|c}
+\left( \begin{array}{rrrrr|r}
 1 & 0 & -4 & 2 & 1 & 3\\
 0 & 1 & 0 & 0 & 2 & 1\\
 \end{array} \right)

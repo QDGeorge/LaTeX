@@ -33,7 +33,7 @@
 
 Примеры:
 \begin{itemize}
-	\item Векторы в $3^x$ $(\dim L = n)$. Базис: $\left\{\left(\begin{array}{c} % зачем создавать по 2 столба? Можно ограничиться окружением \begin{pmatrix}
+	\item Векторы в $3^x$ $(\dim L = n)$. Базис: $\left\{\left(\begin{array}{c} % зачем создавать по 2 столба? Можно ограничиться окружением \begin{pmatrix*}[r]
 	1\\  
 	0\\
 	0\\
@@ -57,22 +57,22 @@
 	\vdots\\
 	1\\
 	\end{array}\right)\right\}$
-	\item Матрицы $m\times n$ $(\dim L =m\times n)$. Базис: $\left\{\begin{pmatrix}
+	\item Матрицы $m\times n$ $(\dim L =m\times n)$. Базис: $\left\{\begin{pmatrix*}[r]
 	1 & 0 & \cdots & 0 \\  
 	0 & 0 & \cdots & 0 \\    
 	\hdotsfor{4} \\
 	0 & 0 & \cdots & 0
-	\end{pmatrix},\begin{pmatrix}
+	\end{pmatrix*},\begin{pmatrix*}[r]
 	0 & 1 & \cdots & 0 \\  
 	0 & 0 & \cdots & 0 \\       
 	\hdotsfor{4} \\
 	0 & 0 & \cdots & 0
-	\end{pmatrix},\dots,\begin{pmatrix}
+	\end{pmatrix*},\dots,\begin{pmatrix*}[r]
 	0 & 0 & \cdots & 0 \\  
 	0 & 0 & \cdots & 0 \\       
 	\hdotsfor{4} \\
 	0 & 0 & \cdots & 1
-	\end{pmatrix}\right\}$
+	\end{pmatrix*}\right\}$
 	\item Множество функций, определённых на отрезке $[0,1]$ % избегаем сокращений.
 	\item Многочлены $(\dim L = \infty)$
 	\item Многочлены степени $\leq n$ $(\dim L = n+1)$.~Базис:$\{1, t, t^2, \dots,  t^n\}$ %после запятых все-таки нужны пробелы
@@ -95,32 +95,32 @@
 a) L' --- множество векторов, координаты которых равны\\
 Да, является;  $\dim L'=1$, базис: % использование \dim для функций (в литературе принято писать функции прямыми буквами) 
 $\left\{
-\begin{pmatrix} % для удобства чтения проще размещать строки друг под другом
+\begin{pmatrix*}[c] % для удобства чтения проще размещать строки друг под другом
 1\\ 
 1\\ 
 \vdots\\
 1\\ 
-\end{pmatrix}
+\end{pmatrix*}
 \right\}$\\
 б) L' --- множество векторов,  сумма координат которых равна 0\\
 Да, является;  $\dim  L'=n-1$, базис: 
 $
 \left\{ % Можно использовать \left\{ для того, чтобы скобка подгонялась под нужный размер 
-\begin{pmatrix} % окружение smallmatrix почему-то приводит к косякам вроде лишнего пробела перед многоточием. Думаю, проще использовать просто pmatrix, тем более, что место неограничено
+\begin{pmatrix*}[c] % окружение smallmatrix почему-то приводит к косякам вроде лишнего пробела перед многоточием. Думаю, проще использовать просто pmatrix, тем более, что место неограничено
 1\\ 
 0\\ 
 \vdots\\ 
 0\\ 
 -1\\
-\end{pmatrix}
+\end{pmatrix*}
 , \cdots ,
-\begin{pmatrix}
+\begin{pmatrix*}[c]
 0\\ 
 \vdots\\ 
 0\\ 
 1\\ 
 -1\\
-\end{pmatrix}
+\end{pmatrix*}
 \right\}$\\
 в) L' --- множество векторов,  сумма координат которых равна 1\\
 Нет, не является.\\
@@ -172,43 +172,43 @@ $0\cdot x = 0 \Longrightarrow$ нет, не является. \\
 
 0 --- тоже линейное пространство
 \begin{definition}
-	Линейная оболочка векторов $a_1, a_2, \cdots , a_k$  $(<a_1, a_2, \cdots , a_k>)$ --- всевозможные линейные комбинации этих векторов:
-	$$<a_1, a_2, \cdots , a_k>=\left\{ \sum\limits^k _{i= 1} \lambda_i  a_i  , \lambda_i \in R \right\}$$ 
+	Линейная оболочка векторов $a_1, a_2, \cdots , a_k$  $(\langle a_1, a_2, \cdots , a_k\rangle )$ --- всевозможные линейные комбинации этих векторов:
+	$$\langle a_1, a_2, \cdots , a_k\rangle =\left\{ \sum\limits^k _{i= 1} \lambda_i  a_i  , \lambda_i \in R \right\}$$ 
 \end{definition}
 
 \begin{prim}
 	Найти размерность и базис линейной оболочки
 \end{prim}
 $$
-<
-\begin{pmatrix}
+\langle 
+\begin{pmatrix*}[r]
 1\\ 
 1\\ 
 1\\ 
 1\\
-\end{pmatrix}
+\end{pmatrix*}
 ,
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 1\\ 
 1\\ 
 1\\ 
 3\\
-\end{pmatrix}
+\end{pmatrix*}
 ,
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 3\\ 
 -5\\ 
 7\\ 
 2\\
-\end{pmatrix}
+\end{pmatrix*}
 ,
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 1\\ 
 -7\\ 
 5\\ 
 2\\
-\end{pmatrix}
->
+\end{pmatrix*}
+\rangle 
 $$
 Т.к. $\dim L'=\Rg A$:
 $$
@@ -232,32 +232,32 @@ $$
 $(3)=(4) \Rightarrow (4)$ вычеркиваем!\\
 $\dim  L'=3$, базис: $
 \left\{
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 1\\ 
 1\\ 
 1\\ 
 1\\
-\end{pmatrix}
+\end{pmatrix*}
 ,
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 0\\ 
 0\\ 
 0\\ 
 2\\
-\end{pmatrix}
+\end{pmatrix*}
 ,
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 0\\ 
 -8\\ 
 4\\ 
 1\\
-\end{pmatrix}
+\end{pmatrix*}
 \right\}$
 
 \begin{prim}
 	(условие --- см. пример 4)
 \end{prim}
-$$<
+$$\langle 
 \begin{pmatrix*}[r]
 6 & 8 & 9 \\
 0 & 1 & 6 \\
@@ -272,9 +272,9 @@ $$<
 2 & 6 & 7 \\
 -6 & 1 & 4 \\
 \end{pmatrix*} 
->$$
+\rangle $$
 Задача не изменится, если взять
-$$<
+$$\langle 
 \begin{pmatrix*}[r]
 6 \\ 
 8 \\ 
@@ -301,7 +301,7 @@ $$<
 1 \\ 
 4 \\
 \end{pmatrix*} 
-> \\
+\rangle  \\
 \begin{pmatrix*}
 6 & 8 & 9 & 0 & 1 & 6 \\
 2 & 1 & 1 & 3 & 0 & 1 \\
@@ -372,68 +372,68 @@ x_1&+3x_2&+x_3&+7x_4&=13\\
 $$
 Решая эту СЛУ, получим:
 $$
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 x_1\\
 x_2\\
 x_3\\
 x_4\\
-\end{pmatrix}
+\end{pmatrix*}
 =
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 -1\\
 2\\
 -1\\
 1\\
-\end{pmatrix}
+\end{pmatrix*}
 $$
 Т.о., решив систему, убедились в единственности решения (факт базиса).
 \begin{prim}
 	Найти размерность и базис линейной оболочки.
 \end{prim}
 $$
-<(1+t)^3, t^3, t+t^2, 1>
+\langle (1+t)^3, t^3, t+t^2, 1\rangle 
 $$
 Стандартный базис многочлена: $\left\{1, t, t^2, t^3 \right\}$.
 Тогда координаты наших векторов в стандартном базисе есть:
 $$
-<
-\begin{pmatrix}
+\langle 
+\begin{pmatrix*}[r]
 1\\
 3\\
 3\\
 1\\
-\end{pmatrix}
+\end{pmatrix*}
 ,
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 0\\
 0\\
 0\\
 1\\
-\end{pmatrix}
+\end{pmatrix*}
 ,
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 0\\
 1\\
 1\\
 0\\
-\end{pmatrix}
+\end{pmatrix*}
 ,
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 1\\
 0\\
 0\\
 0\\
-\end{pmatrix}
->
+\end{pmatrix*}
+\rangle 
 $$
 Тогда запишем матрицу, аналогично примеру 4:
 $$
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 1 & 3 & 3 & 1\\
 0 & 0 & 0 & 1\\
 0 & 1 & 1 & 0\\
 1 & 0 & 0 & 0\\
-\end{pmatrix}
+\end{pmatrix*}
 $$
 1 строка ЛНЗ, ее можно вычеркнуть. Тогда
 $$
@@ -452,21 +452,21 @@ P_n(t)=P_n(\alpha)+\frac{1}{1!}P'(\alpha)(t-\alpha)+\dots+\frac{1}{n!}P^{(n)}_n(
 $$
 Т.к. данное разложение $\exists !$, это базис. Запишем коэффициенты разложения:
 $$
-\begin{pmatrix}
+\begin{pmatrix*}[c]
 P_n(\alpha)\\
 \frac{1}{1!}P'_n(\alpha)\\
 \hdotsfor{1}\\
 \frac{1}{n!}P^{(n)}_n(\alpha)
-\end{pmatrix}
+\end{pmatrix*}
 $$
 \begin{prim}
 	Найти размерность и базис подпространства, заданного в виде $Ax=0$, где
 	$$
 	A = 
-	\begin{pmatrix}
+	\begin{pmatrix*}[r]
 	1 & 2 & 0 & 1\\
 	3 & 4 & -2 & 5\\
-	\end{pmatrix}.
+	\end{pmatrix*}.
 	$$
 \end{prim}
 Решения однородной системы образуют линейные подпространства.\\
@@ -486,68 +486,68 @@ $
 \right)
 $\\
 $
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 x_1\\
 x_2\\
 x_3\\
 x_4\\
-\end{pmatrix}
+\end{pmatrix*}
 =
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 2 & -3\\
 -1 & 1\\
 1 & 0\\
 0 & 1\\
-\end{pmatrix}
-\begin{pmatrix}
+\end{pmatrix*}
+\begin{pmatrix*}[r]
 c_1\\
 c_2\\
-\end{pmatrix}
+\end{pmatrix*}
 $\\
 Отсюда, получаем линейную оболочку:
 $$
-<
-\begin{pmatrix}
+\langle 
+\begin{pmatrix*}[r]
 2\\
 -1\\
 1\\
 0\\
-\end{pmatrix}
+\end{pmatrix*}
 ,
-\begin{pmatrix}
+\begin{pmatrix*}[r]
 -3\\
 1\\
 0\\
 1\\
-\end{pmatrix}
->
+\end{pmatrix*}
+\rangle 
 , \qquad \dim L' = 2
 $$
 Столбцы этой линейной оболочки будут являться базисом в этом линейном подпространстве.
 \begin{prim}
 	Задать подпространство в виде однородной системы
 	$$
-	<
-	\begin{pmatrix}
+	\langle 
+	\begin{pmatrix*}[r]
 	1\\
 	2\\
 	3\\
 	4\\
-	\end{pmatrix}
+	\end{pmatrix*}
 	,
-	\begin{pmatrix}
+	\begin{pmatrix*}[r]
 	0\\
 	1\\
 	-1\\
 	1\\
-	\end{pmatrix}
-	>.
+	\end{pmatrix*}
+	\rangle .
 	$$
 \end{prim}
 Задача по сути является задачей из прошлого семинара:\\
 $
 \left(
-\begin{array}{cc|c}
+\begin{array}{rr|r}
 1 & 0 & x_1\\
 2 & 1 & x_2\\
 3 & -1 & x_3\\

@@ -1,0 +1,105 @@
+\documentclass[a4paper, 12pt, openany]{book}
+
+\input{preambula}
+
+\title{Семинары Жесткова}
+\author{Георгий Демьянов}
+\date{today}
+\usepackage[left=1.27cm,right=1.27cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage{fancyhdr} % Для колонтитулов
+
+
+\makeatletter % Убирает нумерацию на страницах, где \chapter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+	\thispagestyle{empty}% original style: plain
+	\global\@topnum\z@
+	\@afterindentfalse
+	\secdef\@chapter\@schapter}
+\makeatother
+
+\begin{document}
+%\thispagestyle{empty}
+\def\chaptername{Семинар} % Семинар вместо главы
+\setcounter{tocdepth}{1} % Глубина отображения в оглавлении
+
+
+\begin{titlepage}
+	\begin{center}
+		{\large Московский физико--технический институт}
+		\vfill
+		\vfill
+		{\Large \textbf{C.A. ЖЕСТКОВ}}
+		\vspace{1.5cm}
+		
+		
+		{\textbf{{\Huge СЕМИНАРЫ\\\smallskip ПО ЛИНЕЙНОЙ АЛГЕБРЕ}\\ \Large Весенний семестр,\\ 2016--2017 учебный год}}
+		\bigskip
+	\end{center}
+	\vfill
+	
+	\hfill\begin{minipage}{0.4\textwidth}
+		{\centering
+				При поддержке команды\\ паблика \href{https://vk.com/botay_fizteh}{BOTAY!}:\\
+				Д. Георгий, \href{https://vk.com/id37346992}{VK}\\
+				К. Ксения, \href{https://vk.com/id143862366}{VK}\\
+				Г. Мадина, \href{https://vk.com/id226312463}{VK}\\
+				С. Паша, \href{https://vk.com/id181006282}{VK}\\
+				М. Матвей, \href{https://vk.com/id62009425}{VK}\\
+				К. Алексей, \href{https://vk.com/id92540660}{VK}\\	
+			}
+	\end{minipage}%
+
+	\vfill
+	\begin{center}
+		Москва, 2017 г.
+	\end{center}
+\end{titlepage}
+
+\fancypagestyle{plain1}{ %
+	\fancyhead{} % remove everything
+	\fancyfoot{}
+	\renewcommand{\headrulewidth}{0.5pt}
+	%\renewcommand{\footrulewidth}{0pt}
+	%\fancyhead[RO, RE]{\textbf{\large \thepage}} 
+	%\fancyhead[CE, CO]{\hrule\smallskip{\small \text{\rightmark}}}% odd-center, with the name of the Section
+	\fancyhead[CO]{ОГЛАВЛЕНИЕ}% Even-center, with the name of the Chapter.
+	%\fancyfoot[L,R,C]{}
+	\fancyhead[R]{\hrule\smallskip\textbf{\large \thepage}}
+}
+\pagestyle{plain1}
+{
+\tableofcontents
+}
+
+
+\newpage
+\fancypagestyle{plain}{ %
+	\fancyhead{} % remove everything
+	\renewcommand{\headrulewidth}{0.5pt} % remove lines as well
+	\renewcommand{\footrulewidth}{0pt}
+	\fancyhead[RO, RE]{\textbf{\large \thepage}} 
+	\fancyhead[CE]{\hrule\smallskip{\small \text{\rightmark}}}% odd-center, with the name of the Section
+	\fancyhead[CO]{\hrule\smallskip СЕМИНАР \thechapter}% Even-center, with the name of the Chapter.
+	\fancyfoot[L,R,C]{}
+	%\fancyhead[C]{\normalsize\thepage}
+}
+\pagestyle{plain}
+
+
+
+
+\include{sem/sem_1/sem_1}
+\include{sem/sem_2/sem_2}
+\include{sem/sem_3/sem_3}
+\include{sem/sem_4/sem_4}
+\include{sem/sem_5/sem_5}
+\include{sem/sem_6/sem_6}
+\include{sem/sem_7/sem_7}
+\include{sem/sem_8/sem_8}
+\addtocounter{chapter}{1}
+\include{sem/sem_10/sem_10_main}
+\include{sem/sem_11/sem_11_main}
+\include{sem/sem_12/sem_12_main}
+
+\end{document}

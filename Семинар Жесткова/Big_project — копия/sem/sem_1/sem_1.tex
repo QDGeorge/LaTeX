@@ -1,6 +1,5 @@
 \renewcommand{\thechapter}{\arabic{chapter}}
 
-
 \chapter{Матрицы. Ранг матрицы.}
 \section{Про матрицы}
 Уже умеем
@@ -107,7 +106,7 @@ $$
 	2 & 3 & 1\\
 \end{pmatrix}
 $$
-Решение:
+\textit{Решение:}\\
 Прямой ход метода Гаусса:\\
 $
 \begin{pmatrix}
@@ -180,7 +179,7 @@ $$T_M\cdot...\cdot T_1 E = A^{-1}$$
 
 Доказать, что $A$ невырождена и найти обратную, если
 $$A^2+A+E=O$$
-Доказательство:
+\textit{Доказательство:}
 $$A^2+A+E=O$$
 $$A(A+E)+E=O$$
 $$A(-A-E)=E$$
@@ -190,11 +189,11 @@ $$\det E = 1,\qquad \det(A(-A-E))=\det A\cdot\det (-A-E) \Rightarrow \det A \neq
 
 $$A^m=O\ \text{--- нильпотентная матрица}$$
 Доказать $$(E-A)^{-1}=E+A+A^2+...+A^{m-1}$$
-Доказательство:
+\textit{Доказательство:}
 $$(E-A)^{-1}=E+A+A^2+...+A^{m-1}\quad |\cdot (E-A)$$
 $$E=E-A+A-A^2+A^2+...+A^{m-1}-A^m=E$$
-\textbf{Пример 5}\vspace{1mm}
-
+\textbf{Пример 5}\vspace{1mm}\\
+Решить уравнения:\\
 а)$\begin{pmatrix}
 2 & 5\\
 1 & 3\\
@@ -216,6 +215,7 @@ $
 1 & 1\\
 \end{pmatrix}
 $\vspace{1mm}\\
+\textit{Решение:}\\
 a) $AX=B\quad A^{-1}\cdot |$\\
 $X=A^{-1}B$\\
 б) $XA=B\quad |\cdot A^{-1}$\\
@@ -299,7 +299,9 @@ $\Rg AB \leq \min(\Rg A, \Rg B)$
 Приводим матрицу к ступенчатому виду. Ранг~--- число ненулевых строк.\\
 \textbf{Пример 6}
 
-Найти Rg.\vspace{3mm}\\
+Найти Rg.
+
+\noindent\textit{Решение:}\\[3mm]
 $
 \left( \begin{array}{ccc}
 	1 & 1 & 1\\
@@ -347,7 +349,9 @@ $\vspace{3mm}\\
 3 и 4 строчку можно вычеркнуть, т.к. они ЛЗ. Т.о. $\Rg=2$.\\
 \textbf{Пример 8}
 
-Найти Rg в зависимости от параметра.\vspace{3mm}\\
+Найти Rg в зависимости от параметра.
+
+\noindent\textit{Решение:}\\[3mm]
 $
 \left( \begin{array}{ccccc}
 	0 & 0 & 1 & -2 & \alpha\\
