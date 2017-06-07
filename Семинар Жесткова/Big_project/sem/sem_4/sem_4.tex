@@ -1,4 +1,4 @@
-\part{Замена базиса. Сумма и пересечение подпространств.}
+\chapter{Замена базиса. Сумма и пересечение подпространств.}
 \section{Замена базиса.}
 Рассмотрим базис $\overline{e}(e_1,e_2,\dots,e_n)$.
 
@@ -79,7 +79,7 @@ x&=\overline{e'}\overline{\xi'}=\overline{e}\underbracket{S\overline{\xi'}}_{\xi
 		\item Найти $S$ от $F$ к $G$.
 		\item Зная $\overline{\xi'}$ в $G$, найти $\overline{\xi}$ в $F$.
 	\end{enumerate}
-dghfhf
+~
 \end{prim}
 $$G = \begin{pmatrix*}[r]
 -1 & 4 & 1\\
@@ -103,16 +103,16 @@ $$G = \begin{pmatrix*}[r]
 	
 	$(F|G) \rightarrow (E|S)$
 	
-	$\left( \begin{array}{ccc|ccc}
+	$\left( \begin{array}{rrr|rrr}
 	4 & 5 & 3 & -1 &4 & 1  \\
 	2 & 3& 2&4&3&2\\
 	1&2&1&0&1&3
-	\end{array}\right)\rightarrow \left( \begin{array}{ccc|ccc}
+	\end{array}\right)\rightarrow \left( \begin{array}{rrr|rrr}
 	1  & 0 & 0 & -5 &0 & 4  \\
 	0 & 1& 0&-4&1&4\\
 	0&0&1&13&3&-1
 	\end{array}\right)
-	\Rightarrow S=\left( \begin{array}{ccc}
+	\Rightarrow S=\left( \begin{array}{rrr}
 	-5 &0 & 4  \\
 	-4&1&4\\
 	13&3&-1
@@ -123,7 +123,8 @@ $$G = \begin{pmatrix*}[r]
 	\xi_1\\  
 	\xi_2\\
 	\xi_3\\
-	\end{pmatrix*} = \begin{pmatrix*}[r]
+	\end{pmatrix*} = 
+	\begin{pmatrix*}[r]
 	-5 & 0 & 4\\
 	-4 & 1 & 4\\
 	13 & 3 & -1\\
@@ -142,7 +143,7 @@ $$G = \begin{pmatrix*}[r]
 %---------------------------------------------------------------------------
 \begin{prim}(Условие то же, что и в примере 1)\\
 	$
-	F\!:~~<\!
+	F\!:~~\langle \!
 	\begin{psm}
 	0&1&-2\\
 	-1&0&3\\
@@ -160,11 +161,11 @@ $$G = \begin{pmatrix*}[r]
 	1&0&-2\\
 	-2&2&0\\
 	\end{psm}
-	\!>
+	\!\rangle 
 	$
 	\quad
 	$
-	G\!:~<\!
+	G\!:~\langle \!
 	\begin{psm}
 	0&1&1\\
 	-1&0&-1\\
@@ -182,7 +183,7 @@ $$G = \begin{pmatrix*}[r]
 	-1&0&3\\
 	0&-3&0\\
 	\end{psm}
-	\!>
+	\!\rangle 
 	$
 \end{prim}\\
 Заметим, что перед нами кососимметричные матрицы.
@@ -280,10 +281,10 @@ $$
 	\label{ris:image1}
 \end{figure}
 
-\noindent а) ${\color{orange}L_1}\!:~ <\overline{a}_1\!> \qquad \dim L_1 = 1$\\
-\phantom{а)}${\color{blue}L_2}\!:~ <\overline{a}_2, \overline{a}_3\!> \qquad \dim L_2 = 2$\\
+\noindent а) ${\color{orange}L_1}\!:~ \langle \overline{a}_1\!\rangle  \qquad \dim L_1 = 1$\\
+\phantom{а)}${\color{blue}L_2}\!:~ \langle \overline{a}_2, \overline{a}_3\!\rangle  \qquad \dim L_2 = 2$\\
 В данном случае вектора некомпланарны.\\
-$L_1+L_2=<\overline{a}_1, \overline{a}_2, \overline{a}_3\!> = \mathbb{R}^3$\\
+$L_1+L_2=\langle \overline{a}_1, \overline{a}_2, \overline{a}_3\!\rangle  = \mathbb{R}^3$\\
 $\dim (L_1 +L_2) = 3 = \dim L_1 + \dim L_2$\\
 Т.о.
 $$
@@ -293,9 +294,9 @@ $$
 %	\includegraphics[height=0.2\textheight]{prim_a_cvet}
 %	\caption{Рисунок подпространств к примеру а)}
 %\end{wrapfigure}
-б) ${\color{orange}L_1}\!:~ <\overline{a}_1, \overline{a}_4> \qquad \dim L_1 = 2$\\
-${\color{blue}L_2}\!:~ <\overline{a}_2, \overline{a}_3> \qquad \dim L_2 = 2$\\
-$L_1+L_2\!:~<\overline{a}_1, \overline{a}_2, \overline{a}_3, \overline{a}_4\!>: \mathbb{R}^3$\\
+б) ${\color{orange}L_1}\!:~ \langle \overline{a}_1, \overline{a}_4\rangle  \qquad \dim L_1 = 2$\\
+${\color{blue}L_2}\!:~ \langle \overline{a}_2, \overline{a}_3\rangle  \qquad \dim L_2 = 2$\\
+$L_1+L_2\!:~\langle \overline{a}_1, \overline{a}_2, \overline{a}_3, \overline{a}_4\!\rangle : \mathbb{R}^3$\\
 Но $\dim (L_1+L_2)=3$, т.к. $\overline{a}_4$ можно выкинуть.
 
 В общем случае:
@@ -311,7 +312,7 @@ $$
 	Пусть $\exists a\in L_1,\ b\in L_2, \ x \in L_1+L_2:\ \exists!x = a + b \Leftrightarrow L_1+L_2 = L_1 \oplus L_2$. При этом вектор $a$ называется \textsf{проекцией вектора} $x$ на $L_1$ параллельно $L_2$.  
 \end{definition}
 \begin{prim}
-	Найти проекцию $X(0\ -1\ -1\ 4)^{\text{T}}$ на подпространство $L_1: x_1+x_2+x_3+x_4=0$ вдоль линейной оболочки $L_2\!:~<(1\ -1\ 1\ 0)^{\text{T}}$>.
+	Найти проекцию $X(0\ -1\ -1\ 4)^{\text{T}}$ на подпространство $L_1: x_1+x_2+x_3+x_4=0$ вдоль линейной оболочки $L_2\!:~\langle (1\ -1\ 1\ 0)^{\text{T}}\rangle$ .
 \end{prim}\\
 $L_1: (1\ 1\ 1\ 1\ |\ 0)\Rightarrow
 \begin{pmatrix}
@@ -335,7 +336,7 @@ c_3\\
 $
 или
 $L_1:
-<
+\langle 
 \begin{pmatrix*}[r]
 -1\\
 1\\
@@ -356,12 +357,12 @@ $L_1:
 0\\
 1\\
 \end{pmatrix*}
->.
+\rangle .
 $\\
 $
-L_2\!:~<\begin{pmatrixr}
+L_2\!:~\langle \begin{pmatrixr}
 1\\-1\\1\\0\\
-\end{pmatrixr}>
+\end{pmatrixr}\rangle 
 $\\
 Разложим вектор $X$:\\
 $$
@@ -425,7 +426,7 @@ $$
 \begin{prim}
 	Найти размероность и базис суммы подпространств $U_1$ и $U_2$.
 	$$
-	U_1\!:~<
+	U_1\!:~\langle 
 	\begin{psm}
 	1\\0\\-2\\0\\
 	\end{psm}
@@ -437,7 +438,7 @@ $$
 	\begin{psm}
 	3\\2\\0\\2
 	\end{psm}
-	>
+	\rangle 
 	\quad
 	U_2:
 	\left\{
@@ -507,7 +508,7 @@ c_1\\c_2\\
 \end{pmatrixr}\right\}.
 $$
 $
-U_1+U_2\!:~<
+U_1+U_2\!:~\langle 
 \begin{psm}
 1\\0\\-2\\0
 \end{psm}
@@ -522,7 +523,7 @@ U_1+U_2\!:~<
 \begin{psm}
 0\\2\\0\\1\\
 \end{psm}
->.
+\rangle .
 $\\
 $
 \begin{pmatrixr}
@@ -564,7 +565,7 @@ $\dim  (U_1+U_2)=3$, $\dim  U_1=2$, $\dim  U_2=2 \Rightarrow \dim (U_1 \cap U_2)
 \noindent\textbf{1 способ}
 
 Зададим $U_1$ как систему: 
-$U_1\!:~<\left(
+$U_1\!:~\langle \left(
 \begin{smallmatrix*}[r]
 1\\
 0\\
@@ -578,7 +579,7 @@ $U_1\!:~<\left(
 3\\
 1\\
 \end{smallmatrix*}
-\right)>$\\
+\right)\rangle $\\
 $$
 \begin{pmatrix*}[r]
 1 & 0 & \vrule & x_1\\
@@ -622,14 +623,14 @@ $$
 0 & -1 & 0 & 1& \vrule & 0\\
 \end{pmatrix*}
 \Rightarrow
-<
+\langle 
 \begin{pmatrix*}[c]
 1\\
 1\\
 1\\
 1\\
 \end{pmatrix*}
-> (\text{базис } U_1 \cap U_2)
+\rangle  (\text{базис } U_1 \cap U_2)
 $$
 \textbf{2 способ}\\
 Базис $U_1: a_1, a_2$\\

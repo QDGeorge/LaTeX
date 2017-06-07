@@ -85,7 +85,7 @@
 
 %%% Оформление
 \usepackage{indentfirst} % Красная строка
-%\setlength{\parskip}{0.3cm} % отступы между абзацами
+%\setlength{srskip}{0.3cm} % отступы между абзацами
 %%% Название разделов
 \usepackage{titlesec}
 \titlelabel{\thetitle.\quad}
@@ -125,7 +125,7 @@
 
 \newcommand{\resh}{\noindent\textit{Решение:}\\}
 
-\newcounter{prim}[part]
+\newcounter{prim}[chapter]
 \newenvironment{prim}{%
 	\par\addtocounter{prim}{1}
 	\noindent{\\
