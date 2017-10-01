@@ -1,0 +1,35 @@
+	\section{Сопряжённые преобразования}
+	\subsection{Определение}
+	\begin{definition}
+		Линейное преобразование евклидова пространства $\varphi^{*}$ называется \emph{сопряжённым с преобразованием $\varphi$}, если 
+		\[\boxed {(\varphi (\textbf{x}), \textbf{y}) = (\textbf{x}, \varphi^{*}(\textbf{y})), \forall \textbf{x}, \textbf{y} \in \mathcal{E}}\]
+	\end{definition}
+Пусть в базисе $\textbf{e}$: $\textbf{x}= \bm\xi$, $\textbf{y} = \bm\eta$. Матрицы преобразований $\varphi$ и $\varphi^*$ равны соответственно $A$ и $A^*$, то есть:
+\[\varphi(\textbf{x}) = A\bm\xi;~ \varphi^{*}(\textbf{y})=A^{*}\bm\eta\]
+\[(\varphi (\textbf{x}), \textbf{y}) = (\textbf{x}, \varphi^{*}(\textbf{y})) \Leftrightarrow (A\bm\xi)^{\text{T}}\Gamma\bm\eta = \bm\xi^{\text{T}}\Gamma (A^{*}\bm\eta)\]
+\[\bm\xi^{\text{T}}A^{\text{T}}\Gamma\bm\eta = \bm\xi^{\text{T}}\Gamma A^{*}\bm\eta\]
+Отбросив $\bm\xi^{\text{T}}$ и $\bm\eta$ в обоих частях последнего равенства (т.к. данное равенство выполнено для любых $\bm\xi^{\text{T}}$ и $\bm\eta$), получим:
+\[\boxed{A^{\text{T}}\Gamma = \Gamma A^{*}}\]
+В ортонормированном базисе получим:
+\[\boxed{A^{\text{T}} = A^{*}}\]
+\subsection{Свойства сопряжённых преобразований}
+\begin{enumerate}
+	\item Характеристические многочлены совпадают.
+	\item Если подпространство $U \in  \mathcal{E}$ инвариантно относительно $\varphi$, то его ортогональное дополнение $U^{\perp}$ инвариантно относительно $\varphi^{*}$.
+	\begin{proof}{\itshape\!(пункт 2)}:
+	Возьмём произвольные $x \in U$ и $y \in U^{\perp}$.\\
+	$\varphi (\textbf{x}) \in U \Rightarrow (\varphi (\textbf{x}), \textbf{y}) = 0 \Rightarrow (\textbf{x}, \varphi^{*}(\textbf{y}))  \Rightarrow \varphi^*(\textbf{x}) \perp \textbf{x}$, то есть $\varphi^*(\textbf{x}) \in U^{\perp} $
+	\end{proof}
+\end{enumerate}
+\subsection{Самосопряжённые преобразования}
+	\begin{definition}
+	Линейное преобразование евклидова пространства $\varphi$ называется \emph{самосопряжённым}, если 
+	\[\boxed {(\varphi (\textbf{x}), \textbf{y}) = (\textbf{x}, \varphi(\textbf{y}))}\]
+\end{definition}
+В ортонормированном базисе получим:
+\[A = A^{\text{T}}, \text{где $A$ -- симметрическая} \Leftrightarrow \varphi - \text{симметрическое}\]
+$\triangle$
+Наличие пары комплексных корней в уравнении $\det (A - \lambda E) = 0$ порождает двумерное инвариантное подпространство без собственных векторов. $\blacktriangle$
+\begin{lemma}
+Самосопряжённое преобразование $\varphi$ имеет только вещественные собственные значения.
+\end{lemma}

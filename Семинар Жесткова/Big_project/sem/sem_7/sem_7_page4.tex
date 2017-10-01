@@ -1,0 +1,137 @@
+Далее подставим числа $\lambda$ в $(*)$:
+
+\begin{enumerate}
+\item{
+$\lambda_1=1 :$
+$\begin{pmatrix*}[r]
+ 1 & 2 & 1 & \vrule & 0\\
+ -2 & -4 & 2 & \vrule & 0\\
+ 3 & 6 & -1 & \vrule & 0\\
+\end{pmatrix*} , $\\
+$
+L_1=
+\left(
+\begin{smallmatrix*}[r]
+x_1\\ x_2\\ x_3\\ 
+\end{smallmatrix*}
+\right) 
+=
+\langle
+\left(
+\begin{smallmatrix*}[r]
+2\\ -1\\ 0\\ 
+\end{smallmatrix*}
+\right) 
+\rangle
+$
+$\leftarrow $
+ Собственный вектор, перейдёт сам в себя т.к. $\lambda=1$.
+}
+\item{
+$\lambda_2=3 :
+L_2=
+\left(
+\begin{smallmatrix*}[r]
+x_1\\ x_2\\ x_3\\ 
+\end{smallmatrix*}
+\right) 
+=
+\langle
+\left(
+\begin{smallmatrix*}[r]
+1\\ 0\\ 1\\ 
+\end{smallmatrix*}
+\right) 
+\rangle
+$
+}
+\item{
+$\lambda_3=-5 :
+L_3=
+\left(
+\begin{smallmatrix*}[r]
+x_1\\ x_2\\ x_3\\ 
+\end{smallmatrix*}
+\right) 
+=
+\langle
+\left(
+\begin{smallmatrix*}[r]
+1\\ -8\\ 9\\ 
+\end{smallmatrix*}
+\right) 
+\rangle
+$
+}
+\end{enumerate}
+
+\begin{lemma} % окружение лемма!
+	Собственные векторы, соответствующие различным собственным значениям, попарно линейно независимы.
+\end{lemma}
+
+
+Соберём базис $\textbf{f}$ %f в мат режиме
+$  %для красоты пришлось сделать ужас: в матрице матрица, у которой в подписи матрица.
+\begin{matrix}
+\overset{\left\{
+\begin{pmatrix*}[r]
+2\\ -1\\ 0\\ 
+\end{pmatrix*},
+\begin{pmatrix*}[r]
+1\\ 0\\ 1\\ 
+\end{pmatrix*},
+\begin{pmatrix*}[r]
+1\\ -8\\ 9\\ 
+\end{pmatrix*}
+\right\}}{
+\begin{matrix*}[r]
+\textbf{f$_1$}\phantom{3}&\textbf{f$_2$}&\phantom{2}\textbf{f$_3$}
+\end{matrix*}}
+\end{matrix}
+$\\
+$
+\left.
+\begin{aligned} %раз уж aligned, сделай выравнивание
+\varphi (\textbf{f$_1$})&=\textbf{f$_1$}\\ %ВЕКТОРЫ
+\varphi (\textbf{f$_2$})&=3\textbf{f$_2$} \\
+\varphi (\textbf{f$_3$})&=5\textbf{f$_3$}\\
+\end{aligned}
+\right.
+\to A'=
+\begin{pmatrix*}[r]
+ 1 & 0 & 0\\
+ 0 & 3 & 0\\
+ 0 & 0 & -5\\
+\end{pmatrix*}
+$
+в базисе $\textbf{f}$.\\ %точки в конце предложений!
+
+\section{Диагонализируемость матрицы}
+\begin{prim}
+Диагонализировать матрицу\\
+$$
+ A=
+\begin{pmatrix*}[r]
+ 3 & 1 & -2\\
+ 2 & 2 & -2\\
+ 2 & 1 & -1\\
+\end{pmatrix*}
+$$
+\end{prim}
+
+$
+\det(A-\lambda E)=0$:\\ %заебался уже говорить о мат функциях, об их оформлениях. Почему нельзя делать правильно - я не понимаю.
+$
+\begin{vmatrix*}[c] %лучше сделать центрирование
+ 3-\lambda & 1 & -2\\
+ 2 & 2-\lambda & -2\\
+ 2 & 1 & -1-\lambda\\
+\end{vmatrix*}
+=0
+\leftrightarrow
+	\underset{ \text{Не забывайте про свойства детерминанта}}{(\lambda-1)^2(\lambda-2)=0}\\
+$
+$\lambda =1$ --- корень алгебраической кратности 2.\\ % тире тройное!!!!!!!!!!!!+что такое алгоритмическая кратность?
+$\lambda =2$ --- корень алгебраической кратности 1 (простой корень).\\
+
+

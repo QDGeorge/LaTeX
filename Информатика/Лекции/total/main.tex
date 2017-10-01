@@ -1,0 +1,74 @@
+\documentclass[a4paper, 12pt, openany]{book}
+
+\input{preambula}
+
+\title{Inf_lections}
+\author{Георгий Демьянов}
+\date{today}
+\usepackage[left=1.27cm,right=1.27cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage{fancyhdr} % Для колонтитулов
+
+\renewcommand{\baselinestretch}{1.3}
+
+\makeatletter % Убирает нумерацию на страницах, где \chapter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+	\thispagestyle{empty}% original style: plain
+	\global\@topnum\z@
+	\@afterindentfalse
+	\secdef\@chapter\@schapter}
+\makeatother
+
+
+\begin{document}
+%\thispagestyle{empty}
+\def\chaptername{ЛЕКЦИЯ} % Семинар вместо главы
+\setcounter{tocdepth}{1} % Глубина отображения в оглавлении
+
+\include{title}
+
+\fancypagestyle{plain1}{ %
+	\fancyhead{} % remove everything
+	\fancyfoot{}
+	\renewcommand{\headrulewidth}{0.5pt}
+	%\renewcommand{\footrulewidth}{0pt}
+	%\fancyhead[RO, RE]{\textbf{\large \thepage}} 
+	%\fancyhead[CE, CO]{\hrule\smallskip{\small \text{\rightmark}}}% odd-center, with the name of the Section
+	\fancyhead[CE, CO]{ОГЛАВЛЕНИЕ}% Even-center, with the name of the Chapter.
+	%\fancyfoot[L,R,C]{}
+	\fancyhead[R]{\hrule\smallskip\textbf{\large \thepage}}
+}
+\pagestyle{plain1}
+{
+\tableofcontents
+}
+
+\newpage % НЕ УБИРАТЬ, ПОЛОМАЕТСЯ!!!
+
+\fancypagestyle{plain}{ %
+	\fancyhead{} % remove everything
+	\renewcommand{\headrulewidth}{0.5pt}
+	\renewcommand{\footrulewidth}{0pt}
+	\fancyhead[RO, RE]{\textbf{\large \thepage}} 
+	\fancyhead[CE]{\hrule\smallskip{\small \text{\rightmark}}}% odd-center, with the name of the Section
+	\fancyhead[CO]{\hrule\smallskip ЛЕКЦИЯ \thechapter}% Even-center, with the name of the Chapter.
+	\fancyfoot[L,R,C]{}
+	%\fancyhead[C]{\normalsize\thepage}
+}
+\pagestyle{plain}
+
+\include{lection_16/lection_16}
+\include{lection_17/lection_17}
+\include{lection_18/lection_18}
+\include{lection_19/lection_19}
+\include{lection_20/lection_20}
+\include{lection_21/lection_21}
+\include{lection_22/lection_22}
+\include{lection_23/lection_23}
+\include{lection_24/lection_24}
+\include{lection_25/lection_25}
+\include{lection_26/lection_26}
+\include{lection_27/lection_27}
+
+
+\end{document}

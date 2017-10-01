@@ -1,0 +1,150 @@
+Для начала решим небольшой пример по прошлому семинару.
+\begin{prim}
+$\phi: M_{2\times 2}\rightarrow M_{2\times 1}, \phi(\textbf{x})=\textbf{x}\begin{psm}
+	1\\4\\
+	\end{psm}$. Найти матрицу линейного преобразования $A$.
+\end{prim}\\
+
+Запишем базисы:\\
+$M_{2\times 2}: \textbf{e}
+\left\{
+\begin{psm}
+1&0\\
+0&0\\
+\end{psm}
+,
+\begin{psm}
+0&1\\
+0&0\\
+\end{psm}
+,
+\begin{psm}
+0&0\\
+1&0\\
+\end{psm}
+,
+\begin{psm}
+0&0\\
+0&1\\
+\end{psm}
+\right\}\\
+M_{2\times1}: \textbf{f}
+\left\{
+\begin{psm}
+1\\0
+\end{psm}
+,
+\begin{psm}
+0\\1
+\end{psm}
+\right\}.
+$\\
+Для удобства в общем виде найдём, что значит наше преобразование:\\
+$$
+\phi(\textbf{x})=\begin{pmatrixr}
+a&b\\
+c&d\\
+\end{pmatrixr}
+\begin{pmatrixr}
+1\\4
+\end{pmatrixr}
+=
+\begin{pmatrixr}
+a+4b\\c+4d
+\end{pmatrixr}.
+$$
+Далее <<прогоним>> через преобразование базис \textbf{e}:\\
+$
+\phi(\textbf{e$_1$})=
+\begin{psm}
+1&0\\
+0&0\\
+\end{psm}
+\begin{psm}
+1\\4
+\end{psm}
+=
+\begin{psm}
+1\\0
+\end{psm}, \quad
+\phi(\textbf{e$_2$})=\begin{psm}
+4\\0
+\end{psm}, \quad
+\phi(\textbf{e$_3$})=\begin{psm}
+0\\1
+\end{psm}, \quad
+\phi(\textbf{e$_4$})=\begin{psm}
+0\\4
+\end{psm}.
+$\\
+Отсюда, получаем ответ:
+$$
+A=\begin{pmatrixr}
+1&4&0&0\\
+0&0&1&4\\
+\end{pmatrixr}.
+$$
+\section{Рассмотрение ядра и образа}
+Рассмотрим $\phi: \underset{\dim L=n}{L}\rightarrow \underset{\dim \overline{L}=m}{\overline{L}}$.\\
+Ядро: $\ker\phi: \{\textbf{x} \in L: A\textbf{\textbf{x}}=\textbf{o}\}$\\
+Очевидно, что ЛНЗ решения такого уравнения формируют ФСР, а ФСР задаёт линейное подпространство. Вспоминая количество столбцов в ФСР, легко получить формулу:
+\begin{equation}
+\boxed{\dim\ker\phi=n-\Rg A}.
+\label{ker}
+\end{equation}
+Образ $\im\phi: \{\textbf{y} \in \overline{L}:\exists \textbf{x}\in L: A\textbf{x}=\textbf{y}\}$.\\
+Аналогично $\im\phi \in \overline{L}$ формирует линейное подпространство т.к.
+\begin{center}
+$
+A\textbf{x$_1$}+A\textbf{x$_2$}=A(\textbf{x$_1$}+\textbf{x$_2$})$
+
+$A\alpha \textbf{x}=\alpha A\textbf{x}$.
+\end{center}
+Выберем в $L$ базис $\textbf{e}:\{\textbf{e$_1$}, \textbf{e$_2$}, \dots, \textbf{e$_n$}\}$.\\
+$\forall \textbf{x} \in L: \textbf{x}=\alpha_1\textbf{e$_1$}+\dots+\alpha_n\textbf{e$_n$} \leftarrow \phi$ (это обозначение значит <<подействуем преобразованием $\phi$>>)\\
+$\phi(\textbf{x})=\alpha_1 \underset{=\textbf{a$_1$}}{\phi(\textbf{e$_1$})}+\dots+\alpha_n \underset{=\textbf{a$_n$}}{\phi(\textbf{e$_n$})}=\langle \textbf{a$_1$},\dots, \textbf{a$_n$}\rangle$.\\
+Заметим, что $\textbf{a$_1$},\dots, \textbf{a$_n$}$ --- столбцы матрицы $A$. Отсюда следует формула:
+\begin{equation}
+\boxed{\dim\im\phi=\Rg A=r}.
+\label{im}
+\end{equation}
+Сложим формулы \eqref{ker} и \eqref{im} и получим:
+\begin{equation}
+\boxed{\dim\ker\phi+\dim\im\phi=n}.
+\end{equation}
+\begin{center}
+В примерах 2--5: $L=\mathbb{R}^4, \overline{L}=\mathbb{R}^3, A=\begin{psm}
+0&0&2&-2\\
+2&-4&1&1\\
+-1&2&1&-2\\
+\end{psm}$.
+\end{center}
+\begin{prim}
+Найти образ $\textbf{x}=\begin{psm}
+	1\\1\\1\\1\\
+\end{psm}$.
+\end{prim}\\
+
+$\phi: A\textbf{x}=\textbf{y}$, т.е. нужно перемножить матрицу $A$ и вектор $\textbf{x}$.\\
+$
+\begin{psm}
+0&0&2&-2\\
+2&-4&1&1\\
+-1&2&1&-2\\
+\end{psm}
+\begin{psm}
+1\\1\\1\\1
+\end{psm}
+=
+\begin{psm}
+0\\0\\0
+\end{psm}
+=\textbf{o}
+\Rightarrow$ ядро не пусто.
+\begin{prim}
+Найти прообраз $\textbf{y}=\begin{psm}
+	4\\0\\3
+\end{psm}.$
+\end{prim}\\
+
+Итак $\phi: \underline{A}\textbf{x}=\underline{\textbf{y}}$. Мы знаем то, что подчёркнуто. Очевидно, что мы получили СЛУ относительно \textbf{x}. Решим ее.

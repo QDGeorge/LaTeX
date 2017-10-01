@@ -1,0 +1,131 @@
+\section{Инвариантные подпространства}
+\underline{Будем работать только с преобразованиями.} %22:15
+\subsection{Определение}
+\begin{definition}
+Подпространство $L' \subset L$ называется \textsf{инвариантным} \textbf{относительно преобразования $\bm\phi$}, если
+$$
+\forall \textbf{x} \in L' \mapsto \phi(\textbf{x}) \in L'\text{ или }\phi(L')\subset L'.
+$$
+\end{definition}
+Например:
+\begin{itemize}
+	\item \textbf{o}, L --- вырожденные случаи.
+	\item Поворот $\mathbb{R}^3$ вокруг \textbf{e$_3$} на $\pi/2$ (рис. \ref{prim1}). Инвариантные подпространства: $\textbf{o}, \mathbb{R}^3, \langle \textbf{e$_1$}, \textbf{e$_2$} \rangle, \langle \textbf{e$_3$}\rangle$.
+	\item Ядро преобразования $\phi \ (\ker \phi)$ всегда инвариантно относительно этого преобразования $\phi$.
+	\item $\im \phi$
+	\begin{theorem}
+	Если какое-то подпространство содержит в себе образ, то $L'$ инвариантно относительно $\phi$.
+	\end{theorem}
+	\begin{proof}
+		$$\forall \textbf{x} \in L' \mapsto \phi(\textbf{x}) \subset \im\phi\subset L'$$
+	\end{proof}
+\end{itemize}
+\subsection{Свойства инвариантных подпространств}
+\begin{predlog}
+	Сумма инвариантных подпространств инвариантна.
+\end{predlog}
+\begin{proof}
+	$$
+	\left.
+	\begin{array}{r}
+		\textbf{x} \in L_1, \phi(\textbf{x}) \in L_1\\
+		\textbf{y} \in L_2, \phi(\textbf{y}) \in L_2\\
+	\end{array}
+	\right\} \Rightarrow \phi(\textbf{x}) + \phi(\textbf{y}) \in L_1 + L_2
+	$$
+\end{proof}
+\begin{predlog}
+	Пересечение инвариантных подпространств инвариантно.
+\end{predlog}
+\begin{proof}
+	$$
+	\left.
+	\begin{array}{r}
+	\textbf{x} \in L_1, \phi(\textbf{x}) \in L_1\\
+	\textbf{x} \in L_2, \phi(\textbf{x}) \in L_2\\
+	\end{array}
+	\right\} \Rightarrow \phi(\textbf{x}) \in L_1 \cap L_2
+	$$
+\end{proof}
+\section{Матрица преобразования}
+\subsection{Вид матрицы преобразования}
+Рассмотрим линейное пространство $L$, $\dim L=n$. Пусть $L' \subset L$, $\dim L' = k$ --- инвариантное подпространство относительно $\phi$, базис в $L': \{\textbf{e$_1$}, \dots, \textbf{e$_k$}\}$, базис в $L: \{\textbf{e$_1$}, \dots, \textbf{e$_k$}, \textbf{e$_{k+1}$}, \dots, \textbf{e$_n$}\}$. %22:44 23:10
+
+\begin{figure}
+	\centering
+	\def\svgwidth{5cm} % если надо изменить размер
+	\input{sem/sem_7/podpr.pdf_tex}
+	\caption{Подпространство в L}
+	\label{podpr}
+\end{figure}
+
+Напомним, что матрица преобразования $A$ строится из образов базисных векторов:
+$$A=
+\left(\hspace{1mm}
+\begin{array}{|c|c|c|}
+\cline{1-1} \cline{3-3}
+\multirow{4}{*}{$\phi(e_1)$} & \multirow{4}{*}{$\cdots$} & \multirow{4}{*}{$\phi(e_n)$} \\
+&                           &                              \\
+&                           &                              \\
+&                           &                              \\ \cline{1-1} \cline{3-3} 
+\end{array}\hspace{1mm}\right)
+$$
+Т.о. матрица преобразования в выбранном базисе имеет следующий вид:
+$$
+A =\left(
+\begin{tabular}{c|c}
+$A_1$ & $A_2$\\
+\hline
+$O$ & $A_4$\\
+\end{tabular}
+\right)^{\square}\text{ --- \textsf{клетчочно--треугольный вид}.}\footnote{Квадрат над матрицей значит, что матрица блочная.}
+$$
+
+Пусть теперь $L=L_1\oplus L_2 \oplus \dots \oplus L_s, \forall i\ L_i$ --- инвариантное подпространство относительно $\phi$.
+
+\begin{figure}[h!]
+	\centering
+	\def\svgwidth{10cm} % если надо изменить размер
+	\input{sem/sem_7/summa.pdf_tex}
+	\caption{Прямая сумма подпространств}
+	\label{summa}
+\end{figure}
+
+Тогда матрица преобразования имеет вид:
+$$
+A =\left(
+\begin{array}{cccc}\cline{1-1}
+\multicolumn{1}{|c|}{A_1} & O & \dots & O\\\cline{1-1} \cline{2-2}
+O & \multicolumn{1}{|c|}{A_2} &\dots& O\\\cline{2-2}
+\vdots&\vdots&\ddots&\vdots\\\cline{4-4}
+O & O &\dots & \multicolumn{1}{|c|}{A_s}\\\cline{4-4}
+\end{array}
+\right)^{\square}\text{ --- \textsf{клеточно--диагноальный вид}.}
+$$
+Ширина и высота каждой клетки равны размерности инвариантного подпространства.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

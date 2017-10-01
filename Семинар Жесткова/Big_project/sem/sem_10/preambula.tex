@@ -5,6 +5,7 @@
 \usepackage[utf8]{inputenc}			% кодировка исходного текста
 \usepackage[english,russian]{babel}	% локализация и переносы
 \usepackage{indentfirst} 			% отступ 1 абзаца
+\usepackage{gensymb}				% мат символы?
 
 %%% Работа с русским языком % для XeLatex
 %\usepackage[english,russian]{babel}   %% загружает пакет многоязыковой вёрстки
@@ -34,11 +35,21 @@
 
 %% Свои команды
 \DeclareMathOperator{\sgn}{\mathop{sgn}} % создание новой конанды \sgn (типо как \sin)
+\DeclareMathOperator{\rg}{\mathop{rg}}
+\DeclareMathOperator{\Rg}{\mathop{Rg}}
+\DeclareMathOperator{\im}{\mathop{Im}}
+\DeclareMathOperator{\tr}{\mathop{tr}}
+\DeclareMathOperator{\const}{\mathop{const}}
+\DeclareMathOperator{\Id}{\mathop{Id}}
+%\DeclareMathOperator{\dim}{\mathop{dim}}
 \usepackage{csquotes} % ещё одна штука для цитат
 \newcommand{\pd}[2]{\ensuremath{\cfrac{\partial #1}{\partial #2}}} % частная производная
 \newcommand{\abs}[1]{\ensuremath{\left|#1\right|}} % модуль
 \renewcommand{\phi}{\ensuremath{\varphi}} % греческая фи
 \newcommand{\pogk}[1]{\!\left(\cfrac{\sigma_{#1}}{#1}\right)^{\!\!\!2}\!} % для погрешностей
+
+
+%\renewcommand{\labelenumi}{\asbuk{enumi})}
 
 % Ссылки
 \usepackage{color} % подключить пакет color
@@ -77,11 +88,16 @@
 \titlelabel{\thetitle.\quad}
 \renewcommand{\figurename}{\textbf{Рис.}}		%Чтобы вместо figure под рисунками писал "рис"
 \renewcommand{\tablename}{\textbf{Таблица}}		%Чтобы вместо table над таблицами писал Таблица
+\usepackage{enumitem}
+\setlist{nolistsep}
+\usepackage{verbatim}
 
 %%% Теоремы
 \theoremstyle{plain} % Это стиль по умолчанию, его можно не переопределять.
 \newtheorem{theorem}{Теорема}[section]
 \newtheorem{proposition}[theorem]{Утверждение}
+\newtheorem{predlog}{Предложение}[section]
+\newtheorem{lemma}{Лемма}[section]
 
 \theoremstyle{definition} % "Определение"
 \newtheorem{definition}{Определение}[section]

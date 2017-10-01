@@ -1,0 +1,178 @@
+\\
+$\left(\begin{array}{rrrr|r}
+    0 & 0 & 2 & -2 & 4   \\
+    2 & -4& 1&1&0\\
+    -1&2&1&-2&3
+\end{array}\right)\xrightarrow[(1)\leftrightarrow(3)]{(3)\cdot0.5;(1)\cdot(-1)} \left( \begin{array}{rrrr|r}
+    -1&2&1&-2&3   \\
+    2 & -4& 1&1&0\\
+    0&0&1&-1&2
+\end{array}\right) \xrightarrow{(2)-2(1)} \left( \begin{array}{rrrr|r}
+    -1&2&1&-2&3   \\
+    0 & 0& 3&-3&6\\
+    0&0&1&-1&2
+\end{array}\right) 
+\rightarrow\\
+\xrightarrow{(1)+(2)} 
+\begin{matrix}
+\overset{
+\left(\begin{array}{rrrr|r} % приписывание иксов в матрице!??!?!?!
+    1&-2&0&1&-1   \\
+    0&0&1&-1&2 \\
+\end{array}\right)
+}{
+\begin{matrix*}
+ x_1&x_2&x_3&x_4& \ \ \ \ \ 
+\end{matrix*}
+}
+\end{matrix}
+\rightarrow 
+\begin{matrix}
+\overset{\left(\begin{array}{rrrr|r}
+    1&0&-2&1&-1   \\
+    0&1&0&-1&2 \\
+\end{array}\right)
+}{
+\begin{matrix*}
+x_1&x_3&x_2&x_4& \ \ \ \ \ 
+\end{matrix*}
+}
+\end{matrix}$
+\vspace{3mm}
+
+$\left( \begin{array}{r}
+    x_1\\
+    x_3\\
+    x_2\\
+    x_4
+\end{array}\right) = \left( \begin{array}{r}
+    -1\\
+    2\\
+    0\\
+    0
+\end{array}\right) + \left( \begin{array}{rr}
+    2 & -1\\
+    0&1\\
+    1&0\\
+    0&1
+\end{array}\right) \left( \begin{array}{r}
+    c_1\\
+    c_2
+\end{array}\right)$
+\vspace{3mm}
+
+$\left( \begin{array}{r}
+    x_1\\
+    x_2\\
+    x_3\\
+    x_4
+\end{array}\right) = \left( \begin{array}{r}
+    -1\\
+    0\\
+    2\\
+    0
+\end{array}\right) + \left( \begin{array}{r}
+    2\\
+    1\\
+    0\\
+    0
+\end{array}\right) c_1 + \left( \begin{array}{r}
+    -1\\
+    0\\
+    1\\
+    0
+\end{array}\right) c_2 $
+
+\begin{prim}
+Найти ядро отображения.
+\end{prim}\\
+
+Для этого нужно решить СЛУ $A\textbf{x}=\textbf{o} \Rightarrow$
+
+$\Rightarrow\ker\varphi:\langle \left( \begin{array}{r} % МАТФУНКЦИИ
+    2\\
+    1\\
+    0\\
+    0
+\end{array}\right), \left( \begin{array}{r}
+    -1\\
+    0\\
+    1\\
+    0
+\end{array}\right)\rangle$\footnote{В примере 2 как раз и был вектор из $\ker\phi$}, \quad $\dim\ker\phi=2$.
+
+\begin{prim}
+Найти образ $\im\varphi$.
+\end{prim}\\
+
+$\im\varphi : \langle \left( \begin{array}{r}
+    0\\
+    2\\
+    -1
+\end{array}\right),\left( \begin{array}{r}
+    0\\
+    -4\\
+    2
+\end{array}\right),\left( \begin{array}{r}
+    2\\
+    1\\
+    1
+\end{array}\right),\left( \begin{array}{r}
+    -2\\
+    1\\
+    -2
+\end{array}\right) \rangle$
+
+$A = \begin{pmatrixr}
+0 & 2 & -1\\
+0 & -4 & 2\\
+2 & 1 & 1\\
+-2&1&-2\\ \end{pmatrixr}$ \\
+Очевидно, что $(2) = -2(1), (4) = (3)+(1) \Rightarrow$ 2 и 4 строку можно вычеркнуть. \\
+$\im\varphi :\langle \left( \begin{array}{r}
+    0\\
+    2\\
+    -1
+\end{array}\right), \left( \begin{array}{r}
+    2\\
+    1\\
+    1
+\end{array}\right) \rangle$\\
+$\dim \im\varphi = 2$\\
+$\dim \im \varphi +\dim \ker \varphi =4$
+
+
+
+
+\section{Два важных частных случая}
+
+\begin{enumerate}
+    \item Если \underline{$\dim\ker\varphi=0$}:
+    
+    $\dim \im \varphi = n = \Rg A \Rightarrow$ (столбцы ЛНЗ)
+    
+    $\textbf{y} \in \overline{L}$
+    $\ker\varphi = {0}$\\
+    Пусть $\textbf{y}=A\textbf{x$_1$}=A\textbf{x$_2$}$
+    
+    $A(\textbf{x$_1$}-\textbf{x$_2$}) = 0 \Rightarrow \textbf{x$_1$} - \textbf{x$_2$} \in \ker\varphi =\{0\} \Rightarrow \textbf{x$_1$}=\textbf{x$_2$}$
+    
+    Если $\ker\varphi = \{0\}$, то это \underline{инъекция}.
+    
+    Оказывается, верно и обратное:
+    
+    Отображение инъективно $\Leftrightarrow$ $\ker\varphi = {0}$
+    
+    Докажем в другую сторону:
+    
+    Пусть $\dim\ker \varphi \geq 1  \Rightarrow \exists \textbf{x$_0$} \neq 0 \in \ker \varphi$
+    
+    $A\textbf{x}=\textbf{y}$
+    
+$A(\textbf{x}+\textbf{x$_0$}) = A\textbf{x}+A\textbf{x$_0$} = \textbf{y}$~---~противоречие инъекции $\Rightarrow \ker\varphi = \{0\}$
+
+Число прообразов = $0, 1, \infty$
+  \item Если \underline{$\im\varphi = \mathbb{R}^m = \overline{L}$}:
+  
+  $\dim \im\varphi = m = \Rg A$~---~строки ЛНЗ $\leftarrow$ \underline{сюръекция}
+\end{enumerate}

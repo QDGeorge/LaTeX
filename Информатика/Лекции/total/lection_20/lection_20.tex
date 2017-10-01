@@ -1,0 +1,124 @@
+\chapter{Задачи на графы}
+\section{Поиск минимального остовного дерева}
+Минимальное остовное дерево (для связного графа) --- остовное дерево минимального суммарного веса. \\
+Остовных деревьев может быть несколько. Есть 2 алгоритма поиска минимального остовного дерева: Прима и Краскала. 
+Оба алгоритмы жадные. В первом случае мы выхватываем ребро, которое короче. Связность появится в последний момент. Во втором случае мы постоянно поддерживаем связанность.
+Условие: связный неориентированный граф.
+\subsection{Алгоритм Краскала}
+\subsubsection{Алгоритм}
+\begin{enumerate}
+\item Упорядочиваем все ребра по возрастанию веса (не убыванию).
+\item Далее добавляем ребро по порядку к каркасу (вершины добавляются вместе с ребром), если оно не образует цикл с уже имеющимися  ранее ребрами.
+\end{enumerate}
+Подробная визуализация разобрана на \href{https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D0%9A%D1%80%D0%B0%D1%81%D0%BA%D0%B0%D0%BB%D0%B0}{википедии}.
+\subsubsection{Реализация}
+\begin{infa}{Реализация алгоритма Краскала}
+\ \num N, M = [\inti(x) \fori x \ini \inputi().split()]
+\ \num edges = []
+\ \num \fori i \ini \rangei(M): 
+\ \num \tab v1, v2, weight = \mapi(\inti, \inputi().split())
+\ \num \tab edges.append((weight, v1, v2)) \com{Сначала будем добавлять вес}
+\ \num edges.sort()
+\ \num comp = \listi(range(N))
+\ \num tree = []
+\ \num tree_weight = 0
+\num \fori weight, v1, v2 \ini edges:
+\num \tab \ifi comp[v1] != comp[v2]:
+\num \tab \tab tree.append((v1, v2))
+\num \tab \tab tree_weight += weight
+\num \tab \tab \fori i \ini \rangei(N):
+\num \tab \tab \tab \ifi comp[i] == comp[v2]:
+\num \tab \tab \tab \tab comp[i] = comp[v1]
+\end{infa}
+Сложность алгоритма $O(M \log M + M\cdot N)$.\\
+Построчный комментарий кода:\\
+1) Вводим количество вершин и ребер.\\
+2) Создаем список для ребер.\\
+4) Вводим ребра --- вершины, которые они соединяют и вес.\\
+5) Добавляем в список ребер.\\
+6) Сортируем по весу ребер.\\
+7) Создаем список ребер, чтобы работать с индексами и проверять, из одной они компоненты связанности или нет.\\
+8) Сам массив ребер, образующих остовное дерево.\\
+9) Вес графа.\\
+10) Пока не прошли по всем ребрам.\\
+11) Если вершины не принадлежат одной компоненте связанности.\\
+12) Добавляем ребро к остовному дереву.\\
+13) Добавляем в общий вес вес нового ребра.\\
+14) Проходим по всем вершинам.\\
+15-16) Если мы встречаем аналогичную второй вершине компоненту связанности,то перекрашиваем ее в компоненту связанности первой. Так свяжем дерево.\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Алгоритм Прима}
+%Есть множество уже присоединенных к остовному дереву.
+\subsubsection{Алгоритм}
+\begin{enumerate}
+	\item Выбираем произвольную вершину (она и есть заготовка для дерева).
+	\item Добавляем к каркасу ребро минимального веса среди ребер, инцидентных какой-либо вершине каркаса и вершине не из каркаса.
+\end{enumerate}
+\subsubsection{Реализация}
+\texttt{dist[i]} --- минимальный вес  ребра, которым можно присоединить вершину i к каркасу.
+\begin{infa}{Реализация алгоритма Прима}
+\ \num INF = 10**9 \com{Введем условную бесконечность}
+\ \num dist = [INF]*N \com{W[i][j] - вес ребра ij, который равен +бесконечность,\\ \phantom{\ 2\tab }если i не смежна j} 
+\ \num dist[0] = 0
+\ \num used = [\Falsei]*N
+\ \num used[0] = \Truei
+\ \num tree = []
+\ \num tree_weight = 0
+\ \num \fori i \ini \rangei(N):
+\ \num \tab min_d = INF
+\num \tab \fori j \ini \rangei(N):
+\num \tab \tab \ifi \noti used[j] \andi dist[j] < min_d:
+\num \tab \tab \tab min_d = dist[j]
+\num \tab \tab \tab u = j
+\num \tab tree.append((i, u))
+\num \tab tree_weight += min_d
+\num \tab used[u] = \Truei
+\num \tab \fori v \ini \rangei(N):
+\num \tab \tab dist[v] = \mini(dist[v], W[u][v])
+\end{infa}
+Асимптотика алгоритма: $O(N^2)$. С помощью кучи можно ускорить до $O((M+N)\log N)$.
+\section{Алгоритм построения Гамильтонова цикла}
+Гамильтонов цикл~--- цикл, проходящий через все вершины по одному разу.
+Гамильтонов путь~--- путь, проходящий через все вершины по одному разу.\\
+Это NP -- сложная задача, т.к. решение задачи находится перебором, $O(N!)$.
+\begin{infa}{Реализация}
+\ \num visited = [\Falsei]*N
+\ \num path = []
+\ \num \defi hamilton(curr):
+\ \num \tab path.append(curr)
+\ \num \tab \ifi \leni(path) == N:
+\ \num \tab \tab \ifi A[path[-1]][path[0]] == 1: \com{A - таблица смежности}
+\ \num \tab \tab \tab \returni \Truei
+\ \num \tab \tab \elsei:
+\ \num \tab \tab \tab path.pop()
+\num \tab \tab \tab \returni \Falsei
+\num \tab visited[curr] = \Truei
+\num \tab \fori next \ini \rangei(N):
+\num \tab \tab \ifi A[curr][next] == 1 \andi \noti visited[next]:
+\num \tab \tab \tab \ifi hamilton(next):
+\num \tab \tab \tab \tab \returni \Truei 
+\num \tab visited[curr] = \Falsei
+\num \tab path.pop()
+\num \tab \returni \Falsei
+\end{infa}

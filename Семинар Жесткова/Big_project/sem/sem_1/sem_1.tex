@@ -1,0 +1,398 @@
+%\renewcommand{\thechapter}{\Roman{chapter}}
+\newpage
+\chapter{Матрицы. Ранг матрицы.}
+\section{Про матрицы}
+Уже умеем
+\begin{itemize}
+	\item[-] сложение и умножение на число (поэлементно)
+	\item[-] транспонировать
+	\item[-] умножать
+\end{itemize}
+
+Свойства умножения
+\renewcommand{\labelenumi}{\arabic{enumi}.\!\degree}
+\begin{enumerate}
+	\item $A \cdot B \neq B\cdot A$ (если $A \cdot B = B\cdot A$, то $A,B$~--- перестановочные матрицы)
+	\item $A\cdot E= E\cdot A = A$
+	\item $(AB)C=A(BC)$
+	\item $A(B+C)=AB+AC;\quad (B+C)A=BA+CA$
+	\item $\alpha (AB)=(\alpha A)B=A(\alpha B)$
+	\item $(AB)^\mathrm{T}=B^\mathrm{T}A^\mathrm{T}$
+\end{enumerate}
+\textbf{Пример 1}
+
+Верно ли:
+
+а) $(A+B)^2=A^2+2AB+B^2$
+
+Проверка:
+$$(A+B)^2=(A+B)(A+B)=A^2+AB+BA+B^2$$
+Т.о. в общем случае выражение неверно.
+
+б) $(A+B)^2+(A-B)^2=2(A^2+B^2)$
+
+Проверка:
+$$A^2+AB+BA+B^2+A^2-AB-BA+B^2=2(A^2+B^2)$$
+Т.о. в общем случае выражение верно.
+\section{Элементарные преобразования строк}
+\begin{itemize}
+	\item[-] умножение строки на число, неравное 0
+	\item[-] сложение строк
+\end{itemize}
+Также, элементарными преобразованиями являются:
+\begin{itemize}
+	\item[-] добавление к строке другой строки, умноженной на число
+	\item[-] перестановка строк
+\end{itemize}
+
+\emph{Очевидно, что элементарные преобразования обратимы.}
+
+Рассмотрим: $SA=A'$, где $S$~--- матрица элементарного преобразования.
+\begin{itemize}
+	\item умножение: $\begin{pmatrix}
+	1 & 0 \\ 0 & \lambda
+	\end{pmatrix}
+	\begin{pmatrix}
+	a & b \\ c & d
+	\end{pmatrix}=
+	\begin{pmatrix}
+	a & b \\ \lambda c & \lambda d
+	\end{pmatrix}$
+	\item сложение: $\begin{pmatrix}
+	1 & 0 \\ 1 & 1
+	\end{pmatrix}
+	\begin{pmatrix}
+	a & b \\ c & d
+	\end{pmatrix}=
+	\begin{pmatrix}
+	a & b \\ a + c & b + d
+	\end{pmatrix}$
+\end{itemize}
+Элементарная матрица получается элементарными преобразованиями из единичной.\\
+Для преобразования столбцов элементарную матрицу нужно умножать справа.\\
+Запись нескольких преобразований: $S_1,...,S_N$, то $S_N \cdot ... \cdot S_1 A$.
+
+Строки $a_1,...,a_k$ матрицы $A$ называются ЛНЗ (линейно-независимыми), если
+\begin{itemize}
+	\item ЛНЗ: $\alpha_1 a_1+...+\alpha_k a_k = 0 \Leftrightarrow \alpha_1=...=\alpha_k=0,$
+	
+	называются ЛЗ (линейно-зависимыми), если
+	\item ЛЗ: $\exists\ \alpha_1,...,\alpha_k: \alpha_1^2+...+\alpha_k^2 \neq 0 \Rightarrow \alpha_1 a_1+...+\alpha_k a_k = 0$
+\end{itemize}
+
+Все свойства из аналита.
+\begin{itemize}
+	\item Если есть нулевая строка, то матрица ЛЗ
+	\item Если часть строк ЛЗ, то и матрица ЛЗ
+	\item Любая часть ЛНЗ --- ЛНЗ
+\end{itemize}
+
+Квадратная матрица вырожденная, если она содержит ЛЗ строки.
+
+Элементарные преобразования \emph{не нарушают} линейных зависимостей в матрице.
+
+В частности: вырожденная матрица при элементарных преобразованиях перейдёт в вырожденную матрицу, а невырожденная матрица при элементарных преобразованиях перейдёт в невырожденную матрицу.
+
+\begin{theorem}
+	Каждая невырожденная матрица с помощью элементарных преобразований может быть превращена в единичную
+\end{theorem}
+\noindent\textbf{Пример 2}
+
+Привести к $E$.
+$$
+\begin{pmatrix}
+	1 & 2 & 1\\
+	1 & 1 & -1\\
+	2 & 3 & 1\\
+\end{pmatrix}
+$$
+\textit{Решение:}\\
+Прямой ход метода Гаусса:\\
+$
+\begin{pmatrix}
+1 & 2 & 1\\
+1 & 1 & -1\\
+2 & 3 & 1\\
+\end{pmatrix}
+\xrightarrow[(3)-2(1)]{(2)-(1)}
+\begin{pmatrix}
+1 & 2 & 1\\
+0 & -1 & -2\\
+0 & -1 & -1\\
+\end{pmatrix}
+\xrightarrow{(3)-(2)}
+\left( \begin{array}{ccc}
+1 & 2 & 1\\ \cline{1-1}
+0 & \multicolumn{1}{|c}{-1} & -2\\\cline{2-2}
+0 & 0 & \multicolumn{1}{|c}{1}\\
+\end{array} \right)\
+$ 
+--- ступенчатый вид матрицы.\\
+Обратный ход метода Гаусса:
+$$
+\xrightarrow[(2)+2(3)]{(1)-(3)}
+\begin{pmatrix}
+	1 & 2 & 0\\
+	0 & -1 & 0\\
+	0 & 0 & 1\\
+\end{pmatrix}
+\xrightarrow{(1)+2(2)}
+\begin{pmatrix}
+	1 & 0 & 0\\
+	0 & -1 & 0\\
+	0 & 0 & 1\\
+\end{pmatrix}
+\xrightarrow{(2)\times (-1)}
+\begin{pmatrix}
+	1 & 0 & 0\\
+	0 & 1 & 0\\
+	0 & 0 & 1\\
+\end{pmatrix}
+$$
+\begin{theorem}
+	Матрица невырождена $\Leftrightarrow$ раскладывается в произведение элементарных матриц.
+\end{theorem}
+\begin{proof}
+$(\Rightarrow)$: см. метод Гаусса (пример 2).\\
+$\exists\  T_1,...,T_M$~--- элементарные преобразования строк: $T_M\cdot ...\cdot T_1 A=E$\\
+Элементарные преобразования обратимы $\Rightarrow \exists\  S_1,...,S_M: S_M\cdot ...\cdot S_1 E=A\Leftrightarrow S_M\cdot ...\cdot S_1=A$\\
+($\Leftarrow$): $A=S_M\cdot ...\cdot S_1 E$\\
+Т.к. единичная матрица невырождена, а элементарные преобразования вырожденности не меняют $\Rightarrow A$ невырождена.
+\end{proof}
+\section{Обратная матрица}
+\begin{definition}
+Матрица $X$ обратная к матрице $A$, если
+$$XA=AX=E,$$
+где $A$~--- невырождена, $X$~--- единственна.
+\end{definition}
+
+Свойства:
+\begin{enumerate}
+	\item $(AB)^{-1}=B^{-1}A^{-1}$
+	\item $(A^{\mathrm{T}})^{-1}=(A^{-1})^{\mathrm{T}}$
+\end{enumerate}
+
+\textbf{Метод Жордана-Гаусса}\\
+$$T_M\cdot...\cdot T_1 A=E \quad|\!\cdot A^{-1}$$
+$$T_M\cdot...\cdot T_1 E = A^{-1}$$
+\textbf{Пример 3}
+
+Доказать, что $A$ невырождена и найти обратную, если
+$$A^2+A+E=O$$
+\textit{Доказательство:}
+$$A^2+A+E=O$$
+$$A(A+E)+E=O$$
+$$A(-A-E)=E$$
+$$\det E = 1,\qquad \det(A(-A-E))=\det A\cdot\det (-A-E) \Rightarrow \det A \neq 0.$$
+Отсюда же следует, что $$A^{-1}=-A-E$$
+\textbf{Пример 4}
+
+$$A^m=O\ \text{--- нильпотентная матрица}$$
+Доказать $$(E-A)^{-1}=E+A+A^2+...+A^{m-1}$$
+\textit{Доказательство:}
+$$(E-A)^{-1}=E+A+A^2+...+A^{m-1}\quad |\cdot (E-A)$$
+$$E=E-A+A-A^2+A^2+...+A^{m-1}-A^m=E$$
+\textbf{Пример 5}\vspace{1mm}\\
+Решить уравнения:\\
+а)$\begin{pmatrix}
+2 & 5\\
+1 & 3\\
+\end{pmatrix}
+X=
+\begin{pmatrix}
+2 & 1\\
+1 & 1\\
+\end{pmatrix}
+$
+\qquad б)$X
+\begin{pmatrix}
+2 & 5\\
+1 & 3\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+2 & 1\\
+1 & 1\\
+\end{pmatrix}
+$\vspace{1mm}\\
+\textit{Решение:}\\
+a) $AX=B\quad A^{-1}\cdot |$\\
+$X=A^{-1}B$\\
+б) $XA=B\quad |\cdot A^{-1}$\\
+$X=BA^{-1}$\\
+Найдём $A^{-1}$:\vspace{2mm}\\
+$\left( \begin{array}{cc|cc}
+2 & 5 & 1 & 0\\
+1 & 3 & 0 & 1\\
+\end{array} \right)
+\xrightarrow{(1)\times \frac{1}{2}}
+\left( \begin{array}{cc|cc}
+1 & 5/2 & 1/2 & 0\\
+1 & 3 & 0 & 1\\
+\end{array} \right)
+\xrightarrow{(2)-(1)}
+\left( \begin{array}{cc|cc}
+1 & 5/2 & 1/2 & 0\\
+0 & 1/2 & -1/2 & 1\\
+\end{array} \right)
+\xrightarrow{(2)\times 2}
+\left( \begin{array}{cc|cc}
+1 & 5/2 & 1/2 & 0\\
+0 & 1 & -1 & 2\\
+\end{array} \right)\rightarrow
+$\vspace{5mm}
+$
+\xrightarrow{(1)-5/2\times(2)}
+\left( \begin{array}{cc|cc}
+1 & 0 & 3 & -5\\
+0 & 1 & -1 & 2\\
+\end{array} \right)
+$\vspace{2mm}
+
+Т.о. $A^{-1}=\left( \begin{array}{cc}
+3 & -5\\
+-1 & 2\\
+\end{array} \right).
+$\\
+Ответ: a) $X=\left( \begin{array}{cc}
+	1 & -2\\
+	0 & 1\\
+\end{array} \right),
+$ б) $X=\left( \begin{array}{cc}
+5 & -8\\
+2 & -3\\
+\end{array} \right).
+$
+\section{Ранг матрицы}
+Пусть у матрицы $A$ $r$~--- ЛНЗ строк и нет ЛНЗ системы строк большего числа. Тогда $r$~--- строчный ранг матрицы.
+
+\begin{definition}
+	Строчный ранг матрицы~--- максимальное число ЛНЗ строк.
+\end{definition}
+
+\begin{theorem}
+	Система из r строк ЛНЗ $\Leftrightarrow \exists$ невырожденная подматрица порядка r. 
+\end{theorem}
+$$
+\left( \begin{array}{cccccc}\cline{3-4}
+\cdot & \cdot & \multicolumn{1}{|c}{\cdot} & \cdot & \multicolumn{1}{|c}{\cdot} & \cdot\\
+\cdot & \cdot & \multicolumn{1}{|c}{\cdot} & \cdot & \multicolumn{1}{|c}{\cdot} & \cdot\\ \cline{3-4}
+\cdot & \cdot & \cdot & \cdot & \cdot & \cdot\\
+\cdot & \cdot & \cdot & \cdot & \cdot & \cdot\\
+\end{array} \right)
+$$
+Первые две строки ЛНЗ. Вычерченный фрагмент содержит непропорциональные строки.
+
+\begin{definition}
+Подматрица порядка $r$ называется базисной, если она невырождена, а все квадратные подматрицы большего порядка вырождены. 
+\end{definition}
+\begin{definition}
+	Ранг матрицы~--- порядок базисной подматрицы.
+\end{definition}
+Ранг матрицы равен строчному рангу. Ранг не меняется при элементарных преобразованиях.
+
+Свойства:
+
+$\Rg AB \leq \min(\Rg A, \Rg B)$
+
+\subsection{Алгоритм поиска ранга}
+Приводим матрицу к ступенчатому виду. Ранг~--- число ненулевых строк.\\
+\textbf{Пример 6}
+
+Найти Rg.
+
+\noindent\textit{Решение:}\\[3mm]
+$
+\left( \begin{array}{ccc}
+	1 & 1 & 1\\
+	1 & 0 & -1\\
+	3 & 2 & 1\\
+\end{array} \right)
+\xrightarrow[(3)-3(1)]{(2)-(1)}
+\left( \begin{array}{ccc}
+1 & 1 & 1\\
+0 & -1 & -2\\
+0 & -1 & -2\\
+\end{array} \right)
+\xrightarrow{(3)-(2)}
+\left( \begin{array}{ccc}
+1 & 1 & 1\\ \cline{1-1}
+0 & \multicolumn{1}{|c}{-1} & -2\\ \cline{2-3}
+0 & 0 & \multicolumn{1}{c|}{0}\\
+\end{array} \right) \Rightarrow \Rg =2
+$\vspace{3mm}\\
+\textbf{Пример 7}
+
+Найти Rg.\vspace{3mm}\\
+$
+\left( \begin{array}{ccccc}
+2 & -1 & 3 & -5 & 1\\
+1 & -1 & -5 & 0 & 2\\
+3 & -2 & -2 & -5 & 3\\
+7 & -5 & -9 & -10 & 8\\
+\end{array} \right)
+\xrightarrow[(4)\leftrightarrow(1)]{1/5\times(4)}
+\left( \begin{array}{ccccc}
+1 & -1 & 3 & 2 & 1\\
+0 & -1 & -5 & 1 & 2\\
+1 & -2 & -2 & 3 & 3\\
+2 & -5 & -9 & 7 & 8\\
+\end{array} \right)
+\xrightarrow[(4)-2(1)]{(3)-(1)}
+\left( \begin{array}{ccccc}
+1 & -1 & 3 & 2 & 1\\
+0 & -1 & -5 & 1 & 2\\
+0 & -1 & -5 & 1 & 2\\
+0 & -3 & -15 & 3 & 6\\
+\end{array} \right)
+$\vspace{3mm}\\
+3 и 4 строчку можно вычеркнуть, т.к. они ЛЗ. Т.о. $\Rg=2$.\\
+\textbf{Пример 8}
+
+Найти Rg в зависимости от параметра.
+
+\noindent\textit{Решение:}\\[3mm]
+$
+\left( \begin{array}{ccccc}
+	0 & 0 & 1 & -2 & \alpha\\
+	2 & -4 & 3 & -2 & 3\\
+	3 & -6 & 2 & 2 & 2\\
+	-3 & 6 & 1 & -4 & \beta\\
+\end{array} \right)
+\xrightarrow{(1)\leftrightarrow(4)}
+\left( \begin{array}{ccccc}
+2 & -4 & 3 & -2 & 3\\
+3 & -6 & 2 & 2 & 2\\
+-3 & 6 & 1 & -4 & \beta\\
+0 & 0 & 1 & -2 & \alpha\\
+\end{array} \right)
+\xrightarrow[(3)+3/2\times (1)]{(2)-3/2\times(1)}
+\left( \begin{array}{ccccc}
+2 & -4 & 3 & -2 & 3\\
+0 & 0 & -5/2 & 5 & -5/2\\
+0 & 0 & 7/2 & -7 & \beta+9/2\\
+0 & 0 & 1 & -2 & \alpha\\
+\end{array} \right)\rightarrow\\
+\xrightarrow[(4)+2/5\times (1)]{(3)-5/7\times(2)}
+\left( \begin{array}{ccccc}
+2 & -4 & 3 & -2 & 3\\
+0 & 0 & -5/2 & 5 & -5/2\\
+0 & 0 & 0 & 0 & \beta+1\\
+0 & 0 & 0 & 0 & \alpha-1\\
+\end{array} \right)\\
+$
+Rg = 2 при $\alpha=-\beta=1$.\\
+Rg = 3 в остальных случаях.\\
+\textbf{Пример 9}
+
+Верно ли $\forall A, B$:\\
+а) $\Rg(A+B)=\Rg A+\Rg B$\\
+Неверно, например:
+$$A=B=E_2$$
+б) $\Rg(A+B)\leq \Rg A+\Rg B$\\
+Верно. Докажем:\\
+$$\Rg(A+B)\leq Rg(\underbrace{A+B}_\text{ЛЗ}|A|B)=\Rg(A|B)$$\\
+$$r=\Rg A, \qquad s= \Rg B$$\\
+$$\Rg(A|B)\leq r+s$$\\
+Т.е.
+$$\Rg(A+B)\leq \Rg A+\Rg B.$$

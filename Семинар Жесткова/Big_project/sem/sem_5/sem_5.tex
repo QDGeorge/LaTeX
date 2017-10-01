@@ -1,0 +1,447 @@
+\chapter{Линейные отображения. Часть 1.}
+\section{Определение линейного отображения}
+\begin{definition}
+	Пусть заданы $L$ и $\overline{L}$ --- два линейных пространства. \textsf{Отображение} $\phi$ из $L$ в $\overline{L}$ --- правило, по которому \underline{каждому} вектору из $L$ ставится в соответствие \underline{единственный} вектор из $\overline{L}$.\\
+	Обозначение: $\phi: L\rightarrow\overline{L}$.
+\end{definition}
+
+\begin{definition}
+	\textsf{Сюрьекция} --- отображение, при котором каждый элемент из $\overline{L}$ является образом вектора из $L$.
+\end{definition}
+
+\begin{figure}[h!]
+	\centering
+	\def\svgwidth{5cm} % если надо изменить размер
+	\input{sem/sem_5/surekt.pdf_tex}
+	\caption{Сюръективная функция}
+	\label{...}
+\end{figure}
+
+\begin{definition}
+	\textsf{Инъекция} --- отображение, при котором каждый образ из $\overline{L}$ имеет единственный прообраз в $L$.
+\end{definition}
+
+\begin{figure}[h!]
+	\centering
+	\def\svgwidth{5cm} % если надо изменить размер
+	\input{sem/sem_5/inekt.pdf_tex}
+	\caption{Инъективная функция}
+	\label{...}
+\end{figure}
+
+\begin{definition}
+	Сюрьекция + инъекция = \textsf{биекция} --- это отображение, которое является одновременно и сюръективным, и инъективным (взаимно--однозначное соответствие).
+\end{definition}
+
+\begin{definition}
+	Если в результате отображения $L=\overline{L}$, то такое отображение называется \textsf{преобразованием}.
+\end{definition}
+
+\begin{definition}
+	Отображение $\pi$ называется \textsf{линейным}, если выполнено:
+	$$
+	\left\{
+	\begin{array}{l}
+	\phi(x+y)=\phi(x)+\phi(y)\\
+	\phi(\alpha x)=\alpha\phi(x).\\
+	\end{array}\right.
+	$$
+\end{definition}
+
+Примеры:
+\begin{itemize}
+	\item аффинные преобразования плоскости
+	\item геометрия 3D (т.е. преобразования в трёхмерном пространстве: поворот, симметрия и т.д.)
+	\item присвоение координат в линейном пространстве (пространство многочленов $\rightarrow$ пространство столбцов т.е. координатный изоморфизм)
+	\item умножение на матрицу, транспонирование
+	\item дифференцирование, интегрирование (только для определённого интеграла, чтобы избежать появление константы)
+\end{itemize}
+Очевидно, что $\phi(0)=0$.
+
+Рассмотрим ЛЗ систему векторов $a_1,\dots,a_n$.
+$$
+\alpha_1 a_1+\dots+\alpha_n a_n=0.
+$$
+Подействуем преобразованием $\phi$:
+$$
+\alpha_1 \phi(a_1)+\dots+\alpha_n \phi(a_n)=0.
+$$
+Отсюда видно, что \textsf{система образов} --- тоже ЛЗ система векторов с теми же коэффициентами. Но для ЛНЗ системы векторов данное утверждение не верно (контрпример: нуль--преобразование).
+
+\begin{definition}
+	\textsf{Образ} $\phi: \im \phi:\{\phi(x)\in \overline{L}:x\in L\}$ --- множество всех образов из $L$ в $\overline{L}$.
+\end{definition}
+
+\begin{definition}
+	\textsf{Ядро} $\phi: \ker{\phi}: \{x\in L:\phi(x)=0\}$ --- множество векторов из $L$, которые переходят в 0.
+\end{definition}
+
+\begin{definition}
+	\textsf{Ранг} $\phi: r=\dim(\im{\phi})$ --- размерность образа.
+\end{definition}
+
+\begin{wrapfigure}{r}{0.27\linewidth}
+	\def\svgwidth{5cm} % если надо изменить размер
+	\input{sem/sem_5/prim1.pdf_tex}
+	\caption{К примеру 1а}
+	\label{...}
+\end{wrapfigure}
+
+\begin{prim}
+	Работаем в $\mathbb{R}^3$, ОНБ, \textbf{a}$\neq$\textbf{0}, \textbf{n}$\neq$\textbf{0}.\\
+	Найти \phi, если \phi --- ортогональная проекция на:\\
+	а) $L_1$: \textbf{[r, a] = 0}\\
+	б) $L_2$: \textbf{(r, n)} = 0
+\end{prim}
+
+
+
+\noindent а) $\phi(\textbf{x})=\cfrac{\textbf{(x,\,a)}}{\abs{\textbf{a}}^2}\,\textbf{a}$ --- формула для проекции вектора на прямую (из аналит. геометрии).\\
+$\ker \phi : \textbf{(r,\,a)}=0$ --- плоскость, ортогональная вектору $\textbf{a}$.\\
+$\im \phi: \textbf{[r,\,a]=0}$.\\
+$r = 1$ (прямая).
+
+\begin{wrapfigure}{r}{0.27\linewidth}
+	\def\svgwidth{5cm} % если надо изменить размер
+	\input{sem/sem_5/prim1b.pdf_tex}
+	\caption{К примеру 1б}
+	\label{...}
+	\vspace{-10cm}
+\end{wrapfigure}
+
+\noindent б) $\phi(\textbf{x})=\textbf{x}-\textbf{p}$\\
+$\phi(\textbf{x})=\textbf{x}-\cfrac{\textbf{(\textbf{x},\,\textbf{n})}}{\abs{\textbf{n}}^2}\,\textbf{n}$.\\
+$\ker \phi: \textbf{[r,\,n]=0}.$\\
+$\im \phi: \textbf{(r,\,n)}=0$ (плоскость).\\
+$r=2$ (плоскость).
+
+\section{Матрица линейного отображения}
+\noindent$\phi: L\rightarrow\overline{L}, \dim L=n<\infty, \dim \overline{L}=m<\infty$\\
+Базисы в $L: \textbf{e} (e_1,\dots,e_n)$, в $\overline{L}: \textbf{f} (f_1,\dots,f_m)$, $a \in L$. $\phi(a) \in \overline{L}$.\\
+Пусть $a$ имеет в $L$ координатный столбец $\textbf{x}$, а $\phi(a)$ в $\overline{L}$ координатный столбец $\textbf{y}$. Построим такую матрицу $A$: $\underset{m\times n} A\cdot \underset{n\times 1}{\text{\textbf{x}}}=\underset{m\times 1}{\text{\textbf{y}}}$.\\
+Пусть $\textbf{x}=e_1: (1\ 0\ \cdots\ 0)^{\text{T}}$.\\
+$y=\underset{\text{в базисе $f$}}{\phi(e_1)}=Ae_1=A\cdot (1\ 0\ \cdots\ 0)^{\text{T}}=a_1$ --- первый столбец из A. Аналогично поступим с вторым, третьим и т.д. столбцами. Тогда матрица линейного отображения A имеет вид:
+$$A=
+\left.\left(\hspace{1mm}
+\begin{array}{|c|c|c|}
+\cline{1-1} \cline{3-3}
+\multirow{4}{*}{$\phi(e_1)$} & \multirow{4}{*}{$\cdots$} & \multirow{4}{*}{$\phi(e_n)$} \\
+&                           &                              \\
+&                           &                              \\
+&                           &                              \\ \cline{1-1} \cline{3-3} 
+\end{array}\hspace{1mm}\right) \right\}m
+$$
+В данном случае, столбцы матрицы --- это координатные столбцы $\phi(e_i)$ в базисе $f$ т.к.:
+$$
+a=\alpha_1 e_1+\dots+\alpha_n e_n
+$$
+Подействуем на него преобразованием $\phi$:
+$$
+\phi(a)=\alpha_1 \phi(e_1)+\dots+\alpha_n \phi(e_n)
+$$
+
+В примерах 2--5 вопрос следующий: найти $A$, если задано $\phi$ --- преобразование $\mathbb{R}^3$, в ОНБ.
+\begin{prim}
+	$\phi$ --- поворот вокруг $\textbf{$e_3$}$ на угол $\frac{\pi}{2}$.
+\end{prim}
+
+\begin{wrapfigure}{r}{0.27\linewidth}
+	\def\svgwidth{3cm} % если надо изменить размер
+	\input{sem/sem_5/prim2.pdf_tex}
+	\caption{К примеру 2}
+	\label{...}
+	\vspace{-9cm}
+\end{wrapfigure}
+
+\noindent$\underset{\text{e$_1$,e$_2$,e$_3$}}{L}\rightarrow\underset{\text{e$_1$,e$_2$,e$_3$}}{\overline{L}}$\footnote{Всегда в решении задачи обязательно нужно выбрать базисы.}.\\
+$\phi(\textbf{e$_1$})=\textbf{e$_2$}: \begin{psm}
+0\\1\\0\\
+\end{psm}\\
+\phi(\textbf{e$_2$})=-\textbf{e$_1$}: \begin{psm}
+-1\\0\\0\\
+\end{psm}\\
+\phi(\textbf{\text{e$_3$}})=\textbf{e$_3$}:\begin{psm}
+0\\0\\1\\
+\end{psm}$\\
+$$A=\begin{pmatrixr}
+0&-1&0\\
+1&0&0\\
+0&0&1\\	
+\end{pmatrixr}$$
+Для построения матрицы $A$ нам необходимо и достаточно образов преобразования.
+\begin{prim}
+	$\phi$ --- ортогональное проецирование на $L: x=y=z$.
+\end{prim}
+
+\begin{wrapfigure}{r}{0.35\linewidth}
+	\def\svgwidth{6cm} % если надо изменить размер
+	\input{sem/sem_5/prim3.pdf_tex}
+	\caption{К примеру 3}
+	\label{...}
+	\vspace{-9cm}
+\end{wrapfigure}
+
+\noindent$\underset{\text{e$_1$,e$_2$,e$_3$}}{L}\rightarrow\underset{\text{e$_1$,e$_2$,e$_3$}}{\overline{L}}$\\
+$\phi(\textbf{x})=\cfrac{\textbf{(x,\,a)}}{\abs{\textbf{a}}^2}\textbf{a}$\\
+<<Прогоним>> через эту формулу все базисные векторы:\\
+$\left.
+\begin{aligned}
+\phi(\textbf{e$_1$})=\frac{1}{3}\begin{psm}
+1\\1\\1
+\end{psm}\\
+\phi(\textbf{e$_2$})=\frac{1}{3}\begin{psm}
+1\\1\\1
+\end{psm}\\
+\phi(\textbf{e$_3$})=\frac{1}{3}\begin{psm}
+1\\1\\1
+\end{psm}
+\end{aligned}
+\right\}\Rightarrow A = \cfrac{1}{3}\begin{pmatrixr}
+1&1&1\\1&1&1\\1&1&1\\
+\end{pmatrixr}
+$
+\\
+\begin{prim}
+	$\varphi$ - отражение относительно $\alpha$: $2x-2y+z=0$
+\end{prim}\\
+
+\begin{wrapfigure}{r}{0.35\linewidth}
+	\vspace{-4cm}
+	\def\svgwidth{6cm} % если надо изменить размер
+	\input{sem/sem_5/prim4.pdf_tex}
+	\caption{К примеру 4}
+	\label{...}
+	\vspace{-9cm}
+\end{wrapfigure}
+
+$\underset{\text{e$_1$,e$_2$,e$_3$}}{L}\rightarrow\underset{\text{e$_1$,e$_2$,e$_3$}}{\overline{L}}$\\
+$\textbf{n} (2;-2;1)$\\
+$|\textbf{n}|^2=9$\\
+$\varphi(\textbf{p})=\textbf{p}-2\cfrac{\textbf{(p,\,a)}}{|\textbf{a}|^2}\textbf{n}$\\
+$\varphi(\textbf{e$_1$})=
+\left(
+\begin{smallmatrix*}[r]
+1\\ 0\\ 0\\
+\end{smallmatrix*}
+\right)
+-2 \cdot \frac{2}{9} 
+\left(
+\begin{smallmatrix*}[r]
+2\\ -2\\ 1\\
+\end{smallmatrix*}
+\right)$
+;
+$\varphi(\textbf{e$_1$})=\frac{1}{9} 
+\left(
+\begin{smallmatrix*}[r]
+1\\ 8\\ -4\\
+\end{smallmatrix*}
+\right)$;\\
+$\varphi(\textbf{e$_2$})=\frac{1}{9} 
+\left(
+\begin{smallmatrix*}[r]
+8\\ -7\\ 4\\
+\end{smallmatrix*}
+\right)$;\\
+$\varphi(\textbf{e$_3$})=\frac{1}{9} 
+\left(
+\begin{smallmatrix*}[r]
+-4\\ 4\\ 1\\
+\end{smallmatrix*}
+\right)$;\\
+$$
+A=\frac{1}{9} 
+\begin{pmatrix*}[r]
+1 & 8 & -4\\
+8 & -7 & 4\\
+-4 & 4 & 1\\
+\end{pmatrix*}
+$$\\
+\begin{prim}
+	$L_1: x=0$\\
+	$L_2: 2x=2y=-z$\\
+\end{prim}\\
+
+\begin{wrapfigure}{r}{0.4\linewidth}
+	\vspace{-5cm}
+	\def\svgwidth{6cm} % если надо изменить размер
+	\input{sem/sem_5/prim5.pdf_tex}
+	\caption{К примеру 5}
+	\label{...}
+	\vspace{-9cm}
+\end{wrapfigure}
+
+$\underset{\text{e$_1$,e$_2$,e$_3$}}{L}\rightarrow\underset{\text{e$_1$,e$_2$,e$_3$}}{\overline{L}}$\\
+
+$\varphi$ --- проецирование на $L_1 || L_2$\\
+$L_1: \langle
+\begin{pmatrix*}[r]
+0\\
+1\\
+0\\
+\end{pmatrix*}
+,
+\begin{pmatrix*}[r]
+0\\
+0\\
+1\\
+\end{pmatrix*}
+\rangle
+$,
+$L_2: \langle
+\begin{pmatrix*}[r]
+\frac{1}{2} \\
+\frac{1}{2} \\
+-1\\
+\end{pmatrix*}
+\rangle$\\
+$ \textbf{p}=
+\underbrace{
+	\alpha
+	\left(
+	\begin{smallmatrix*}[r]
+	0\\ 1\\ 0\\
+	\end{smallmatrix*}
+	\right)
+	+\beta
+	\left(
+	\begin{smallmatrix*}[r]
+	0\\ 0\\ 1\\
+	\end{smallmatrix*}
+	\right)
+}_{\in L_1}
++
+\underbrace{
+	\gamma
+	\left(
+	\begin{smallmatrix*}[r]
+	\frac{1}{2} \\
+	\frac{1}{2} \\
+	-1\\
+	\end{smallmatrix*}
+	\right)
+}_{\in L_2}\\
+\textbf{e$_1$}: 
+\begin{psm}
+1\\ 0\\ 0\\
+\end{psm}
+=
+\underbrace{
+	\alpha
+	\left(
+	\begin{smallmatrix*}[r]
+	0\\ 1\\ 0\\
+	\end{smallmatrix*}
+	\right)
+	+\beta
+	\left(
+	\begin{smallmatrix*}[r]
+	0\\ 0\\ 1\\
+	\end{smallmatrix*}
+	\right)
+}_{\varphi(\textbf{e$_1$})}
++\gamma
+\left(
+\begin{smallmatrix*}[r]
+\frac{1}{2} \\
+\frac{1}{2} \\
+-1\\
+\end{smallmatrix*}
+\right)
+\Rightarrow
+\gamma=2
+\Rightarrow
+\varphi(\textbf{e$_1$})=
+\left(
+\begin{smallmatrix*}[r]
+0\\ -1\\ 2\\
+\end{smallmatrix*}
+\right)
+$\\
+$\textbf{e$_2$}: \varphi(\textbf{e$_2$})=\textbf{e$_2$};\\
+\textbf{e$_3$}: \varphi(\textbf{e$_3$})=\textbf{e$_3$}.  $\\
+Ответ:$
+\begin{pmatrix*}[r]
+0 & 0 & 0\\
+-1 & 1 & 0\\
+2 & 0 & 1\\
+\end{pmatrix*}
+$\\
+Понимая пример 5 как отображение, можно заметить, что $\dim(\im\varphi)=2$,  а значит, для описания всевозможных результатов в $\bar L$ можно было выбрать базис из двух векторов.\\
+$ f= \left\{ \left(
+\begin{smallmatrix*}[r]
+0\\ 1\\ 0\\
+\end{smallmatrix*}
+\right) 
+, 
+\left(
+\begin{smallmatrix*}[r]
+0\\ 0\\ 1\\
+\end{smallmatrix*}
+\right) 
+\right\}$\\ 
+$\varphi (\textbf{e$_1$})=\left(
+\begin{smallmatrix*}[r]
+-1\\ 2\\
+\end{smallmatrix*}
+\right) $
+,
+$\varphi (\textbf{e$_2$})=\left(
+\begin{smallmatrix*}[r]
+1\\ 0\\
+\end{smallmatrix*}
+\right) $
+,
+$\varphi (\textbf{e$_3$})=\left(
+\begin{smallmatrix*}[r]
+0\\ 1\\
+\end{smallmatrix*}
+\right) $;\\
+$$A=
+\begin{pmatrixr}
+-1 & 1 & 0\\
+2 & 0 & 1\\
+\end{pmatrixr}
+$$
+\begin{prim}
+	$ \varphi : \underset{\textbf{e$_1$}, \textbf{e$_2$}, \textbf{e$_3$}}L \Rightarrow \underset{\textbf{f$_1$}, \textbf{f$_2$}, \textbf{f$_3$}, \textbf{f$_4$}}{\bar L} $\\
+	
+	$L: \langle\underset{=\text{\textbf{$e_1$}}}1, \underset{=\text{\textbf{$e_2$}}}x, \underset{=\text{\textbf{$e_3$}}}{x^2}\rangle$ , 
+	$L: \langle\underset{=\text{\textbf{$f_1$}}}1, \underset{=\text{\textbf{$f_2$}}}x, \underset{=\text{\textbf{$f_3$}}}{x^2}, \underset{=\text{\textbf{$f_4$}}}{x^3}\rangle$ \\
+\end{prim}
+$\varphi (x)=\int\limits^x_0 f(t)dt$\\
+$$
+\left.
+\begin{aligned}
+\varphi (e_1)=\int\limits^x_0 1 dt=x
+\left(
+\begin{smallmatrix*}[r]
+0\\ 1\\ 0\\ 0\\
+\end{smallmatrix*}
+\right) \\
+\varphi (e_2)=\int\limits^x_0 t dt=\frac{x^2}{2}
+\left(
+\begin{smallmatrix*}[r]
+0\\ 0\\ \frac{1}{2}\\ 0\\
+\end{smallmatrix*}
+\right) \\
+\varphi (e_3)=\int\limits^x_0 t^2 dt=\frac{x^3}{3}
+\left(
+\begin{smallmatrix*}[r]
+0\\ 0\\  0\\ \frac{1}{3}\\
+\end{smallmatrix*}
+\right) 
+\end{aligned}
+\right\}
+A=
+\begin{pmatrix*}[r]
+0 & 0 & 0\\
+1 & 0 & 0\\
+0 & \frac{1}{2} & 0\\
+0 & 0 & \frac{1}{3}\\
+\end{pmatrix*}
+$$
+
+
+
+
