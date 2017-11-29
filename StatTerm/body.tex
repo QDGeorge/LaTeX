@@ -129,12 +129,12 @@ $$
 $$
 Таким образом
 \begin{center}
-	$S_{\text{вр}} = \left(\cfrac{1}{2}\,8.314\cdot\ln (5.67\cdot10^{-137})+\cfrac{3}{2}\,8.314\cdot\ln 1700 - 8.314\cdot\ln2+1320.8\right)\cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}= 419.60\ \cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}$
+	$S_{\text{вр}} = \left(\cfrac{1}{2}\,8.314\cdot\ln (5.67\cdot10^{-137})+\cfrac{3}{2}\,8.314\cdot\ln 1700 - 8.314\cdot\ln2+1320.8\right)\cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}= 103.67\ \cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}$
 \end{center}
 
 Итак,
 \begin{equation}
-\boxed{S_{\text{вр}} = 419.60\  \cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}}.
+\boxed{S_{\text{вр}} = 103.67\  \cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}}.
 \end{equation}
 \subsubsection{Расчет колебательной энтропии}
 При расчете колебательной составляющей энтропии выдвинуто приближение, заключающееся в том, что молекула представлена в виде жёсткого гармонического осциллятора.
@@ -179,11 +179,11 @@ S_{i, \text{кол}} = R\,\cfrac{\frac{\theta_i}{T}}{e^{\frac{\theta_i}{T}}-1}-R
 \subsubsection{Окончательное значение виртуальной энтропии}
 Таким образом, виртуальная энтропия $NO_2$ равна
 \begin{center}
-$S_{\text{вирт}} = S_{\text{пост}} + S_{\text{вр}} + S_{\text{кол}} = 176.48+419.60+25.90 = 621.98\ \cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}$
+$S_{\text{вирт}} = S_{\text{пост}} + S_{\text{вр}} + S_{\text{кол}} = 176.48+103.67+25.90 = 306.05\ \cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}$
 \end{center}
 Итоговый результат
 \begin{equation}
-\boxed{S_{\text{вирт}} = 621.98\  \cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}}.
+\boxed{S_{\text{вирт}} = 306.05\  \cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}}.
 \end{equation}
 
 \subsection{Расчет теплоемкости $C_P$}
@@ -238,15 +238,21 @@ $$
 \subsection{Сопоставление результата с уравнением энтропии}
 Сопоставим результаты расчета с уравнением
 \begin{equation}
-S = S_{298}^0 + \int\limits_{298}^{1700}\cfrac{C_P(T) dT}{T}-R\ln P = 304.98,
+S = S_{298}^0 + \int\limits_{298}^{1700}\cfrac{C_P(T) dT}{T}-R\ln P = 306.94,
 \end{equation}
-где $C_P(T) = C_{\text{пост}} + C_{\text{вр}} + C_{\text{кол}}(T)$, $S_{298}^0 = 240.45\ \frac{\text{Дж}}{\text{моль}\cdot\text{К}} $ 
+где $C_P(T) = C_{\text{пост}} + C_{\text{вр}} + C_{\text{кол}}(T)$, $S_{298}^0 = 240.45\ \frac{\text{Дж}}{\text{моль}\cdot\text{К}}. $ 
 
+Подставив все значения, получим
+\begin{multline}
+S = 240.45  + \\ + \int\limits_{298}^{1700}\left(\frac{(1950/T)^2\cdot e^{\frac{1950}{T}}}{(e^{\frac{1950}{T}}-1)^2}+\frac{(1089/T)^2\cdot e^{\frac{1089}{T}}}{(e^{\frac{1089}{T}}-1)^2}+\frac{(2393/T)^2\cdot e^{\frac{2393}{T}}}{(e^{\frac{2393}{T}}-1)^2}+4\right)\cdot\cfrac{8.314}{T}\,dT  - \\  -8.314\cdot\ln7 = 306.94 \ \cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}
+\end{multline}
 
-%((1950/x)^2*e^(1950/x)/(e^(1950/x) - 1)^2+(1088.566/x)^2*e^(1088.566/x)/(e^(1088.566/x) - 1)^2+(2392.832/x)^2*e^(2392.832/x)/(e^(2392.832/x) - 1)^2+4)*8.314
+Итак,
+\begin{equation}
+\boxed{S = 306.94 \ \cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}}.
+\end{equation}
 
-%((4798/x)^2*e^(4798/x)/(e^(4798/x) - 1)^2+(1366/x)^2*e^(1366/x)/(e^(1366/x) - 1)^2+2*(4952/x)^2*e^(4952/x)/(e^(4952/x) - 1)^2 +2*(2339/x)^2*e^(2339/x)/(e^(2339/x) - 1)^2 +6)*8.314
-$$\left(\frac{(1950/x)^2*e^{\frac{1950}{x}}}{(e^{\frac{1950}{x}}-1)^2}+\frac{(1089/x)^2*e^{\frac{1089}{x}}}{(e^{\frac{1089}{x}}-1)^2}+\frac{(2393/x)^2*e^{\frac{2393}{x}}}{(e^{\frac{2393}{x}}-1)^2}+4\right)\cdot8.314$$
+Можно видеть, что величины $S$ и $S_{\text{вирт}}$ находятся в достаточном согласии друг с другом.
 
 
 
