@@ -189,7 +189,7 @@ $S_{\text{вирт}} = S_{\text{пост}} + S_{\text{вр}} + S_{\text{кол}}
 \subsection{Расчет теплоемкости $C_P$}
 Теплоемкость $C_P$ можно найти как сумму поступательной, вращательной и колебательной теплоемкостей
 \begin{equation}
-C_P = C_{\text{пост}} + C_{вр} + C_{кол},
+C_P = C_{\text{пост}} + C_{\text{вр}} + C_{\text{кол}},
 \end{equation}
 где $C_{\text{пост}}$, $C_{\text{вр}}$, $C_{\text{кол}}$ --- поступательная, вращательная и колебательная теплоемкость соответственно.
 
@@ -198,11 +198,55 @@ C_P = C_{\text{пост}} + C_{вр} + C_{кол},
 C_{\text{пост}} = \cfrac{5}{2}\,R \qquad C_{\text{вр}} = \cfrac{3}{2}R.
 \end{equation}
 
+Для расчета колебательной теплоемкости воспользуемся формулой
+\begin{equation}
+C_{i,\text{кол}} =R\, \cfrac{\left(\frac{\theta_i}{T}\right)^2e^{\frac{\theta_i}{T}}}{\left(e^{\frac{\theta_i}{T}}-1\right)^2}.
+\end{equation}
+
+Составим для удобства расчетов таблицу.
+
+\begin{table}[h!]
+	\centering
+	\caption{Колебательная теплоемкость}
+	\label{tab2}
+	\setlength{\extrarowheight}{1mm}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$\omega$, см$^{-1}$ & $\theta$, К & $\frac{\theta}{T}$ & $C_{i,\text{кол}}$, $\frac{\text{Дж}}{\text{моль}\cdot\text{К}}$ \\
+		\hline 
+		1356 & 1950 & 1.15 & 7.46 \\ 
+		\hline 
+		757 & 1089 & 0.64 & 8.03 \\ 
+		\hline 
+		1664 & 2393 & 1.41 & 7.07 \\ 
+		\hline 
+		\multicolumn{3}{|c|}{} & $\sum\limits_i C_{i,\text{кол}} = 22.56$ \\ 
+		\hline 
+	\end{tabular} 
+\end{table}
+\vspace{5cm}
+Таким образом
+$$
+C_P = C_{\text{пост}} + C_{\text{вр}} + C_{\text{кол}} = \cfrac{5}{2}\,8.314 + \cfrac{3}{2}\,8.314+22.56 = 55.82\ \frac{\text{Дж}}{\text{моль}\cdot\text{К}}
+$$
+
+Итоговый результат
+\begin{equation}
+\boxed{C_P = 55.82\  \cfrac{\text{Дж}}{\text{моль}\cdot\text{К}}}.
+\end{equation}
+
+\subsection{Сопоставление результата с уравнением энтропии}
+Сопоставим результаты расчета с уравнением
+\begin{equation}
+S = S_{298}^0 + \int\limits_{298}^{1700}\cfrac{C_P(T) dT}{T}-R\ln P = 304.98,
+\end{equation}
+где $C_P(T) = C_{\text{пост}} + C_{\text{вр}} + C_{\text{кол}}(T)$, $S_{298}^0 = 240.45\ \frac{\text{Дж}}{\text{моль}\cdot\text{К}} $ 
 
 
+%((1950/x)^2*e^(1950/x)/(e^(1950/x) - 1)^2+(1088.566/x)^2*e^(1088.566/x)/(e^(1088.566/x) - 1)^2+(2392.832/x)^2*e^(2392.832/x)/(e^(2392.832/x) - 1)^2+4)*8.314
 
-
-
+%((4798/x)^2*e^(4798/x)/(e^(4798/x) - 1)^2+(1366/x)^2*e^(1366/x)/(e^(1366/x) - 1)^2+2*(4952/x)^2*e^(4952/x)/(e^(4952/x) - 1)^2 +2*(2339/x)^2*e^(2339/x)/(e^(2339/x) - 1)^2 +6)*8.314
+$$\left(\frac{(1950/x)^2*e^{\frac{1950}{x}}}{(e^{\frac{1950}{x}}-1)^2}+\frac{(1089/x)^2*e^{\frac{1089}{x}}}{(e^{\frac{1089}{x}}-1)^2}+\frac{(2393/x)^2*e^{\frac{2393}{x}}}{(e^{\frac{2393}{x}}-1)^2}+4\right)\cdot8.314$$
 
 
 
