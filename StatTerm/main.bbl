@@ -7,9 +7,21 @@
 \cyr\cyrd\cyra\cyrt\cyra\ %
 \cyro\cyrb\cyrr\cyra\cyrshch\cyre\cyrn\cyri\cyrya}: #1)}\else\fi
 \ifx\undefined\BibAnnote\long\def\BibAnnote#1{#1}\else\fi
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
 \def\selectlanguageifdefined#1{
 \expandafter\ifx\csname date#1\endcsname\relax
 \else\language\csname l@#1\endcsname\fi}
+
+\bibitem{Zaharov:HimTerm}
+\selectlanguageifdefined{russian}
+\BibEmph{И. В.~Захаров~В. Н. Простов А. П.~Пурмаль.,
+  А. Т.~Никитаев}. ХИМИЧЕСКАЯ ТЕРМОДИНАМИКА.
+\newblock Москва: МФТИ, 2007.
+
+\bibitem{Gerasimov:KursPhisHim}
+\selectlanguageifdefined{russian}
+\BibEmph{Герасимов~Я.И.~Еремин Е.Н. и~др.,
+  Древинг~В.П.} Курс физической химии. Том 1.
+\newblock М.: Химия, 1970.
 
 \end{thebibliography}
